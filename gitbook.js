@@ -4,14 +4,15 @@ const search = document.querySelector('#search');
 const results = document.querySelector('#results');
 const root = window.DOC_ROOT || '';
 const entries = window.DOC_NAV || [];
-const current = decodeURIComponent(location.pathname);
-const active = entries.findIndex(item => current.endsWith('/' + item.url));
+const current = location.pathname;
+const isCurrent = item => new URL(root + item.url, location.href).pathname === current;
+const active = entries.findIndex(isCurrent);
 
 function makeLink(item) {
   const link = document.createElement('a');
   link.href = root + item.url;
   link.textContent = item.title;
-  if (current.endsWith('/' + item.url)) {
+  if (isCurrent(item)) {
     link.classList.add('active');
     link.setAttribute('aria-current', 'page');
   }
