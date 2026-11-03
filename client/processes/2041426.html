@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>[AMO] КФИ - Передача в АМО регистрации — Investor Practic</title><link rel="stylesheet" href="../../offline.css"></head>
+<body><aside><a class="home" href="../../index.html">Investor Practic</a>
+<label for="search">Поиск по страницам</label><input id="search" type="search" placeholder="Название или ID">
+<div id="results"></div><nav id="doc-nav"></nav></aside>
+<main><div class="toolbar"><a href="../../index.html">Главная</a><span>Документация · 03.11.2026</span></div>
+<article><h1 id="amo-кфи---передача-в-амо-регистрации">[AMO] КФИ - Передача в АМО регистрации</h1>
+<ul>
+<li>ID процесса: <code>2041426</code></li>
+<li>Объект: Пользователи</li>
+<li>Статус: Ожидание событий</li>
+<li>Внутренняя страница: <a href="../../processes/2041426.html">2041426. [AMO] КФИ - Передача в АМО регистрации</a></li>
+<li>GetCourse: <a href="https://investorpractic.getcourse.ru/pl/tasks/mission/update?id=2041426">Карточка</a> | <a href="https://investorpractic.getcourse.ru/pl/tasks/mission/process?id=2041426">Схема процесса</a></li>
+</ul>
+<h2 id="скриншоты-процесса">Скриншоты процесса</h2>
+<p><img src="../../assets/rules/2041426_rule.png" alt="Правило входа 2041426" /></p>
+<p><img src="../../assets/processes/2041426_process.png" alt="Схема процесса 2041426" /></p>
+<h2 id="коротко-для-заказчика">Коротко для заказчика</h2>
+<ul>
+<li>Главное: В процесс попадают пользователи по правилу: Имеет заказ или Имеет заказ.</li>
+<li>Дальше он передает данные как: Формы и анкеты.</li>
+<li>Связанных баз Vakas: 1.</li>
+</ul>
+<h2 id="понятное-описание-процесса">Понятное описание процесса</h2>
+<ul>
+<li>Процесс работает с объектом GetCourse: Пользователи. Текущий статус процесса: Ожидание событий.</li>
+<li>На вход попадают данные так: В процесс попадают пользователи по правилу: Имеет заказ или Имеет заказ.</li>
+<li>Внутри схемы есть дополнительные проверки/ожидания: 2. Основные блоки: «Бесплатный веб?»; «Ожидание условия».</li>
+<li>Дальше процесс делает прямые вызовы Vakas: 2. Напрямую задействованы базы: 73595.</li>
+<li>Передача: 73595. КФИ - Передача в АМО регистрации: Формы и анкеты. Передаются параметры: <code>name</code>, <code>email</code>, <code>phone</code>, <code>getcourse_user_id</code>, <code>utm_source</code>, <code>utm_medium</code>, <code>utm_campaign</code>, <code>utm_content</code>, <code>utm_term</code>, <code>p1</code> и другие.</li>
+<li>Передача: 73595. КФИ - Передача в АМО регистрации: Формы и анкеты. Передаются параметры: <code>name</code>, <code>email</code>, <code>phone</code>, <code>getcourse_user_id</code>, <code>utm_source</code>, <code>utm_medium</code>, <code>utm_campaign</code>, <code>utm_content</code>, <code>utm_term</code>, <code>p1</code> и другие.</li>
+<li>Что происходит в amoCRM: На входе в этап ОТДЕЛ - ДОВЕДЕНИЯ -&gt; РЕГИСТРАЦИИ [71064150] база ищет дубль и при необходимости переводит найденную сделку в рабочий этап.</li>
+</ul>
+<h2 id="ход-процесса-в-getcourse">Ход процесса в GetCourse</h2>
+<ul>
+<li>Схема состоит из 11 блоков и 17 переходов.</li>
+<li>По типам: стартов 1, условий/ожиданий 2, вызовов URL 6, изменений полей 0, финалов 2.</li>
+</ul>
+<p>Блоки процесса: что делают и зачем нужны:</p>
+<ul>
+<li>Блок <code>35318340</code> «Начало работы» (старт). Что делает: Запускает выполнение схемы для объекта, который попал под правило входа процесса. Зачем нужен: Нужен как точка входа: от него GetCourse начинает движение объекта по схеме. Дальше: если результат «Выполнено», идет в «Бесплатный веб?».</li>
+<li>Блок <code>35318431</code> «Бесплатный веб?» (условие). Что делает: Проверяет условие: Имеет заказ. Зачем нужен: Нужен, чтобы разделить поток: подходящих пользователей/заказы отправить дальше, неподходящих перевести на другую ветку или завершить. Дальше: если результат «Нет», идет в «Ожидание условия»; если результат «Да», идет в «Вызвать url».</li>
+<li>Блок <code>35318557</code> «Вызвать url» (вызов URL). Что делает: Передает в Vakas: 73595. КФИ - Передача в АМО регистрации, канал «Формы и анкеты» (GET); параметры: <code>name</code>, <code>email</code>, <code>phone</code>, <code>getcourse_user_id</code>, <code>utm_source</code>, <code>utm_medium</code>, <code>utm_campaign</code>, <code>utm_content</code>, <code>utm_term</code>, <code>p1</code>, <code>comments</code>; timeout 300 сек. Зачем нужен: Нужен, чтобы передать подходящий объект в 73595. КФИ - Передача в АМО регистрации; дальше На входе в этап ОТДЕЛ - ДОВЕДЕНИЯ -&gt; РЕГИСТРАЦИИ [71064150] база ищет дубль и при необходимости переводит найденную сделку в рабочий этап. Дальше: если результат «Ошибка», идет в «n8n fail после Вызвать url #35318557»; если результат «Выполнено», идет в «n8n success после Вызвать url #35318557».</li>
+<li>Блок <code>43527772</code> «n8n success после Вызвать url #35318557» (вызов URL). Что делает: Пишет событие в n8n: success, action vakas_users (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен для фиксации успешной отправки: n8n получает событие, что Vakas-вызов отработал без ошибки. Дальше: если результат «Ошибка», идет в «Завершение процесса»; если результат «Выполнено», идет в «Завершение процесса».</li>
+<li>Блок <code>35318560</code> «Завершение процесса» (завершение). Что делает: Завершает ветку процесса после выполненных проверок и действий. Зачем нужен: Нужен, чтобы закрыть текущую ветку и не гонять объект по процессу повторно. Дальше переходов нет: это конечная точка ветки.</li>
+<li>Блок <code>43527775</code> «n8n fail после Вызвать url #35318557» (вызов URL). Что делает: Пишет событие в n8n: fail, action vakas_users (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен для контроля ошибки: n8n получает данные неуспешной отправки, чтобы можно было увидеть проблему и повторить/разобрать передачу. Дальше: если результат «Ошибка», идет в «Бесплатный веб?»; если результат «Выполнено», идет в «Бесплатный веб?».</li>
+<li>Блок <code>35318474</code> «Ожидание условия» (ожидание условия). Что делает: Останавливает объект в ожидании, пока выполнится условие: Имеет заказ. Зачем нужен: Нужен, чтобы не отправлять объект раньше времени: процесс ждет нужное событие, заказ, сегмент или другое условие. Дальше: если результат «Время истекло», идет в «Завершение процесса»; если результат «Условие выполнено», идет в «Вызвать url».</li>
+<li>Блок <code>35318563</code> «Завершение процесса» (завершение). Что делает: Завершает ветку как неуспешную или неподходящую для дальнейшей передачи. Зачем нужен: Нужен, чтобы закрыть текущую ветку и не гонять объект по процессу повторно. Дальше переходов нет: это конечная точка ветки.</li>
+<li>Блок <code>35318592</code> «Вызвать url» (вызов URL). Что делает: Передает в Vakas: 73595. КФИ - Передача в АМО регистрации, канал «Формы и анкеты» (GET); параметры: <code>name</code>, <code>email</code>, <code>phone</code>, <code>getcourse_user_id</code>, <code>utm_source</code>, <code>utm_medium</code>, <code>utm_campaign</code>, <code>utm_content</code>, <code>utm_term</code>, <code>p1</code>, <code>comments</code>; timeout 300 сек. Зачем нужен: Нужен, чтобы передать подходящий объект в 73595. КФИ - Передача в АМО регистрации; дальше На входе в этап ОТДЕЛ - ДОВЕДЕНИЯ -&gt; РЕГИСТРАЦИИ [71064150] база ищет дубль и при необходимости переводит найденную сделку в рабочий этап. Дальше: если результат «Ошибка», идет в «n8n fail после Вызвать url #35318592»; если результат «Выполнено», идет в «n8n success после Вызвать url #35318592».</li>
+<li>Блок <code>43527778</code> «n8n success после Вызвать url #35318592» (вызов URL). Что делает: Пишет событие в n8n: success, action vakas_users (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен для фиксации успешной отправки: n8n получает событие, что Vakas-вызов отработал без ошибки. Дальше: если результат «Ошибка», идет в «Завершение процесса»; если результат «Выполнено», идет в «Завершение процесса».</li>
+<li>Блок <code>43527781</code> «n8n fail после Вызвать url #35318592» (вызов URL). Что делает: Пишет событие в n8n: fail, action vakas_users (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен для контроля ошибки: n8n получает данные неуспешной отправки, чтобы можно было увидеть проблему и повторить/разобрать передачу. Дальше: если результат «Ошибка», идет в «Ожидание условия»; если результат «Выполнено», идет в «Ожидание условия».</li>
+</ul>
+<h2 id="что-именно-входит-в-процесс">Что именно входит в процесс</h2>
+<ul>
+<li>В процесс попадают пользователи по правилу: Имеет заказ или Имеет заказ.</li>
+</ul>
+<h2 id="как-именно-настроено-правило">Как именно настроено правило</h2>
+<ul>
+<li>Имеет заказ или Имеет заказ</li>
+</ul>
+<h2 id="куда-и-как-передается-дальше">Куда и как передается дальше</h2>
+<table>
+<thead>
+<tr>
+<th>База Vakas</th>
+<th>Что передается</th>
+<th>Этап в amoCRM</th>
+<th>Что происходит со сделкой</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../bases/73595.html">73595. КФИ - Передача в АМО регистрации</a></td>
+<td>Формы и анкеты</td>
+<td>ОТДЕЛ - ДОВЕДЕНИЯ -&gt; РЕГИСТРАЦИИ [71064150]</td>
+<td>На входе в этап ОТДЕЛ - ДОВЕДЕНИЯ -&gt; РЕГИСТРАЦИИ [71064150] база ищет дубль и при необходимости переводит найденную сделку в рабочий этап.</td>
+</tr>
+</tbody>
+</table>
+</article></main><script>window.DOC_ROOT="../../";</script>
+<script src="../../search-data.js"></script><script src="../../nav-data.js"></script><script src="../../gitbook.js"></script></body></html>

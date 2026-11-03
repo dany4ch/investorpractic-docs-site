@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="ru"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>[AMO] [ED] Пассивный доход 5-й поток — Investor Practic</title><link rel="stylesheet" href="../../offline.css"></head>
+<body><aside><a class="home" href="../../index.html">Investor Practic</a>
+<label for="search">Поиск по страницам</label><input id="search" type="search" placeholder="Название или ID">
+<div id="results"></div><nav id="doc-nav"></nav></aside>
+<main><div class="toolbar"><a href="../../index.html">Главная</a><span>Документация · 03.11.2026</span></div>
+<article><h1 id="amo-ed-пассивный-доход-5-й-поток">[AMO] [ED] Пассивный доход 5-й поток</h1>
+<ul>
+<li>ID процесса: <code>2499733</code></li>
+<li>Объект: Заказы</li>
+<li>Статус: Ожидание событий</li>
+</ul>
+<p><a href="https://investorpractic.getcourse.ru/pl/tasks/mission/update?id=2499733">Общее</a> | <a href="https://investorpractic.getcourse.ru/pl/tasks/mission/process?id=2499733">Схема процесса</a></p>
+<h2 id="описание-из-getcourse">Описание из GetCourse</h2>
+<blockquote>
+<p>30.06.2026. Подробный ход процесса GetCourse:</p>
+<ul>
+<li>
+<p>Главное: В процесс попадают заказы по следующим продуктам: «---».</p>
+</li>
+<li>
+<p>Процесс работает с объектом GetCourse: Заказы. Текущий статус процесса: Ожидание событий.</p>
+</li>
+</ul>
+<p>Как идет процесс внутри GetCourse:</p>
+<ul>
+<li>Схема состоит из 20 блоков и 32 переходов.</li>
+</ul>
+<p>Конец подробного хода процесса GetCourse.</p>
+<hr />
+<p>18.06.2026 по задаче https://spi.bitrix24.ru/online/?IM_TASK=chat24416&amp;IM_MESSAGE=2145108</p>
+<p>https://vakas-tools.ru/account/base/amo.php?base_id=93596 - База</p>
+<p>https://investorpractic.getcourse.ru/pl/sales/product/update?id=4395595
+https://investorpractic.getcourse.ru/pl/sales/product/update?id=4395596
+https://investorpractic.getcourse.ru/pl/sales/product/update?id=4395600
+https://investorpractic.getcourse.ru/pl/sales/product/update?id=4395610
+https://investorpractic.getcourse.ru/pl/sales/product/update?id=4395614</p>
+<p>Название: Заказ_ЗапускПД5.0
+Тег: Заказ_ЗапускПД5.0</p>
+<p>Воронка
+Пассивный доход
+Этапы
+Новый заказ гк - новый заказ
+Ч/о заказ гк - новый заказ
+Полная оплата - УР</p>
+</blockquote>
+<h2 id="понятное-описание-процесса">Понятное описание процесса</h2>
+<ul>
+<li>Процесс работает с объектом GetCourse: Заказы. Текущий статус процесса: Ожидание событий.</li>
+<li>На вход попадают данные так: В процесс попадают заказы по следующим продуктам: «---».</li>
+<li>Техническое правило входа в GetCourse: Продукт (ID: 4395595) или Продукт (ID: 4395596) или Продукт (ID: 4395600) или Продукт (ID: 4395610) или Продукт (ID: 4395614).</li>
+<li>Внутри схемы есть дополнительные проверки/ожидания: 3. Основные блоки: «Есть платеж?»; «Оплачен?».</li>
+<li>Дальше процесс делает прямые вызовы Vakas: 4. Напрямую задействованы базы: 93596.</li>
+<li>Передача: 93596. База 93596: Оплаты и заказы. Передаются параметры: <code>number</code>, <code>id</code>, <code>order_id</code>, <code>positions</code>, <code>costMoney</code>, <code>leftCostMoney</code>, <code>payedMoney</code>, <code>status</code>, <code>paymentLink</code>, <code>firstName</code> и другие.</li>
+<li>Передача: 93596. База 93596: Оплаты и заказы. Передаются параметры: <code>number</code>, <code>id</code>, <code>order_id</code>, <code>positions</code>, <code>costMoney</code>, <code>leftCostMoney</code>, <code>payedMoney</code>, <code>status</code>, <code>paymentLink</code>, <code>firstName</code> и другие.</li>
+<li>Что происходит в amoCRM: На входе в этап ПАССИВНЫЙ ДОХОД -&gt; НОВЫЙ ЗАКАЗ [75466258] база ищет дубль и может взять старую сделку только из заранее разрешенных этапов.</li>
+</ul>
+<h2 id="ход-процесса-в-getcourse">Ход процесса в GetCourse</h2>
+<ul>
+<li>Схема состоит из 20 блоков и 32 переходов.</li>
+<li>По типам: стартов 1, условий/ожиданий 3, вызовов URL 9, изменений полей 3, финалов 1.</li>
+</ul>
+<p>Блоки процесса: что делают и зачем нужны:</p>
+<ul>
+<li>Блок <code>43629139</code> «Начало работы» (старт). Что делает: Запускает выполнение схемы для объекта, который попал под правило входа процесса. Зачем нужен: Нужен как точка входа: от него GetCourse начинает движение объекта по схеме. Дальше: если результат «Выполнено», идет в «Название Заказ_ЗапускПД5.0».</li>
+<li>Блок <code>43629141</code> «Название Заказ_ЗапускПД5.0» (изменение поля). Что делает: меняет поле <code>order_name_amo</code> (Установить равным). значение: Заказ_ЗапускПД5.0 Зачем нужен: Нужен, чтобы записать внутри GetCourse технический признак/значение, которое потом используется в передаче или логике ветвления. Дальше: если результат «Выполнено», идет в «Тег Запуск_ПД_2026».</li>
+<li>Блок <code>43629142</code> «Тег Запуск_ПД_2026» (изменение поля). Что делает: меняет поле <code>deal_tag_1</code> (Установить равным). значение: Заказ_ЗапускПД5.0 Зачем нужен: Нужен, чтобы записать внутри GetCourse технический признак/значение, которое потом используется в передаче или логике ветвления. Дальше: если результат «Выполнено», идет в «Новая заявка обновл сделку».</li>
+<li>Блок <code>43629144</code> «Новая заявка обновл сделку» (вызов URL). Что делает: Передает в Vakas: 93596. База 93596, канал «Оплаты и заказы» (GET); параметры: <code>number</code>, <code>id</code>, <code>order_id</code>, <code>positions</code>, <code>costMoney</code>, <code>leftCostMoney</code>, <code>payedMoney</code>, <code>status</code>, <code>paymentLink</code>, <code>firstName</code>, <code>lastName</code>, <code>name</code>, <code>email</code>, <code>phone</code> и другие; timeout 300 сек. Зачем нужен: Нужен, чтобы передать подходящий объект в 93596. База 93596; дальше На входе в этап ПАССИВНЫЙ ДОХОД -&gt; НОВЫЙ ЗАКАЗ [75466258] база ищет дубль и может взять старую сделку только из заранее разрешенных этапов. Дальше: если результат «Ошибка», идет в «n8n fail после Новая заявка обновл сделку #40665880»; если результат «Выполнено», идет в «n8n success после Новая заявка обновл сделку #40665880».</li>
+<li>Блок <code>43629153</code> «n8n success после Новая заявка обновл сделку #40665880» (вызов URL). Что делает: Вызывает внешний URL: testn8n.easydrafting.ru/webhook/gc-vakas-retry-events (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>order_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен, чтобы процесс GetCourse передал данные во внешний сервис testn8n.easydrafting.ru. Дальше: если результат «Ошибка», идет в «База вакаса для новых»; если результат «Выполнено», идет в «База вакаса для новых».</li>
+<li>Блок <code>43629145</code> «База вакаса для новых» (изменение поля). Что делает: меняет поле <code>last_base_vakas</code> (Установить равным). значение: 93596 Зачем нужен: Нужен, чтобы записать внутри GetCourse технический признак/значение, которое потом используется в передаче или логике ветвления. Дальше: если результат «Выполнено», идет в «Есть платеж?».</li>
+<li>Блок <code>43629147</code> «Есть платеж?» (ожидание условия). Что делает: Останавливает объект в ожидании нужного условия; точная формула в дампе не расшифрована. Зачем нужен: Нужен, чтобы не отправлять объект раньше времени: процесс ждет нужное событие, заказ, сегмент или другое условие. Дальше: если результат «Условие выполнено», идет в «Оплачен?».</li>
+<li>Блок <code>43629148</code> «Оплачен?» (условие). Что делает: Проверяет ветвление «Оплачен?», но текст условия в дампе не расшифрован. Зачем нужен: Нужен, чтобы разделить поток: подходящих пользователей/заказы отправить дальше, неподходящих перевести на другую ветку или завершить. Дальше: если результат «Нет», идет в «обновл сделку (копия)»; если результат «Да», идет в «обновл сделку».</li>
+<li>Блок <code>43629143</code> «обновл сделку» (вызов URL). Что делает: Передает в Vakas: 93596. База 93596, канал «Оплаты и заказы» (GET); параметры: <code>number</code>, <code>id</code>, <code>order_id</code>, <code>positions</code>, <code>costMoney</code>, <code>leftCostMoney</code>, <code>payedMoney</code>, <code>status</code>, <code>paymentLink</code>, <code>firstName</code>, <code>lastName</code>, <code>name</code>, <code>email</code>, <code>phone</code> и другие; timeout 300 сек. Зачем нужен: Нужен, чтобы передать подходящий объект в 93596. База 93596; дальше На входе в этап ПАССИВНЫЙ ДОХОД -&gt; НОВЫЙ ЗАКАЗ [75466258] база ищет дубль и может взять старую сделку только из заранее разрешенных этапов. Дальше: если результат «Ошибка», идет в «n8n fail после обновл сделку #40665873»; если результат «Выполнено», идет в «n8n success после обновл сделку #40665873».</li>
+<li>Блок <code>43629151</code> «n8n success после обновл сделку #40665873» (вызов URL). Что делает: Вызывает внешний URL: testn8n.easydrafting.ru/webhook/gc-vakas-retry-events (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>order_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен, чтобы процесс GetCourse передал данные во внешний сервис testn8n.easydrafting.ru. Дальше: если результат «Ошибка», идет в «Завершение процесса (копия)»; если результат «Выполнено», идет в «Завершение процесса (копия)».</li>
+<li>Блок <code>43629140</code> «Завершение процесса (копия)» (завершение). Что делает: Завершает ветку процесса после выполненных проверок и действий. Зачем нужен: Нужен, чтобы закрыть текущую ветку и не гонять объект по процессу повторно. Дальше переходов нет: это конечная точка ветки.</li>
+<li>Блок <code>43629152</code> «n8n fail после обновл сделку #40665873» (вызов URL). Что делает: Вызывает внешний URL: testn8n.easydrafting.ru/webhook/gc-vakas-retry-events (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>order_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен, чтобы процесс GetCourse передал данные во внешний сервис testn8n.easydrafting.ru. Дальше: если результат «Ошибка», идет в «Оплачен?»; если результат «Выполнено», идет в «Оплачен?».</li>
+<li>Блок <code>43629146</code> «обновл сделку (копия)» (вызов URL). Что делает: Передает в Vakas: 93596. База 93596, канал «Оплаты и заказы» (GET); параметры: <code>number</code>, <code>id</code>, <code>order_id</code>, <code>positions</code>, <code>costMoney</code>, <code>leftCostMoney</code>, <code>payedMoney</code>, <code>status</code>, <code>paymentLink</code>, <code>firstName</code>, <code>lastName</code>, <code>name</code>, <code>email</code>, <code>phone</code> и другие; timeout 300 сек. Зачем нужен: Нужен, чтобы передать подходящий объект в 93596. База 93596; дальше На входе в этап ПАССИВНЫЙ ДОХОД -&gt; НОВЫЙ ЗАКАЗ [75466258] база ищет дубль и может взять старую сделку только из заранее разрешенных этапов. Дальше: если результат «Ошибка», идет в «n8n fail после обновл сделку (копия) #40666647»; если результат «Выполнено», идет в «n8n success после обновл сделку (копия) #40666647».</li>
+<li>Блок <code>43629155</code> «n8n success после обновл сделку (копия) #40666647» (вызов URL). Что делает: Вызывает внешний URL: testn8n.easydrafting.ru/webhook/gc-vakas-retry-events (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>order_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен, чтобы процесс GetCourse передал данные во внешний сервис testn8n.easydrafting.ru. Дальше: если результат «Ошибка», идет в «Оплачен?»; если результат «Выполнено», идет в «Оплачен?».</li>
+<li>Блок <code>43629149</code> «Оплачен?» (ожидание условия). Что делает: Останавливает объект в ожидании нужного условия; точная формула в дампе не расшифрована. Зачем нужен: Нужен, чтобы не отправлять объект раньше времени: процесс ждет нужное событие, заказ, сегмент или другое условие. Дальше: если результат «Условие выполнено», идет в «обновл сделку (копия) (копия)».</li>
+<li>Блок <code>43629150</code> «обновл сделку (копия) (копия)» (вызов URL). Что делает: Передает в Vakas: 93596. База 93596, канал «Оплаты и заказы» (GET); параметры: <code>number</code>, <code>id</code>, <code>order_id</code>, <code>positions</code>, <code>costMoney</code>, <code>leftCostMoney</code>, <code>payedMoney</code>, <code>status</code>, <code>paymentLink</code>, <code>firstName</code>, <code>lastName</code>, <code>name</code>, <code>email</code>, <code>phone</code> и другие; timeout 300 сек. Зачем нужен: Нужен, чтобы передать подходящий объект в 93596. База 93596; дальше На входе в этап ПАССИВНЫЙ ДОХОД -&gt; НОВЫЙ ЗАКАЗ [75466258] база ищет дубль и может взять старую сделку только из заранее разрешенных этапов. Дальше: если результат «Ошибка», идет в «n8n fail после обновл сделку (копия) (копия) #40667378»; если результат «Выполнено», идет в «n8n success после обновл сделку (копия) (копия) #40667378».</li>
+<li>Блок <code>43629157</code> «n8n success после обновл сделку (копия) (копия) #40667378» (операция). Что делает: Выполняет служебный шаг схемы «n8n success после обновл сделку (копия) (копия) #40667378». Зачем нужен: Нужен как промежуточный технический шаг в схеме «n8n success после обновл сделку (копия) (копия) #40667378». Дальше: если результат «Ошибка», идет в «Завершение процесса (копия)»; если результат «Выполнено», идет в «Завершение процесса (копия)».</li>
+<li>Блок <code>43629158</code> «n8n fail после обновл сделку (копия) (копия) #40667378» (операция). Что делает: Выполняет служебный шаг схемы «n8n fail после обновл сделку (копия) (копия) #40667378». Зачем нужен: Нужен как промежуточный технический шаг в схеме «n8n fail после обновл сделку (копия) (копия) #40667378». Дальше: если результат «Ошибка», идет в «Оплачен?»; если результат «Выполнено», идет в «Оплачен?».</li>
+<li>Блок <code>43629156</code> «n8n fail после обновл сделку (копия) #40666647» (операция). Что делает: Выполняет служебный шаг схемы «n8n fail после обновл сделку (копия) #40666647». Зачем нужен: Нужен как промежуточный технический шаг в схеме «n8n fail после обновл сделку (копия) #40666647». Дальше: если результат «Ошибка», идет в «Оплачен?»; если результат «Выполнено», идет в «Оплачен?».</li>
+<li>Блок <code>43629154</code> «n8n fail после Новая заявка обновл сделку #40665880» (вызов URL). Что делает: Вызывает внешний URL: testn8n.easydrafting.ru/webhook/gc-vakas-retry-events (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>order_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен, чтобы процесс GetCourse передал данные во внешний сервис testn8n.easydrafting.ru. Дальше: если результат «Ошибка», идет в «Тег Запуск_ПД_2026»; если результат «Выполнено», идет в «Тег Запуск_ПД_2026».</li>
+</ul>
+<p>Откуда: процесс берет объекты по правилу входа «Продукт (ID: 4395595) или Продукт (ID: 4395596) или Продукт (ID: 4395600) или Продукт (ID: 4395610) или Продукт (ID: 4395614)».</p>
+<p>Что проверяет по пути: перед отправкой в база 93596 (Оплаты и заказы).</p>
+<p>Куда ведет: вызывает внешний URL Vakas и передает данные в база 93596 (Оплаты и заказы).</p>
+<h2 id="логика-vakas-и-amocrm">Логика Vakas и amoCRM</h2>
+<ul>
+<li>Условие входа в процесс: Продукт (ID: 4395595) или Продукт (ID: 4395596) или Продукт (ID: 4395600) или Продукт (ID: 4395610) или Продукт (ID: 4395614).</li>
+<li>Вызовов Vakas в схеме: <code>4</code>. Уникальных URL Vakas: <code>2</code>. Связанных баз: <code>1</code>.</li>
+</ul>
+<h3 id="связанная-база-vakas-93596-база-93596">Связанная база Vakas: 93596. База 93596</h3>
+<ul>
+<li>Использование в процессе: Оплаты и заказы</li>
+<li>Документация базы: <a href="../bases/93596.html">93596. База 93596</a></li>
+<li>Страница настройки: <a href="https://vakas-tools.ru/account/base/amo.php?mode=contact&amp;base_id=93596">Vakas</a></li>
+<li>Поиск дублей: Проверять на дубли</li>
+<li>Искать только в выбранных воронках: 12</li>
+<li>Ответственный по контакту имеет приоритет: Да</li>
+</ul>
+<h4 id="вызовы-из-процесса">Вызовы из процесса</h4>
+<h4 id="обновл-сделку">обновл сделку</h4>
+<ul>
+<li>Endpoint: <code>payments</code></li>
+<li>URL вызова: <code>https://vakas-tools.ru/base/payments/8927217/93596/?number={object.number}&amp;id={object.user.id}&amp;order_id={object.id}&amp;positions={object.positions}&amp;costMoney={object.cost_money}&amp;leftCostMoney={object.left_cost_money}&amp;payedMoney={object.payed_money}&amp;status={object.status}&amp;paymentLink={object.payment_link}&amp;firstName={object.user.first_name}&amp;lastName={object.user.last_name}&amp;name={object.user.name}&amp;email={object.user.email}&amp;phone={object.user.phone}&amp;manager_name={object.manager}&amp;manager_email={object.manager_email}&amp;manager_phone={object.manager_phone}&amp;offers={object.offers}&amp;avatarUrl={object.user.avatar_url}&amp;utmS={object.user.create_session.utm_source}&amp;utmM={object.user.create_session.utm_medium}&amp;utmCa={object.user.create_session.utm_campaign}&amp;utmCo={object.user.create_session.utm_content}&amp;utmT={object.user.create_session.utm_term}&amp;order_name_amo={object.order_name_amo}&amp;order_price={cost_money_value}&amp;pay_date={object.payed_at format=&quot;d.m.Y H:i&quot;}</code></li>
+<li>Связанная база Vakas: <a href="../bases/93596.html">93596. База 93596</a></li>
+<li>В схеме этот же URL вызывается из блоков: <code>обновл сделку</code>, <code>обновл сделку (копия)</code>, <code>обновл сделку (копия) (копия)</code></li>
+</ul>
+<h5 id="когда-срабатывает-в-процессе">Когда срабатывает в процессе</h5>
+<ul>
+<li>Блок <code>обновл сделку</code>, сценарий 1: <code>Начало работы</code> --Выполнено--&gt; <code>Название Заказ_ЗапускПД5.0</code> --Выполнено--&gt; <code>Тег Запуск_ПД_2026</code> --Выполнено--&gt; <code>Новая заявка обновл сделку</code> --Выполнено--&gt; <code>n8n success после Новая заявка обновл сделку #40665880</code> --Ошибка--&gt; <code>База вакаса для новых</code> --Выполнено--&gt; <code>Есть платеж?</code> --Условие выполнено--&gt; <code>Оплачен?</code> --Да--&gt; <code>обновл сделку</code>
+<ul>
+<li>ожидание <code>Есть платеж?</code>: условие ожидания без текстовой расшифровки -&gt; <code>Условие выполнено</code></li>
+<li>условие <code>Оплачен?</code>: условие без текстовой расшифровки -&gt; <code>Да</code></li>
+</ul>
+</li>
+<li>Блок <code>обновл сделку</code>, сценарий 2: <code>Начало работы</code> --Выполнено--&gt; <code>Название Заказ_ЗапускПД5.0</code> --Выполнено--&gt; <code>Тег Запуск_ПД_2026</code> --Выполнено--&gt; <code>Новая заявка обновл сделку</code> --Выполнено--&gt; <code>n8n success после Новая заявка обновл сделку #40665880</code> --Выполнено--&gt; <code>База вакаса для новых</code> --Выполнено--&gt; <code>Есть платеж?</code> --Условие выполнено--&gt; <code>Оплачен?</code> --Да--&gt; <code>обновл сделку</code>
+<ul>
+<li>ожидание <code>Есть платеж?</code>: условие ожидания без текстовой расшифровки -&gt; <code>Условие выполнено</code></li>
+<li>условие <code>Оплачен?</code>: условие без текстовой расшифровки -&gt; <code>Да</code></li>
+</ul>
+</li>
+<li>Блок <code>обновл сделку (копия)</code>, сценарий 1: <code>Начало работы</code> --Выполнено--&gt; <code>Название Заказ_ЗапускПД5.0</code> --Выполнено--&gt; <code>Тег Запуск_ПД_2026</code> --Выполнено--&gt; <code>Новая заявка обновл сделку</code> --Выполнено--&gt; <code>n8n success после Новая заявка обновл сделку #40665880</code> --Ошибка--&gt; <code>База вакаса для новых</code> --Выполнено--&gt; <code>Есть платеж?</code> --Условие выполнено--&gt; <code>Оплачен?</code> --Нет--&gt; <code>обновл сделку (копия)</code>
+<ul>
+<li>ожидание <code>Есть платеж?</code>: условие ожидания без текстовой расшифровки -&gt; <code>Условие выполнено</code></li>
+<li>условие <code>Оплачен?</code>: условие без текстовой расшифровки -&gt; <code>Нет</code></li>
+</ul>
+</li>
+<li>Блок <code>обновл сделку (копия)</code>, сценарий 2: <code>Начало работы</code> --Выполнено--&gt; <code>Название Заказ_ЗапускПД5.0</code> --Выполнено--&gt; <code>Тег Запуск_ПД_2026</code> --Выполнено--&gt; <code>Новая заявка обновл сделку</code> --Выполнено--&gt; <code>n8n success после Новая заявка обновл сделку #40665880</code> --Выполнено--&gt; <code>База вакаса для новых</code> --Выполнено--&gt; <code>Есть платеж?</code> --Условие выполнено--&gt; <code>Оплачен?</code> --Нет--&gt; <code>обновл сделку (копия)</code>
+<ul>
+<li>ожидание <code>Есть платеж?</code>: условие ожидания без текстовой расшифровки -&gt; <code>Условие выполнено</code></li>
+<li>условие <code>Оплачен?</code>: условие без текстовой расшифровки -&gt; <code>Нет</code></li>
+</ul>
+</li>
+<li>Блок <code>обновл сделку (копия) (копия)</code>, сценарий 1: <code>Начало работы</code> --Выполнено--&gt; <code>Название Заказ_ЗапускПД5.0</code> --Выполнено--&gt; <code>Тег Запуск_ПД_2026</code> --Выполнено--&gt; <code>Новая заявка обновл сделку</code> --Выполнено--&gt; <code>n8n success после Новая заявка обновл сделку #40665880</code> --Ошибка--&gt; <code>База вакаса для новых</code> --Выполнено--&gt; <code>Есть платеж?</code> --Условие выполнено--&gt; <code>Оплачен?</code> --Нет--&gt; <code>обновл сделку (копия)</code> --Выполнено--&gt; <code>n8n success после обновл сделку (копия) #40666647</code> --Ошибка--&gt; <code>Оплачен?</code> --Условие выполнено--&gt; <code>обновл сделку (копия) (копия)</code>
+<ul>
+<li>ожидание <code>Есть платеж?</code>: условие ожидания без текстовой расшифровки -&gt; <code>Условие выполнено</code></li>
+<li>условие <code>Оплачен?</code>: условие без текстовой расшифровки -&gt; <code>Нет</code></li>
+<li>ожидание <code>Оплачен?</code>: условие ожидания без текстовой расшифровки -&gt; <code>Условие выполнено</code></li>
+</ul>
+</li>
+<li>Блок <code>обновл сделку (копия) (копия)</code>, сценарий 2: <code>Начало работы</code> --Выполнено--&gt; <code>Название Заказ_ЗапускПД5.0</code> --Выполнено--&gt; <code>Тег Запуск_ПД_2026</code> --Выполнено--&gt; <code>Новая заявка обновл сделку</code> --Выполнено--&gt; <code>n8n success после Новая заявка обновл сделку #40665880</code> --Ошибка--&gt; <code>База вакаса для новых</code> --Выполнено--&gt; <code>Есть платеж?</code> --Условие выполнено--&gt; <code>Оплачен?</code> --Нет--&gt; <code>обновл сделку (копия)</code> --Выполнено--&gt; <code>n8n success после обновл сделку (копия) #40666647</code> --Выполнено--&gt; <code>Оплачен?</code> --Условие выполнено--&gt; <code>обновл сделку (копия) (копия)</code>
+<ul>
+<li>ожидание <code>Есть платеж?</code>: условие ожидания без текстовой расшифровки -&gt; <code>Условие выполнено</code></li>
+<li>условие <code>Оплачен?</code>: условие без текстовой расшифровки -&gt; <code>Нет</code></li>
+<li>ожидание <code>Оплачен?</code>: условие ожидания без текстовой расшифровки -&gt; <code>Условие выполнено</code></li>
+</ul>
+</li>
+<li>Блок <code>обновл сделку (копия) (копия)</code>, сценарий 3: <code>Начало работы</code> --Выполнено--&gt; <code>Название Заказ_ЗапускПД5.0</code> --Выполнено--&gt; <code>Тег Запуск_ПД_2026</code> --Выполнено--&gt; <code>Новая заявка обновл сделку</code> --Выполнено--&gt; <code>n8n success после Новая заявка обновл сделку #40665880</code> --Выполнено--&gt; <code>База вакаса для новых</code> --Выполнено--&gt; <code>Есть платеж?</code> --Условие выполнено--&gt; <code>Оплачен?</code> --Нет--&gt; <code>обновл сделку (копия)</code> --Выполнено--&gt; <code>n8n success после обновл сделку (копия) #40666647</code> --Ошибка--&gt; <code>Оплачен?</code> --Условие выполнено--&gt; <code>обновл сделку (копия) (копия)</code>
+<ul>
+<li>ожидание <code>Есть платеж?</code>: условие ожидания без текстовой расшифровки -&gt; <code>Условие выполнено</code></li>
+<li>условие <code>Оплачен?</code>: условие без текстовой расшифровки -&gt; <code>Нет</code></li>
+<li>ожидание <code>Оплачен?</code>: условие ожидания без текстовой расшифровки -&gt; <code>Условие выполнено</code></li>
+</ul>
+</li>
+<li>Блок <code>обновл сделку (копия) (копия)</code>, сценарий 4: <code>Начало работы</code> --Выполнено--&gt; <code>Название Заказ_ЗапускПД5.0</code> --Выполнено--&gt; <code>Тег Запуск_ПД_2026</code> --Выполнено--&gt; <code>Новая заявка обновл сделку</code> --Выполнено--&gt; <code>n8n success после Новая заявка обновл сделку #40665880</code> --Выполнено--&gt; <code>База вакаса для новых</code> --Выполнено--&gt; <code>Есть платеж?</code> --Условие выполнено--&gt; <code>Оплачен?</code> --Нет--&gt; <code>обновл сделку (копия)</code> --Выполнено--&gt; <code>n8n success после обновл сделку (копия) #40666647</code> --Выполнено--&gt; <code>Оплачен?</code> --Условие выполнено--&gt; <code>обновл сделку (копия) (копия)</code>
+<ul>
+<li>ожидание <code>Есть платеж?</code>: условие ожидания без текстовой расшифровки -&gt; <code>Условие выполнено</code></li>
+<li>условие <code>Оплачен?</code>: условие без текстовой расшифровки -&gt; <code>Нет</code></li>
+<li>ожидание <code>Оплачен?</code>: условие ожидания без текстовой расшифровки -&gt; <code>Условие выполнено</code></li>
+</ul>
+</li>
+</ul>
+<h5 id="что-уходит-в-vakas">Что уходит в Vakas</h5>
+<p>&lt;details&gt;
+&lt;summary&gt;Показать 27 параметров запроса&lt;/summary&gt;</p>
+<ul>
+<li><code>number</code></li>
+<li><code>id</code></li>
+<li><code>order_id</code></li>
+<li><code>positions</code></li>
+<li><code>costMoney</code></li>
+<li><code>leftCostMoney</code></li>
+<li><code>payedMoney</code></li>
+<li><code>status</code></li>
+<li><code>paymentLink</code></li>
+<li><code>firstName</code></li>
+<li><code>lastName</code></li>
+<li><code>name</code></li>
+<li><code>email</code></li>
+<li><code>phone</code></li>
+<li><code>manager_name</code></li>
+<li><code>manager_email</code></li>
+<li><code>manager_phone</code></li>
+<li><code>offers</code></li>
+<li><code>avatarUrl</code></li>
+<li><code>utmS</code></li>
+<li><code>utmM</code></li>
+<li><code>utmCa</code></li>
+<li><code>utmCo</code></li>
+<li><code>utmT</code></li>
+<li><code>order_name_amo</code></li>
+<li><code>order_price</code></li>
+<li><code>pay_date</code></li>
+</ul>
+<p>&lt;/details&gt;</p>
+<h5 id="как-база-обработает-вызов-и-что-будет-в-amocrm">Как база обработает вызов и что будет в amoCRM</h5>
+<ul>
+<li>
+<p>Логика создания сделки: сначала ищется существующая сделка/контакт по правилам базы; если подходящая сделка найдена, обновляется она, иначе создается новая.</p>
+</li>
+<li>
+<p>Режим проверки дублей: Проверять на дубли</p>
+</li>
+<li>
+<p>Искать дубль только в выбранных воронках: 12 шт.</p>
+</li>
+<li>
+<p>Учитывать закрытые этапы при поиске дубля: нет</p>
+</li>
+<li>
+<p>Добавлять телефон/email в найденный контакт: Да</p>
+</li>
+<li>
+<p>Менять имя контакта при обновлении: Нет
+&lt;details&gt;
+&lt;summary&gt;Показать 12 воронок для поиска дублей&lt;/summary&gt;</p>
+</li>
+<li>
+<p><code>ОСНОВНОЙ ОТДЕЛ - ЗАЯВКИ [6777466]</code></p>
+</li>
+<li>
+<p><code>ПАССИВНЫЙ ДОХОД [9426954]</code></p>
+</li>
+<li>
+<p><code>КРИПТОКАПИТАЛ [9498394]</code></p>
+</li>
+<li>
+<p><code>ФИНАНСОВАЯ СВОБОДА [9498398]</code></p>
+</li>
+<li>
+<p><code>ОД [9839030]</code></p>
+</li>
+<li>
+<p><code>КРИПТОКЛУБ [9578374]</code></p>
+</li>
+<li>
+<p><code>ИНВЕСТ КЛУБ [9500418]</code></p>
+</li>
+<li>
+<p><code>ОТДЕЛ КЛУБОВ [6869966]</code></p>
+</li>
+<li>
+<p><code>АПСЕЙЛЫ ОП [8910882]</code></p>
+</li>
+<li>
+<p><code>ОТДЕЛ ДИАГНОСТИК [6844390]</code></p>
+</li>
+<li>
+<p><code>ЛИДОРУБЫ [9212986]</code></p>
+</li>
+<li>
+<p><code>ДИАГНОСТЫ [9213518]</code></p>
+</li>
+</ul>
+<p>&lt;/details&gt;</p>
+<ul>
+<li>Автоотправка оплат в amoCRM: Да</li>
+<li>Базовый этап для этого вызова: ПАССИВНЫЙ ДОХОД -&gt; НОВЫЙ ЗАКАЗ [75466258]</li>
+<li>Новый заказ: ПАССИВНЫЙ ДОХОД -&gt; НОВЫЙ ЗАКАЗ [75466258]</li>
+<li>Частичная оплата: ПАССИВНЫЙ ДОХОД -&gt; НОВЫЙ ЗАКАЗ [75466258]</li>
+<li>Полная оплата: ПАССИВНЫЙ ДОХОД -&gt; НОВЫЙ ЗАКАЗ [75466258]</li>
+<li>Поле amoCRM для суммы: оплачено[payedMoney]</li>
+<li>Двигать старые сделки только с выбранных этапов: Да</li>
+<li>Этапы, из которых разрешен сдвиг: 146 этапов</li>
+<li>Не менять этап при обновлении: Нет</li>
+<li>Менять название сделки при обновлении: Да</li>
+<li>Теги сделки: {#pay_field_tag_deal_1#}</li>
+<li>Ответственный по умолчанию: EasyDrafting[12985298]</li>
+<li>Индивидуальные правила маршрутизации: нет</li>
+</ul>
+<h4 id="новая-заявка-обновл-сделку">Новая заявка обновл сделку</h4>
+<ul>
+<li>Endpoint: <code>payments</code></li>
+<li>URL вызова: <code>https://vakas-tools.ru/base/payments/8927217/93596/?number={object.number}&amp;id={object.user.id}&amp;order_id={object.id}&amp;positions={object.positions}&amp;costMoney={object.cost_money}&amp;leftCostMoney={object.left_cost_money}&amp;payedMoney={object.payed_money}&amp;status={object.status}&amp;paymentLink={object.payment_link}&amp;firstName={object.user.first_name}&amp;lastName={object.user.last_name}&amp;name={object.user.name}&amp;email={object.user.email}&amp;phone={object.user.phone}&amp;manager_name={object.manager}&amp;manager_email={object.manager_email}&amp;manager_phone={object.manager_phone}&amp;offers={object.offers}&amp;avatarUrl={object.user.avatar_url}&amp;utmS={object.user.create_session.utm_source}&amp;utmM={object.user.create_session.utm_medium}&amp;utmCa={object.user.create_session.utm_campaign}&amp;utmCo={object.user.create_session.utm_content}&amp;utmT={object.user.create_session.utm_term}&amp;p1=‘’&amp;order_name_amo={object.order_name_amo}&amp;deal_tag_1={object.deal_tag_1}</code></li>
+<li>Связанная база Vakas: <a href="../bases/93596.html">93596. База 93596</a></li>
+</ul>
+<h5 id="когда-срабатывает-в-процессе-1">Когда срабатывает в процессе</h5>
+<ul>
+<li>Сценарий 1: <code>Начало работы</code> --Выполнено--&gt; <code>Название Заказ_ЗапускПД5.0</code> --Выполнено--&gt; <code>Тег Запуск_ПД_2026</code> --Выполнено--&gt; <code>Новая заявка обновл сделку</code></li>
+</ul>
+<h5 id="что-уходит-в-vakas-1">Что уходит в Vakas</h5>
+<p>&lt;details&gt;
+&lt;summary&gt;Показать 27 параметров запроса&lt;/summary&gt;</p>
+<ul>
+<li><code>number</code></li>
+<li><code>id</code></li>
+<li><code>order_id</code></li>
+<li><code>positions</code></li>
+<li><code>costMoney</code></li>
+<li><code>leftCostMoney</code></li>
+<li><code>payedMoney</code></li>
+<li><code>status</code></li>
+<li><code>paymentLink</code></li>
+<li><code>firstName</code></li>
+<li><code>lastName</code></li>
+<li><code>name</code></li>
+<li><code>email</code></li>
+<li><code>phone</code></li>
+<li><code>manager_name</code></li>
+<li><code>manager_email</code></li>
+<li><code>manager_phone</code></li>
+<li><code>offers</code></li>
+<li><code>avatarUrl</code></li>
+<li><code>utmS</code></li>
+<li><code>utmM</code></li>
+<li><code>utmCa</code></li>
+<li><code>utmCo</code></li>
+<li><code>utmT</code></li>
+<li><code>p1</code></li>
+<li><code>order_name_amo</code></li>
+<li><code>deal_tag_1</code></li>
+</ul>
+<p>&lt;/details&gt;</p>
+<h5 id="как-база-обработает-вызов-и-что-будет-в-amocrm-1">Как база обработает вызов и что будет в amoCRM</h5>
+<ul>
+<li>
+<p>Логика создания сделки: сначала ищется существующая сделка/контакт по правилам базы; если подходящая сделка найдена, обновляется она, иначе создается новая.</p>
+</li>
+<li>
+<p>Режим проверки дублей: Проверять на дубли</p>
+</li>
+<li>
+<p>Искать дубль только в выбранных воронках: 12 шт.</p>
+</li>
+<li>
+<p>Учитывать закрытые этапы при поиске дубля: нет</p>
+</li>
+<li>
+<p>Добавлять телефон/email в найденный контакт: Да</p>
+</li>
+<li>
+<p>Менять имя контакта при обновлении: Нет
+&lt;details&gt;
+&lt;summary&gt;Показать 12 воронок для поиска дублей&lt;/summary&gt;</p>
+</li>
+<li>
+<p><code>ОСНОВНОЙ ОТДЕЛ - ЗАЯВКИ [6777466]</code></p>
+</li>
+<li>
+<p><code>ПАССИВНЫЙ ДОХОД [9426954]</code></p>
+</li>
+<li>
+<p><code>КРИПТОКАПИТАЛ [9498394]</code></p>
+</li>
+<li>
+<p><code>ФИНАНСОВАЯ СВОБОДА [9498398]</code></p>
+</li>
+<li>
+<p><code>ОД [9839030]</code></p>
+</li>
+<li>
+<p><code>КРИПТОКЛУБ [9578374]</code></p>
+</li>
+<li>
+<p><code>ИНВЕСТ КЛУБ [9500418]</code></p>
+</li>
+<li>
+<p><code>ОТДЕЛ КЛУБОВ [6869966]</code></p>
+</li>
+<li>
+<p><code>АПСЕЙЛЫ ОП [8910882]</code></p>
+</li>
+<li>
+<p><code>ОТДЕЛ ДИАГНОСТИК [6844390]</code></p>
+</li>
+<li>
+<p><code>ЛИДОРУБЫ [9212986]</code></p>
+</li>
+<li>
+<p><code>ДИАГНОСТЫ [9213518]</code></p>
+</li>
+</ul>
+<p>&lt;/details&gt;</p>
+<ul>
+<li>Автоотправка оплат в amoCRM: Да</li>
+<li>Базовый этап для этого вызова: ПАССИВНЫЙ ДОХОД -&gt; НОВЫЙ ЗАКАЗ [75466258]</li>
+<li>Новый заказ: ПАССИВНЫЙ ДОХОД -&gt; НОВЫЙ ЗАКАЗ [75466258]</li>
+<li>Частичная оплата: ПАССИВНЫЙ ДОХОД -&gt; НОВЫЙ ЗАКАЗ [75466258]</li>
+<li>Полная оплата: ПАССИВНЫЙ ДОХОД -&gt; НОВЫЙ ЗАКАЗ [75466258]</li>
+<li>Поле amoCRM для суммы: оплачено[payedMoney]</li>
+<li>Двигать старые сделки только с выбранных этапов: Да</li>
+<li>Этапы, из которых разрешен сдвиг: 146 этапов</li>
+<li>Не менять этап при обновлении: Нет</li>
+<li>Менять название сделки при обновлении: Да</li>
+<li>Теги сделки: {#pay_field_tag_deal_1#}</li>
+<li>Ответственный по умолчанию: EasyDrafting[12985298]</li>
+<li>Индивидуальные правила маршрутизации: нет</li>
+</ul>
+</article></main><script>window.DOC_ROOT="../../";</script>
+<script src="../../search-data.js"></script><script src="../../nav-data.js"></script><script src="../../gitbook.js"></script></body></html>

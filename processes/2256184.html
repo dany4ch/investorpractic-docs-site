@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ru"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>[AMO] [ED] Отдел Доведения Регистрации — Investor Practic</title><link rel="stylesheet" href="../offline.css"></head>
+<body><aside><a class="home" href="../index.html">Investor Practic</a>
+<label for="search">Поиск по страницам</label><input id="search" type="search" placeholder="Название или ID">
+<div id="results"></div><nav id="doc-nav"></nav></aside>
+<main><div class="toolbar"><a href="../index.html">Главная</a><span>Документация · 03.11.2026</span></div>
+<article><h1 id="amo-ed-отдел-доведения-регистрации">[AMO] [ED] Отдел Доведения Регистрации</h1>
+<ul>
+<li>ID процесса: <code>2256184</code></li>
+<li>Объект: Заказы</li>
+<li>Статус: Ожидание событий</li>
+</ul>
+<p><a href="https://investorpractic.getcourse.ru/pl/tasks/mission/update?id=2256184">Общее</a> | <a href="https://investorpractic.getcourse.ru/pl/tasks/mission/process?id=2256184">Схема процесса</a></p>
+<h2 id="описание-из-getcourse">Описание из GetCourse</h2>
+<blockquote>
+<p>30.06.2026. Подробный ход процесса GetCourse:</p>
+<ul>
+<li>
+<p>Главное: В процесс попадают заказы по правилу: Предложение (ID: 7087359) и С тегом (ID: 2069802, 2070128).</p>
+</li>
+<li>
+<p>Процесс работает с объектом GetCourse: Заказы. Текущий статус процесса: Ожидание событий.</p>
+</li>
+</ul>
+<p>Как идет процесс внутри GetCourse:</p>
+<ul>
+<li>Схема состоит из 9 блоков и 12 переходов.</li>
+</ul>
+<p>Конец подробного хода процесса GetCourse.</p>
+<hr />
+<p>30.06.2026. Актуальное описание процесса:</p>
+<ul>
+<li>
+<p>Главное: В процесс попадают заказы по правилу: Предложение (ID: 7087359) и С тегом (ID: 2069802, 2070128).</p>
+</li>
+<li>
+<p>Процесс работает с объектом GetCourse: Заказы. Текущий статус процесса: Ожидание событий.</p>
+</li>
+</ul>
+<p>Конец актуального описания процесса.</p>
+<hr />
+<p>https://vakas-tools.ru/account/base/amo.php?base_id=87770</p>
+</blockquote>
+<h2 id="понятное-описание-процесса">Понятное описание процесса</h2>
+<ul>
+<li>Процесс работает с объектом GetCourse: Заказы. Текущий статус процесса: Ожидание событий.</li>
+<li>На вход попадают данные так: В процесс попадают заказы по правилу: Предложение (ID: 7087359) и С тегом (ID: 2069802, 2070128).</li>
+<li>Внутри схемы есть дополнительные проверки/ожидания: 2. Основные блоки: «Имеет тег trening-niagara? (копия)»; «Имеет тег thk-niagara? (копия)».</li>
+<li>Дальше процесс делает прямые вызовы Vakas: 1. Напрямую задействованы базы: 87770.</li>
+<li>Передача: 87770. Отдел Доведения Регистрации: Оплаты и заказы. Передаются параметры: <code>number</code>, <code>id</code>, <code>order_id</code>, <code>positions</code>, <code>costMoney</code>, <code>leftCostMoney</code>, <code>payedMoney</code>, <code>status</code>, <code>paymentLink</code>, <code>firstName</code> и другие.</li>
+<li>Что происходит в amoCRM: На входе в этап ОТДЕЛ - ДОВЕДЕНИЯ -&gt; РЕГИСТРАЦИИ [71064150] база ищет дубль и может взять старую сделку только из заранее разрешенных этапов.</li>
+</ul>
+<h2 id="ход-процесса-в-getcourse">Ход процесса в GetCourse</h2>
+<ul>
+<li>Схема состоит из 9 блоков и 12 переходов.</li>
+<li>По типам: стартов 1, условий/ожиданий 2, вызовов URL 3, изменений полей 2, финалов 1.</li>
+</ul>
+<p>Блоки процесса: что делают и зачем нужны:</p>
+<ul>
+<li>Блок <code>39119661</code> «Начало работы» (старт). Что делает: Запускает выполнение схемы для объекта, который попал под правило входа процесса. Зачем нужен: Нужен как точка входа: от него GetCourse начинает движение объекта по схеме. Дальше: если результат «Выполнено», идет в «Имеет тег trening-niagara? (копия)».</li>
+<li>Блок <code>39126433</code> «Имеет тег trening-niagara? (копия)» (условие). Что делает: Проверяет условие: С тегом (ID: 2069802). Зачем нужен: Нужен, чтобы разделить поток: подходящих пользователей/заказы отправить дальше, неподходящих перевести на другую ветку или завершить. Дальше: если результат «Нет», идет в «Имеет тег thk-niagara? (копия)»; если результат «Да», идет в «Добавляем тег 2 для передачи в амо (копия)».</li>
+<li>Блок <code>39126434</code> «Добавляем тег 2 для передачи в амо (копия)» (изменение поля). Что делает: меняет поле <code>deal_tag_2</code> (Установить равным). значение: trening-niagara Зачем нужен: Нужен, чтобы записать внутри GetCourse технический признак/значение, которое потом используется в передаче или логике ветвления. Дальше: если результат «Выполнено», идет в «Вызвать url».</li>
+<li>Блок <code>39120002</code> «Вызвать url» (вызов URL). Что делает: Передает в Vakas: 87770. Отдел Доведения Регистрации, канал «Оплаты и заказы» (GET); параметры: <code>number</code>, <code>id</code>, <code>order_id</code>, <code>positions</code>, <code>costMoney</code>, <code>leftCostMoney</code>, <code>payedMoney</code>, <code>status</code>, <code>paymentLink</code>, <code>firstName</code>, <code>lastName</code>, <code>name</code>, <code>email</code>, <code>phone</code> и другие; timeout 300 сек. Зачем нужен: Нужен, чтобы передать подходящий объект в 87770. Отдел Доведения Регистрации; дальше На входе в этап ОТДЕЛ - ДОВЕДЕНИЯ -&gt; РЕГИСТРАЦИИ [71064150] база ищет дубль и может взять старую сделку только из заранее разрешенных этапов. Дальше: если результат «Ошибка», идет в «n8n fail после Вызвать url #39120002»; если результат «Выполнено», идет в «n8n success после Вызвать url #39120002».</li>
+<li>Блок <code>43525679</code> «n8n success после Вызвать url #39120002» (вызов URL). Что делает: Вызывает внешний URL: testn8n.easydrafting.ru/webhook/gc-vakas-retry-events (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>order_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен, чтобы процесс GetCourse передал данные во внешний сервис testn8n.easydrafting.ru. Дальше: если результат «Ошибка», идет в «Завершение процесса»; если результат «Выполнено», идет в «Завершение процесса».</li>
+<li>Блок <code>39120182</code> «Завершение процесса» (завершение). Что делает: Завершает ветку процесса после выполненных проверок и действий. Зачем нужен: Нужен, чтобы закрыть текущую ветку и не гонять объект по процессу повторно. Дальше переходов нет: это конечная точка ветки.</li>
+<li>Блок <code>43525680</code> «n8n fail после Вызвать url #39120002» (вызов URL). Что делает: Вызывает внешний URL: testn8n.easydrafting.ru/webhook/gc-vakas-retry-events (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>order_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен, чтобы процесс GetCourse передал данные во внешний сервис testn8n.easydrafting.ru. Дальше: если результат «Ошибка», идет в «Имеет тег trening-niagara? (копия)»; если результат «Выполнено», идет в «Добавляем тег 2 для передачи в амо (копия)».</li>
+<li>Блок <code>39126435</code> «Добавляем тег 2 для передачи в амо (копия)» (изменение поля). Что делает: меняет поле <code>deal_tag_2</code> (Установить равным). значение: thk-niagara Зачем нужен: Нужен, чтобы записать внутри GetCourse технический признак/значение, которое потом используется в передаче или логике ветвления. Дальше: если результат «Выполнено», идет в «Вызвать url».</li>
+<li>Блок <code>39126436</code> «Имеет тег thk-niagara? (копия)» (условие). Что делает: Проверяет условие: С тегом (ID: 2070128). Зачем нужен: Нужен, чтобы разделить поток: подходящих пользователей/заказы отправить дальше, неподходящих перевести на другую ветку или завершить. Дальше: если результат «Да», идет в «Добавляем тег 2 для передачи в амо (копия)».</li>
+</ul>
+<h2 id="скриншоты-процесса">Скриншоты процесса</h2>
+<p><img src="../assets/rules/2256184_rule.png" alt="Правило входа 2256184" /></p>
+<p><img src="../assets/processes/2256184_process.png" alt="Схема процесса 2256184" /></p>
+<p>Откуда: процесс берет заказы с отбором по тегам. Полное правило показано на скриншоте ниже.</p>
+<p>Что проверяет по пути: Имеет тег trening-niagara?, Имеет тег thk-niagara?.</p>
+<p>Куда ведет: вызывает внешние URL: Вызвать url; обновляет доп. поля GetCourse (1 разных действий).</p>
+<h2 id="логика-vakas-и-amocrm">Логика Vakas и amoCRM</h2>
+<ul>
+<li>Условие входа в процесс: Предложение (ID: 7087359) и С тегом (ID: 2069802, 2070128).</li>
+<li>Вызовов Vakas в схеме: <code>1</code>. Уникальных URL Vakas: <code>1</code>. Связанных баз: <code>1</code>.</li>
+</ul>
+<h3 id="связанная-база-vakas-87770-отдел-доведения-регистрации">Связанная база Vakas: 87770. Отдел Доведения Регистрации</h3>
+<ul>
+<li>Использование в процессе: Оплаты и заказы</li>
+<li>Документация базы: <a href="../vakas-bases/87770.html">87770. Отдел Доведения Регистрации</a></li>
+<li>Страница настройки: <a href="https://vakas-tools.ru/account/base/amo.php?mode=contact&amp;base_id=87770">Vakas</a></li>
+<li>Поиск дублей: Проверять на дубли</li>
+<li>Искать только в выбранных воронках: 1</li>
+<li>Ответственный по контакту имеет приоритет: Нет</li>
+</ul>
+<h4 id="вызовы-из-процесса">Вызовы из процесса</h4>
+<h4 id="вызвать-url">Вызвать url</h4>
+<ul>
+<li>Endpoint: <code>payments</code></li>
+<li>URL вызова: <code>https://vakas-tools.ru/base/payments/8927217/87770/?number={object.number}&amp;id={object.user.id}&amp;order_id={object.id}&amp;positions={object.positions}&amp;costMoney={object.cost_money}&amp;leftCostMoney={object.left_cost_money}&amp;payedMoney={object.payed_money}&amp;status={object.status}&amp;paymentLink={object.payment_link}&amp;firstName={object.user.first_name}&amp;lastName={object.user.last_name}&amp;name={object.user.name}&amp;email={object.user.email}&amp;phone={object.user.phone}&amp;manager_name={object.manager}&amp;manager_email={object.manager_email}&amp;manager_phone={object.manager_phone}&amp;offers={object.offers}&amp;avatarUrl={object.user.avatar_url}&amp;utmS={object.user.create_session.utm_source}&amp;utmM={object.user.create_session.utm_medium}&amp;utmCa={object.user.create_session.utm_campaign}&amp;utmCo={object.user.create_session.utm_content}&amp;utmT={object.user.create_session.utm_term}&amp;order_name_amo={object.order_name_amo}&amp;order_price={cost_money_value}&amp;pay_date={object.payed_at format=&quot;d.m.Y H:i&quot;}&amp;tag_deal_2={object.deal_tag_2}</code></li>
+<li>Связанная база Vakas: <a href="../vakas-bases/87770.html">87770. Отдел Доведения Регистрации</a></li>
+</ul>
+<h5 id="когда-срабатывает-в-процессе">Когда срабатывает в процессе</h5>
+<ul>
+<li>Сценарий 1: <code>Начало работы</code> --Выполнено--&gt; <code>Имеет тег trening-niagara? (копия)</code> --Нет--&gt; <code>Имеет тег thk-niagara? (копия)</code> --Да--&gt; <code>Добавляем тег 2 для передачи в амо (копия)</code> --Выполнено--&gt; <code>Вызвать url</code>
+<ul>
+<li>условие <code>Имеет тег trening-niagara? (копия)</code>: С тегом (ID: 2069802) -&gt; <code>Нет</code></li>
+<li>условие <code>Имеет тег thk-niagara? (копия)</code>: С тегом (ID: 2070128) -&gt; <code>Да</code></li>
+</ul>
+</li>
+<li>Сценарий 2: <code>Начало работы</code> --Выполнено--&gt; <code>Имеет тег trening-niagara? (копия)</code> --Да--&gt; <code>Добавляем тег 2 для передачи в амо (копия)</code> --Выполнено--&gt; <code>Вызвать url</code>
+<ul>
+<li>условие <code>Имеет тег trening-niagara? (копия)</code>: С тегом (ID: 2069802) -&gt; <code>Да</code></li>
+</ul>
+</li>
+</ul>
+<h5 id="что-уходит-в-vakas">Что уходит в Vakas</h5>
+<p>&lt;details&gt;
+&lt;summary&gt;Показать 28 параметров запроса&lt;/summary&gt;</p>
+<ul>
+<li><code>number</code></li>
+<li><code>id</code></li>
+<li><code>order_id</code></li>
+<li><code>positions</code></li>
+<li><code>costMoney</code></li>
+<li><code>leftCostMoney</code></li>
+<li><code>payedMoney</code></li>
+<li><code>status</code></li>
+<li><code>paymentLink</code></li>
+<li><code>firstName</code></li>
+<li><code>lastName</code></li>
+<li><code>name</code></li>
+<li><code>email</code></li>
+<li><code>phone</code></li>
+<li><code>manager_name</code></li>
+<li><code>manager_email</code></li>
+<li><code>manager_phone</code></li>
+<li><code>offers</code></li>
+<li><code>avatarUrl</code></li>
+<li><code>utmS</code></li>
+<li><code>utmM</code></li>
+<li><code>utmCa</code></li>
+<li><code>utmCo</code></li>
+<li><code>utmT</code></li>
+<li><code>order_name_amo</code></li>
+<li><code>order_price</code></li>
+<li><code>pay_date</code></li>
+<li><code>tag_deal_2</code></li>
+</ul>
+<p>&lt;/details&gt;</p>
+<h5 id="как-база-обработает-вызов-и-что-будет-в-amocrm">Как база обработает вызов и что будет в amoCRM</h5>
+<ul>
+<li>Логика создания сделки: сначала ищется существующая сделка/контакт по правилам базы; если подходящая сделка найдена, обновляется она, иначе создается новая.</li>
+<li>Режим проверки дублей: Проверять на дубли</li>
+<li>Искать дубль только в выбранных воронках: 1 шт.</li>
+<li>Учитывать закрытые этапы при поиске дубля: нет</li>
+<li>Добавлять телефон/email в найденный контакт: Нет</li>
+<li>Менять имя контакта при обновлении: Нет</li>
+<li><code>ОТДЕЛ - ДОВЕДЕНИЯ [6795422]</code></li>
+<li>Автоотправка оплат в amoCRM: Да</li>
+<li>Базовый этап для этого вызова: <em>определяется по типу оплаты</em></li>
+<li>Новый заказ: ОТДЕЛ - ДОВЕДЕНИЯ -&gt; РЕГИСТРАЦИИ [71064150]</li>
+<li>Частичная оплата: ОТДЕЛ - ДОВЕДЕНИЯ -&gt; РЕГИСТРАЦИИ [71064150]</li>
+<li>Полная оплата: ОТДЕЛ - ДОВЕДЕНИЯ -&gt; РЕГИСТРАЦИИ [71064150]</li>
+<li>Поле amoCRM для суммы: оплачено[payedMoney]</li>
+<li>Двигать старые сделки только с выбранных этапов: Да</li>
+<li>Этапы, из которых разрешен сдвиг: 13 этапов</li>
+<li>Не менять этап при обновлении: Нет</li>
+<li>Менять название сделки при обновлении: Нет</li>
+<li>Теги сделки: {pay_field_tag_deal_2}</li>
+<li>Ответственный по умолчанию: EasyDrafting[12985298]</li>
+<li>Индивидуальные правила маршрутизации: нет</li>
+</ul>
+</article></main><script>window.DOC_ROOT="../";</script>
+<script src="../search-data.js"></script><script src="../nav-data.js"></script><script src="../gitbook.js"></script></body></html>

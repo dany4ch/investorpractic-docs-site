@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ru"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>[AMO] Заявки с виджета Пассивный доход, 2-й поток - Комплект &quot;Эксперт&quot; — Investor Practic</title><link rel="stylesheet" href="../../offline.css"></head>
+<body><aside><a class="home" href="../../index.html">Investor Practic</a>
+<label for="search">Поиск по страницам</label><input id="search" type="search" placeholder="Название или ID">
+<div id="results"></div><nav id="doc-nav"></nav></aside>
+<main><div class="toolbar"><a href="../../index.html">Главная</a><span>Документация · 03.11.2026</span></div>
+<article><h1 id="amo-заявки-с-виджета-пассивный-доход-2-й-поток---комплект-эксперт">[AMO] Заявки с виджета Пассивный доход, 2-й поток - Комплект &quot;Эксперт&quot;</h1>
+<ul>
+<li>ID процесса: <code>2073398</code></li>
+<li>Объект: Заказы</li>
+<li>Статус: Ожидание событий</li>
+<li>Внутренняя страница: <a href="../../processes/2073398.html">2073398. [AMO] Заявки с виджета Пассивный доход, 2-й поток - Комплект &quot;Эксперт&quot;</a></li>
+<li>GetCourse: <a href="https://investorpractic.getcourse.ru/pl/tasks/mission/update?id=2073398">Карточка</a> | <a href="https://investorpractic.getcourse.ru/pl/tasks/mission/process?id=2073398">Схема процесса</a></li>
+</ul>
+<h2 id="скриншоты-процесса">Скриншоты процесса</h2>
+<p><img src="../../assets/rules/2073398_rule.png" alt="Правило входа 2073398" /></p>
+<p><img src="../../assets/processes/2073398_process.png" alt="Схема процесса 2073398" /></p>
+<h2 id="коротко-для-заказчика">Коротко для заказчика</h2>
+<ul>
+<li>Главное: В процесс попадают заказы по правилу: Предложение (ID: 7087051).</li>
+<li>Дальше он передает данные как: Оплаты и заказы.</li>
+<li>Связанных баз Vakas: 1.</li>
+</ul>
+<h2 id="понятное-описание-процесса">Понятное описание процесса</h2>
+<ul>
+<li>Процесс работает с объектом GetCourse: Заказы. Текущий статус процесса: Ожидание событий.</li>
+<li>На вход попадают данные так: В процесс попадают заказы по правилу: Предложение (ID: 7087051).</li>
+<li>Дополнительные условия внутри схемы не извлечены: процесс идет напрямую по основной ветке или условия не подписаны.</li>
+<li>Дальше процесс делает прямые вызовы Vakas: 1. Напрямую задействованы базы: 76313.</li>
+<li>Передача: 76313. Заявки с виджета Пассивный доход, 2-й поток - Комплект &quot;Эксперт&quot;: Оплаты и заказы. Передаются параметры: <code>number</code>, <code>id</code>, <code>order_id</code>, <code>positions</code>, <code>costMoney</code>, <code>leftCostMoney</code>, <code>payedMoney</code>, <code>status</code>, <code>paymentLink</code>, <code>firstName</code> и другие.</li>
+<li>Что происходит в amoCRM: На входе в этап ПАССИВНЫЙ ДОХОД -&gt; НОВЫЙ ЗАКАЗ [75466258] база ищет дубль и при необходимости переводит найденную сделку в рабочий этап.</li>
+</ul>
+<h2 id="ход-процесса-в-getcourse">Ход процесса в GetCourse</h2>
+<ul>
+<li>Схема состоит из 8 блоков и 10 переходов.</li>
+<li>По типам: стартов 1, условий/ожиданий 0, вызовов URL 3, изменений полей 2, финалов 1.</li>
+</ul>
+<p>Блоки процесса: что делают и зачем нужны:</p>
+<ul>
+<li>Блок <code>35902066</code> «Начало работы» (старт). Что делает: Запускает выполнение схемы для объекта, который попал под правило входа процесса. Зачем нужен: Нужен как точка входа: от него GetCourse начинает движение объекта по схеме. Дальше: если результат «Выполнено», идет в «Вызвать url».</li>
+<li>Блок <code>35902128</code> «Вызвать url» (вызов URL). Что делает: Передает в Vakas: 76313. Заявки с виджета Пассивный доход, 2-й поток - Комплект &quot;Эксперт&quot;, канал «Оплаты и заказы» (GET); параметры: <code>number</code>, <code>id</code>, <code>order_id</code>, <code>positions</code>, <code>costMoney</code>, <code>leftCostMoney</code>, <code>payedMoney</code>, <code>status</code>, <code>paymentLink</code>, <code>firstName</code>, <code>lastName</code>, <code>name</code>, <code>email</code>, <code>phone</code> и другие; timeout 300 сек. Зачем нужен: Нужен, чтобы передать подходящий объект в 76313. Заявки с виджета Пассивный доход, 2-й поток - Комплект &quot;Эксперт&quot;; дальше На входе в этап ПАССИВНЫЙ ДОХОД -&gt; НОВЫЙ ЗАКАЗ [75466258] база ищет дубль и при необходимости переводит найденную сделку в рабочий этап. Дальше: если результат «Ошибка», идет в «n8n fail после Вызвать url #35902128»; если результат «Выполнено», идет в «n8n success после Вызвать url #35902128».</li>
+<li>Блок <code>43524793</code> «n8n success после Вызвать url #35902128» (вызов URL). Что делает: Вызывает внешний URL: testn8n.easydrafting.ru/webhook/gc-vakas-retry-events (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>order_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен, чтобы процесс GetCourse передал данные во внешний сервис testn8n.easydrafting.ru. Дальше: если результат «Ошибка», идет в «error_vakas 0»; если результат «Выполнено», идет в «error_vakas 0».</li>
+<li>Блок <code>43435212</code> «error_vakas 0» (изменение поля). Что делает: меняет поле <code>error_vakas</code> (Установить равным). значение: 0 Зачем нужен: Нужен, чтобы записать внутри GetCourse технический признак/значение, которое потом используется в передаче или логике ветвления. Дальше: если результат «Выполнено», идет в «Завершение процесса».</li>
+<li>Блок <code>35902134</code> «Завершение процесса» (завершение). Что делает: Завершает ветку процесса после выполненных проверок и действий. Зачем нужен: Нужен, чтобы закрыть текущую ветку и не гонять объект по процессу повторно. Дальше переходов нет: это конечная точка ветки.</li>
+<li>Блок <code>43524794</code> «n8n fail после Вызвать url #35902128» (вызов URL). Что делает: Вызывает внешний URL: testn8n.easydrafting.ru/webhook/gc-vakas-retry-events (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>order_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен, чтобы процесс GetCourse передал данные во внешний сервис testn8n.easydrafting.ru. Дальше: если результат «Ошибка», идет в «Начало работы»; если результат «Выполнено», идет в «Начало работы».</li>
+<li>Блок <code>43435210</code> «error_vakas 1» (изменение поля). Что делает: меняет поле <code>error_vakas</code> (Установить равным). значение: 1 Зачем нужен: Нужен, чтобы записать внутри GetCourse технический признак/значение, которое потом используется в передаче или логике ветвления. Дальше: если результат «Выполнено», идет в «Задержка».</li>
+<li>Блок <code>43435211</code> «Задержка» (таймер). Что делает: Делает паузу или ждет заданное время перед следующим шагом. Зачем нужен: Нужен для задержки между проверкой и передачей, чтобы данные успели появиться или чтобы соблюсти нужный порядок обработки. Дальше: если результат «Выполнено», идет в «Начало работы».</li>
+</ul>
+<h2 id="что-именно-входит-в-процесс">Что именно входит в процесс</h2>
+<ul>
+<li>В процесс попадают заказы по правилу: Предложение (ID: 7087051).</li>
+</ul>
+<h2 id="как-именно-настроено-правило">Как именно настроено правило</h2>
+<ul>
+<li>Предложение (ID: 7087051)</li>
+</ul>
+<h2 id="куда-и-как-передается-дальше">Куда и как передается дальше</h2>
+<table>
+<thead>
+<tr>
+<th>База Vakas</th>
+<th>Что передается</th>
+<th>Этап в amoCRM</th>
+<th>Что происходит со сделкой</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../bases/76313.html">76313. Заявки с виджета Пассивный доход, 2-й поток - Комплект &quot;Эксперт&quot;</a></td>
+<td>Оплаты и заказы</td>
+<td>ПАССИВНЫЙ ДОХОД -&gt; НОВЫЙ ЗАКАЗ [75466258]</td>
+<td>На входе в этап ПАССИВНЫЙ ДОХОД -&gt; НОВЫЙ ЗАКАЗ [75466258] база ищет дубль и при необходимости переводит найденную сделку в рабочий этап.</td>
+</tr>
+</tbody>
+</table>
+</article></main><script>window.DOC_ROOT="../../";</script>
+<script src="../../search-data.js"></script><script src="../../nav-data.js"></script><script src="../../gitbook.js"></script></body></html>

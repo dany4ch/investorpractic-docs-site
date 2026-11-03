@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ru"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>[AMO] [ED] ПДО 101081 — Investor Practic</title><link rel="stylesheet" href="../../offline.css"></head>
+<body><aside><a class="home" href="../../index.html">Investor Practic</a>
+<label for="search">Поиск по страницам</label><input id="search" type="search" placeholder="Название или ID">
+<div id="results"></div><nav id="doc-nav"></nav></aside>
+<main><div class="toolbar"><a href="../../index.html">Главная</a><span>Документация · 03.11.2026</span></div>
+<article><h1 id="amo-ed-пдо-101081">[AMO] [ED] ПДО 101081</h1>
+<ul>
+<li>ID процесса: <code>2469476</code></li>
+<li>Объект: Заказы</li>
+<li>Статус: Ожидание событий</li>
+</ul>
+<p><a href="https://investorpractic.getcourse.ru/pl/tasks/mission/update?id=2469476">Общее</a> | <a href="https://investorpractic.getcourse.ru/pl/tasks/mission/process?id=2469476">Схема процесса</a></p>
+<h2 id="описание-из-getcourse">Описание из GetCourse</h2>
+<blockquote>
+<p>15.05.2026 по задаче https://spi.bitrix24.ru/online/?IM_TASK=chat24416&amp;IM_MESSAGE=2110576</p>
+<p>https://vakas-tools.ru/account/base/amo.php?base_id=101081 - База для заказов</p>
+<p>Продукты:
+Пассивный доход на облигациях. Лайт
+https://investorpractic.getcourse.ru/pl/sales/product/update?id=4351601</p>
+<p>Пассивный доход на облигациях. Стандарт
+https://investorpractic.getcourse.ru/pl/sales/product/update?id=4351611</p>
+<p>Название: Заказ_ПДО_Авто
+Тег: Заказ_ПДО_Авто</p>
+<p>Воронка ПДО - https://investorpractic.amocrm.ru/leads/pipeline/10923418/?skip_filter=Y</p>
+<p>Новый заказ в гк - Новый заказ
+ч/о в гк - Новый заказ
+Оплачено в гк - Новый заказ</p>
+</blockquote>
+<h2 id="понятное-описание-процесса">Понятное описание процесса</h2>
+<ul>
+<li>Процесс работает с объектом GetCourse: Заказы. Текущий статус процесса: Ожидание событий.</li>
+<li>На вход попадают данные так: В процесс попадают заказы по продуктам с тегом «ПДО-АМО».</li>
+<li>Техническое правило входа в GetCourse: Продукт (все с тегами: ПДО-АМО)..</li>
+<li>Дополнительные условия внутри схемы не извлечены: процесс идет напрямую по основной ветке или условия не подписаны.</li>
+<li>Дальше процесс делает прямые вызовы Vakas: 1. Напрямую задействованы базы: 101081.</li>
+<li>Передача: 101081. ПДО: Оплаты и заказы. Передаются параметры: <code>number</code>, <code>id</code>, <code>order_id</code>, <code>positions</code>, <code>costMoney</code>, <code>leftCostMoney</code>, <code>payedMoney</code>, <code>status</code>, <code>paymentLink</code>, <code>firstName</code> и другие.</li>
+<li>Что происходит в amoCRM: На входе в этап ПДО -&gt; НОВЫЙ ЗАКАЗ [85904438] база ищет дубль и может взять старую сделку только из заранее разрешенных этапов.</li>
+</ul>
+<h2 id="ход-процесса-в-getcourse">Ход процесса в GetCourse</h2>
+<ul>
+<li>Схема состоит из 2 блоков и 1 переходов.</li>
+<li>По типам: стартов 1, условий/ожиданий 0, вызовов URL 0, изменений полей 0, финалов 0.</li>
+</ul>
+<p>Блоки процесса: что делают и зачем нужны:</p>
+<ul>
+<li>Блок <code>1</code> «Начало работы» (старт). Что делает: Запускает выполнение схемы для объекта, который попал под правило входа процесса. Зачем нужен: Нужен как точка входа: от него GetCourse начинает движение объекта по схеме. Дальше: если результат «Выполнено», идет в «Вызвать url».</li>
+<li>Блок <code>2</code> «Вызвать url» (операция request). Что делает: Выполняет служебный шаг схемы «Вызвать url». Зачем нужен: Нужен как промежуточный технический шаг в схеме «Вызвать url». Дальше переходов нет: это конечная точка ветки.</li>
+</ul>
+<h2 id="скриншоты-процесса">Скриншоты процесса</h2>
+<p><img src="../../assets/rules/2469476_rule.png" alt="Правило входа 2469476" /></p>
+<p><img src="../../assets/processes/2469476_process.png" alt="Схема процесса 2469476" /></p>
+<p>Откуда: процесс берет объекты по правилу входа «Продукт (все с тегами: ПДО-АМО).».</p>
+<p>Что проверяет по пути: перед отправкой в база 101081 (Оплаты и заказы).</p>
+<p>Куда ведет: вызывает внешний URL Vakas и передает данные в база 101081 (Оплаты и заказы).</p>
+<h2 id="логика-vakas-и-amocrm">Логика Vakas и amoCRM</h2>
+<ul>
+<li>Условие входа в процесс: Продукт (все с тегами: ПДО-АМО)..</li>
+<li>Вызовов Vakas в схеме: <code>1</code>. Уникальных URL Vakas: <code>1</code>. Связанных баз: <code>1</code>.</li>
+</ul>
+<h3 id="связанная-база-vakas-101081-пдо">Связанная база Vakas: 101081. ПДО</h3>
+<ul>
+<li>Использование в процессе: Оплаты и заказы</li>
+<li>Документация базы: <a href="../bases/101081.html">101081. ПДО</a></li>
+<li>Страница настройки: <a href="https://vakas-tools.ru/account/base/amo.php?mode=contact&amp;base_id=101081">Vakas</a></li>
+<li>Поиск дублей: Проверять на дубли</li>
+<li>Искать только в выбранных воронках: 19</li>
+<li>Ответственный по контакту имеет приоритет: Да</li>
+</ul>
+<h4 id="вызовы-из-процесса">Вызовы из процесса</h4>
+<h4 id="вызвать-url">Вызвать url</h4>
+<ul>
+<li>Endpoint: <code>payments</code></li>
+<li>URL вызова: <code>https://vakas-tools.ru/base/payments/8927217/101081/?number={object.number}&amp;id={object.user.id}&amp;order_id={object.id}&amp;positions={object.positions}&amp;costMoney={object.cost_money}&amp;leftCostMoney={object.left_cost_money}&amp;payedMoney={object.payed_money}&amp;status={object.status}&amp;paymentLink={object.payment_link}&amp;firstName={object.user.first_name}&amp;lastName={object.user.last_name}&amp;name={object.user.name}&amp;email={object.user.email}&amp;phone={object.user.phone}&amp;offers={object.offers}&amp;order_name_amo={object.order_name_amo}&amp;deal_tag_1={object.deal_tag_1}</code></li>
+<li>Связанная база Vakas: <a href="../bases/101081.html">101081. ПДО</a></li>
+</ul>
+<h5 id="когда-срабатывает-в-процессе">Когда срабатывает в процессе</h5>
+<ul>
+<li>Сценарий 1: <code>Начало работы</code> --Выполнено--&gt; <code>Вызвать url</code></li>
+</ul>
+<h5 id="что-уходит-в-vakas">Что уходит в Vakas</h5>
+<p>&lt;details&gt;
+&lt;summary&gt;Показать 17 параметров запроса&lt;/summary&gt;</p>
+<ul>
+<li><code>number</code></li>
+<li><code>id</code></li>
+<li><code>order_id</code></li>
+<li><code>positions</code></li>
+<li><code>costMoney</code></li>
+<li><code>leftCostMoney</code></li>
+<li><code>payedMoney</code></li>
+<li><code>status</code></li>
+<li><code>paymentLink</code></li>
+<li><code>firstName</code></li>
+<li><code>lastName</code></li>
+<li><code>name</code></li>
+<li><code>email</code></li>
+<li><code>phone</code></li>
+<li><code>offers</code></li>
+<li><code>order_name_amo</code></li>
+<li><code>deal_tag_1</code></li>
+</ul>
+<p>&lt;/details&gt;</p>
+<h5 id="как-база-обработает-вызов-и-что-будет-в-amocrm">Как база обработает вызов и что будет в amoCRM</h5>
+<ul>
+<li>
+<p>Логика создания сделки: сначала ищется существующая сделка/контакт по правилам базы; если подходящая сделка найдена, обновляется она, иначе создается новая.</p>
+</li>
+<li>
+<p>Режим проверки дублей: Проверять на дубли</p>
+</li>
+<li>
+<p>Искать дубль только в выбранных воронках: 19 шт.</p>
+</li>
+<li>
+<p>Учитывать закрытые этапы при поиске дубля: нет</p>
+</li>
+<li>
+<p>Добавлять телефон/email в найденный контакт: Да</p>
+</li>
+<li>
+<p>Менять имя контакта при обновлении: Нет
+&lt;details&gt;
+&lt;summary&gt;Показать 19 воронок для поиска дублей&lt;/summary&gt;</p>
+</li>
+<li>
+<p><code>ОСНОВНОЙ ОТДЕЛ - ЗАЯВКИ [6777466]</code></p>
+</li>
+<li>
+<p><code>ПАССИВНЫЙ ДОХОД [9426954]</code></p>
+</li>
+<li>
+<p><code>КРИПТОКАПИТАЛ [9498394]</code></p>
+</li>
+<li>
+<p><code>РАЗУМНЫЙ ТРЕЙДЕР [10312710]</code></p>
+</li>
+<li>
+<p><code>ФИНАНСОВАЯ СВОБОДА [9498398]</code></p>
+</li>
+<li>
+<p><code>ОД [9839030]</code></p>
+</li>
+<li>
+<p><code>КРИПТОКЛУБ [9578374]</code></p>
+</li>
+<li>
+<p><code>ИНВЕСТ КЛУБ [9500418]</code></p>
+</li>
+<li>
+<p><code>ОТДЕЛ - ДОВЕДЕНИЯ [6795422]</code></p>
+</li>
+<li>
+<p><code>ОТДЕЛ КЛУБОВ [6869966]</code></p>
+</li>
+<li>
+<p><code>АПСЕЙЛЫ ОП [8910882]</code></p>
+</li>
+<li>
+<p><code>ОТДЕЛ ДИАГНОСТИК [6844390]</code></p>
+</li>
+<li>
+<p><code>ЛИДОРУБЫ [9212986]</code></p>
+</li>
+<li>
+<p><code>ДИАГНОСТЫ [9213518]</code></p>
+</li>
+<li>
+<p><code>ЛИДОРУБЫ(Оплаченные) [9692046]</code></p>
+</li>
+<li>
+<p><code>ЛИДОРУБЫ(Обновленная) [9692054]</code></p>
+</li>
+<li>
+<p><code>Распродажа 2025 [10411534]</code></p>
+</li>
+<li>
+<p><code>Инвестиции в Кладовки [10900734]</code></p>
+</li>
+<li>
+<p><code>ПДО [10923418]</code></p>
+</li>
+</ul>
+<p>&lt;/details&gt;</p>
+<ul>
+<li>Автоотправка оплат в amoCRM: Да</li>
+<li>Базовый этап для этого вызова: <em>определяется по типу оплаты</em></li>
+<li>Новый заказ: ПДО -&gt; НОВЫЙ ЗАКАЗ [85904438]</li>
+<li>Частичная оплата: ПДО -&gt; НОВЫЙ ЗАКАЗ [85904438]</li>
+<li>Полная оплата: ПДО -&gt; НОВЫЙ ЗАКАЗ [85904438]</li>
+<li>Поле amoCRM для суммы: оплачено[payedMoney]</li>
+<li>Двигать старые сделки только с выбранных этапов: Да</li>
+<li>Этапы, из которых разрешен сдвиг: 158 этапов</li>
+<li>Не менять этап при обновлении: Нет</li>
+<li>Менять название сделки при обновлении: Да</li>
+<li>Теги сделки: {#pay_field_tag_deal_1#}</li>
+<li>Ответственный по умолчанию: EasyDrafting[12985298]</li>
+<li>Индивидуальные правила маршрутизации: нет</li>
+</ul>
+</article></main><script>window.DOC_ROOT="../../";</script>
+<script src="../../search-data.js"></script><script src="../../nav-data.js"></script><script src="../../gitbook.js"></script></body></html>

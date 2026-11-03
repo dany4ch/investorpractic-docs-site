@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ru"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>[AMO] [ED] чекин_запуск_РТ6 повтор день 2 99606 — Investor Practic</title><link rel="stylesheet" href="../../offline.css"></head>
+<body><aside><a class="home" href="../../index.html">Investor Practic</a>
+<label for="search">Поиск по страницам</label><input id="search" type="search" placeholder="Название или ID">
+<div id="results"></div><nav id="doc-nav"></nav></aside>
+<main><div class="toolbar"><a href="../../index.html">Главная</a><span>Документация · 03.11.2026</span></div>
+<article><h1 id="amo-ed-чекин-запуск-рт6-повтор-день-2-99606">[AMO] [ED] чекин_запуск_РТ6 повтор день 2 99606</h1>
+<ul>
+<li>ID процесса: <code>2445625</code></li>
+<li>Объект: Пользователи</li>
+<li>Статус: Ожидание событий</li>
+</ul>
+<p><a href="https://investorpractic.getcourse.ru/pl/tasks/mission/update?id=2445625">Общее</a> | <a href="https://investorpractic.getcourse.ru/pl/tasks/mission/process?id=2445625">Схема процесса</a></p>
+<h2 id="описание-из-getcourse">Описание из GetCourse</h2>
+<blockquote>
+<p>30.06.2026. Подробный ход процесса GetCourse:</p>
+<ul>
+<li>
+<p>Главное: В процесс попадают пользователи по правилу: Дата добавления в группу.</p>
+</li>
+<li>
+<p>Процесс работает с объектом GetCourse: Пользователи. Текущий статус процесса: Ожидание событий.</p>
+</li>
+</ul>
+<p>Как идет процесс внутри GetCourse:</p>
+<ul>
+<li>Схема состоит из 7 блоков и 9 переходов.</li>
+</ul>
+<p>Конец подробного хода процесса GetCourse.</p>
+<hr />
+<p>22.04.2026: Задача: https://spi.bitrix24.ru/online/?IM_TASK=chat24416&amp;IM_MESSAGE=2093182</p>
+<p>https://vakas-tools.ru/account/base/amo.php?base_id=99606</p>
+<p>https://investorpractic.getcourse.ru/d_veb_2p
+https://investorpractic.getcourse.ru/pl/webinar/show?id=3276032</p>
+<p>Воронка:  Отдел Доведения, Этап Посмотрели вебинар 2
+Название в амо: чекин_запуск_РТ6
+Тег в амо: чекин_запуск_РТ6</p>
+<p>26.05.2026 по задаче https://spi.bitrix24.ru/online/?IM_TASK=chat24416&amp;IM_MESSAGE=2117804: добавлена передача комментариев из вебинарной комнаты в amoCRM.
+Поле GetCourse: у пользователя — webinar_user_comments.
+В процессах по пользователям передаем как {object.webinar_user_comments}; в процессах по заказам — как {object.user.webinar_user_comments}.
+В Vakas это приходит в параметр {comments} и записывается через «Шаблон примечания 2»:
+Комментарии из вебинарной комнаты:
+{comments}</p>
+</blockquote>
+<h2 id="понятное-описание-процесса">Понятное описание процесса</h2>
+<ul>
+<li>Процесс работает с объектом GetCourse: Пользователи. Текущий статус процесса: Ожидание событий.</li>
+<li>На вход попадают данные так: В процесс попадают пользователи по правилу: Дата добавления в группу.</li>
+<li>Внутри схемы есть дополнительные проверки/ожидания: 1. Основные блоки: «Условие».</li>
+<li>Дальше процесс делает прямые вызовы Vakas: 1. Напрямую задействованы базы: 99606.</li>
+<li>Передача: 99606. База 99606: Формы и анкеты. Передаются параметры: <code>name</code>, <code>email</code>, <code>phone</code>, <code>getcourse_user_id</code>, <code>utm_source</code>, <code>utm_medium</code>, <code>utm_campaign</code>, <code>utm_content</code>, <code>utm_term</code>, <code>comments</code>.</li>
+<li>Что происходит в amoCRM: На входе в этап ОТДЕЛ - ДОВЕДЕНИЯ -&gt; ПОСМОТРЕЛИ ВЕБИНАР 2 [57387590] база ищет дубль и при необходимости переводит найденную сделку в рабочий этап.</li>
+</ul>
+<h2 id="ход-процесса-в-getcourse">Ход процесса в GetCourse</h2>
+<ul>
+<li>Схема состоит из 7 блоков и 9 переходов.</li>
+<li>По типам: стартов 1, условий/ожиданий 1, вызовов URL 3, изменений полей 0, финалов 1.</li>
+</ul>
+<p>Блоки процесса: что делают и зачем нужны:</p>
+<ul>
+<li>Блок <code>42529164</code> «Начало работы» (старт). Что делает: Запускает выполнение схемы для объекта, который попал под правило входа процесса. Зачем нужен: Нужен как точка входа: от него GetCourse начинает движение объекта по схеме. Дальше: если результат «Выполнено», идет в «Задержка».</li>
+<li>Блок <code>42529168</code> «Задержка» (таймер). Что делает: Делает паузу или ждет заданное время перед следующим шагом. Зачем нужен: Нужен для задержки между проверкой и передачей, чтобы данные успели появиться или чтобы соблюсти нужный порядок обработки. Дальше: если результат «Выполнено», идет в «Условие».</li>
+<li>Блок <code>42529167</code> «Условие» (условие). Что делает: Проверяет условие: Участник вебинара. Зачем нужен: Нужен, чтобы разделить поток: подходящих пользователей/заказы отправить дальше, неподходящих перевести на другую ветку или завершить. Дальше: если результат «Да», идет в «Вызвать url».</li>
+<li>Блок <code>42529165</code> «Вызвать url» (вызов URL). Что делает: Передает в Vakas: 99606. База 99606, канал «Формы и анкеты» (POST); параметры: <code>name</code>, <code>email</code>, <code>phone</code>, <code>getcourse_user_id</code>, <code>utm_source</code>, <code>utm_medium</code>, <code>utm_campaign</code>, <code>utm_content</code>, <code>utm_term</code>, <code>comments</code>; timeout 300 сек. Зачем нужен: Нужен, чтобы передать подходящий объект в 99606. База 99606; дальше На входе в этап ОТДЕЛ - ДОВЕДЕНИЯ -&gt; ПОСМОТРЕЛИ ВЕБИНАР 2 [57387590] база ищет дубль и при необходимости переводит найденную сделку в рабочий этап. Дальше: если результат «Ошибка», идет в «n8n fail после Вызвать url #42529165»; если результат «Выполнено», идет в «n8n success после Вызвать url #42529165».</li>
+<li>Блок <code>43528075</code> «n8n success после Вызвать url #42529165» (вызов URL). Что делает: Пишет событие в n8n: success, action vakas_users (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен для фиксации успешной отправки: n8n получает событие, что Vakas-вызов отработал без ошибки. Дальше: если результат «Ошибка», идет в «Завершение процесса»; если результат «Выполнено», идет в «Завершение процесса».</li>
+<li>Блок <code>42529166</code> «Завершение процесса» (завершение). Что делает: Завершает ветку процесса после выполненных проверок и действий. Зачем нужен: Нужен, чтобы закрыть текущую ветку и не гонять объект по процессу повторно. Дальше переходов нет: это конечная точка ветки.</li>
+<li>Блок <code>43528083</code> «n8n fail после Вызвать url #42529165» (вызов URL). Что делает: Пишет событие в n8n: fail, action vakas_users (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен для контроля ошибки: n8n получает данные неуспешной отправки, чтобы можно было увидеть проблему и повторить/разобрать передачу. Дальше: если результат «Ошибка», идет в «Условие»; если результат «Выполнено», идет в «Условие».</li>
+</ul>
+<h2 id="скриншоты-процесса">Скриншоты процесса</h2>
+<p><img src="../../assets/rules/2445625_rule.png" alt="Правило входа 2445625" /></p>
+<p><img src="../../assets/processes/2445625_process.png" alt="Схема процесса 2445625" /></p>
+<p>Откуда: процесс берет пользователи по правилу входа, детали лучше смотреть на скриншоте ниже.</p>
+<p>Что проверяет по пути: Задержка.</p>
+<p>Куда ведет: вызывает внешние URL: Вызвать url; ставит задержки: Задержка.</p>
+<h2 id="логика-vakas-и-amocrm">Логика Vakas и amoCRM</h2>
+<ul>
+<li>Условие входа в процесс: Дата добавления в группу.</li>
+<li>Вызовов Vakas в схеме: <code>1</code>. Уникальных URL Vakas: <code>1</code>. Связанных баз: <code>1</code>.</li>
+</ul>
+<h3 id="связанная-база-vakas-99606-база-99606">Связанная база Vakas: 99606. База 99606</h3>
+<ul>
+<li>Использование в процессе: Формы и анкеты</li>
+<li>Документация базы: <a href="../bases/99606.html">99606. База 99606</a></li>
+<li>Страница настройки: <a href="https://vakas-tools.ru/account/base/amo.php?mode=contact&amp;base_id=99606">Vakas</a></li>
+<li>Поиск дублей: Проверять на дубли</li>
+<li>Искать только в выбранных воронках: 1</li>
+<li>Ответственный по контакту имеет приоритет: Нет</li>
+</ul>
+<h4 id="вызовы-из-процесса">Вызовы из процесса</h4>
+<h4 id="вызвать-url">Вызвать url</h4>
+<ul>
+<li>Endpoint: <code>sendform</code></li>
+<li>URL вызова: <code>https://vakas-tools.ru/base/sendform/8927217/99606/?name={object.name}&amp;email={object.email}&amp;phone={object.phone}&amp;getcourse_user_id={object.id}&amp;utm_source={object.create_session.utm_source}&amp;utm_medium={object.create_session.utm_medium}&amp;utm_campaign={object.create_session.utm_campaign}&amp;utm_content={object.create_session.utm_content}&amp;utm_term={object.create_session.utm_term}&amp;comments={object.webinar_user_comments}</code></li>
+<li>Связанная база Vakas: <a href="../bases/99606.html">99606. База 99606</a></li>
+</ul>
+<h5 id="когда-срабатывает-в-процессе">Когда срабатывает в процессе</h5>
+<ul>
+<li>Сценарий 1: <code>Начало работы</code> --Выполнено--&gt; <code>Задержка</code> --Выполнено--&gt; <code>Условие</code> --Да--&gt; <code>Вызвать url</code>
+<ul>
+<li>таймер <code>Задержка</code> -&gt; <code>Выполнено</code></li>
+<li>условие <code>Условие</code>: Участник вебинара -&gt; <code>Да</code></li>
+</ul>
+</li>
+</ul>
+<h5 id="что-уходит-в-vakas">Что уходит в Vakas</h5>
+<ul>
+<li><code>name</code></li>
+<li><code>email</code></li>
+<li><code>phone</code></li>
+<li><code>getcourse_user_id</code></li>
+<li><code>utm_source</code></li>
+<li><code>utm_medium</code></li>
+<li><code>utm_campaign</code></li>
+<li><code>utm_content</code></li>
+<li><code>utm_term</code></li>
+<li><code>comments</code></li>
+</ul>
+<h5 id="как-база-обработает-вызов-и-что-будет-в-amocrm">Как база обработает вызов и что будет в amoCRM</h5>
+<ul>
+<li>Логика создания сделки: сначала ищется существующая сделка/контакт по правилам базы; если подходящая сделка найдена, обновляется она, иначе создается новая.</li>
+<li>Режим проверки дублей: Проверять на дубли</li>
+<li>Искать дубль только в выбранных воронках: 1 шт.</li>
+<li>Учитывать закрытые этапы при поиске дубля: нет</li>
+<li>Добавлять телефон/email в найденный контакт: Нет</li>
+<li>Менять имя контакта при обновлении: Нет</li>
+<li><code>ОТДЕЛ - ДОВЕДЕНИЯ [6795422]</code></li>
+<li>Автоотправка регистраций в amoCRM: Да</li>
+<li>Базовый этап: ОТДЕЛ - ДОВЕДЕНИЯ -&gt; ПОСМОТРЕЛИ ВЕБИНАР 2 [57387590]</li>
+<li>Этапы, из которых разрешен сдвиг: 13 этапов</li>
+<li>Менять название сделки при обновлении: Да</li>
+<li>Менять имя контакта при обновлении: Нет</li>
+<li>Ответственный по умолчанию: EasyDrafting[12985298]</li>
+<li>Всегда менять ответственного: Нет</li>
+<li>Теги сделки: чекин_запуск_РТ6</li>
+<li>Индивидуальные правила маршрутизации: нет</li>
+</ul>
+</article></main><script>window.DOC_ROOT="../../";</script>
+<script src="../../search-data.js"></script><script src="../../nav-data.js"></script><script src="../../gitbook.js"></script></body></html>

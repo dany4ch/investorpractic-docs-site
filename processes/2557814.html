@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>[AMO] [ED] Чекин_запускРТ7 повтор день 1 VAKAS_105567 — Investor Practic</title><link rel="stylesheet" href="../offline.css"></head>
+<body><aside><a class="home" href="../index.html">Investor Practic</a>
+<label for="search">Поиск по страницам</label><input id="search" type="search" placeholder="Название или ID">
+<div id="results"></div><nav id="doc-nav"></nav></aside>
+<main><div class="toolbar"><a href="../index.html">Главная</a><span>Документация · 03.11.2026</span></div>
+<article><h1 id="amo-ed-чекин-запускрт7-повтор-день-1-vakas-105567">[AMO] [ED] Чекин_запускРТ7 повтор день 1 VAKAS_105567</h1>
+<ul>
+<li>ID процесса: <code>2557814</code></li>
+<li>Объект: Пользователи</li>
+<li>Статус: Не запущен</li>
+<li>Начало проверки: <code>25.08.2026 12:00 МСК</code></li>
+<li>Системные теги GetCourse: не заданы; маркер <code>[ED]</code> присутствует в названии</li>
+</ul>
+<p><a href="https://investorpractic.getcourse.ru/pl/tasks/mission/update?id=2557814">Общее</a> | <a href="https://investorpractic.getcourse.ru/pl/tasks/mission/process?id=2557814">Схема процесса</a></p>
+<h2 id="назначение">Назначение</h2>
+<p>Передать зрителя повтора первого дня РТ7 в amoCRM через базу Vakas <code>105567</code>.</p>
+<ul>
+<li>Правило входа: добавлен в группу <code>ЗРИТЕЛЬ РТ7 Д1 ПВ</code> (<code>4929484</code>) с <code>25.08.2026</code></li>
+<li>Страница повтора: <a href="https://investorpractic.getcourse.ru/rt7_7844_day1_repeat">rt7_7844_day1_repeat</a></li>
+<li>Вебинарная комната: <a href="https://investorpractic.getcourse.ru/pl/webinar/show?id=3316749">3316749</a></li>
+<li>Воронка amoCRM: Отдел Доведения</li>
+<li>Этап: Посмотрели вебинар 1</li>
+<li>Название и тег сделки: <code>Чекин_запускРТ7</code></li>
+</ul>
+<h2 id="ход-процесса">Ход процесса</h2>
+<p>Схема содержит 7 блоков и 9 переходов: старт <code>44758077</code>, задержка <code>44758081</code>, условие вебинара <code>44758080</code>, Vakas <code>44758078</code>, n8n success <code>44758082</code>, n8n fail <code>44758083</code>, завершение <code>44758079</code>.</p>
+<p>Условие проверяет комнату <code>3316749</code>, событие «Был во время трансляции» (<code>8</code>) и дату <code>сегодня</code>. Подходящий пользователь передаётся POST-запросом в <code>sendform</code> базы <code>105567</code>; n8n получает success/fail с динамическими <code>{process_id}</code> и <code>{process_name}</code>.</p>
+<h2 id="передаваемые-данные">Передаваемые данные</h2>
+<p><code>name</code>, <code>email</code>, <code>phone</code>, <code>getcourse_user_id</code>, <code>utm_source</code>, <code>utm_medium</code>, <code>utm_campaign</code>, <code>utm_content</code>, <code>utm_term</code>, <code>comments</code>.</p>
+<p>GetCourse передаёт <code>comments={object.webinar_user_comments}</code>. В Vakas примечание настроено как <code>Комментарии с веба: {#reg_field_comments#}</code>.</p>
+<h2 id="проверка">Проверка</h2>
+<p>24.08.2026 после сохранения повторно проверены карточка и блоки: группа, дата, комната, база, n8n и структура графа совпадают; процесс не запускался.</p>
+</article></main><script>window.DOC_ROOT="../";</script>
+<script src="../search-data.js"></script><script src="../nav-data.js"></script><script src="../gitbook.js"></script></body></html>

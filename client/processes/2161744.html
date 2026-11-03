@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ru"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Передача анкеты &quot;выиграл = нет премиум пакета&quot; — Investor Practic</title><link rel="stylesheet" href="../../offline.css"></head>
+<body><aside><a class="home" href="../../index.html">Investor Practic</a>
+<label for="search">Поиск по страницам</label><input id="search" type="search" placeholder="Название или ID">
+<div id="results"></div><nav id="doc-nav"></nav></aside>
+<main><div class="toolbar"><a href="../../index.html">Главная</a><span>Документация · 03.11.2026</span></div>
+<article><h1 id="передача-анкеты-выиграл-нет-премиум-пакета">Передача анкеты &quot;выиграл = нет премиум пакета&quot;</h1>
+<ul>
+<li>ID процесса: <code>2161744</code></li>
+<li>Объект: Пользователи</li>
+<li>Статус: Ожидание событий</li>
+<li>Внутренняя страница: <a href="../../processes/2161744.html">2161744. Передача анкеты &quot;выиграл = нет премиум пакета&quot;</a></li>
+<li>GetCourse: <a href="https://investorpractic.getcourse.ru/pl/tasks/mission/update?id=2161744">Карточка</a> | <a href="https://investorpractic.getcourse.ru/pl/tasks/mission/process?id=2161744">Схема процесса</a></li>
+</ul>
+<h2 id="скриншоты-процесса">Скриншоты процесса</h2>
+<p><img src="../../assets/rules/2161744_rule.png" alt="Правило входа 2161744" /></p>
+<p><img src="../../assets/processes/2161744_process.png" alt="Схема процесса 2161744" /></p>
+<h2 id="коротко-для-заказчика">Коротко для заказчика</h2>
+<ul>
+<li>Главное: В процесс попадают пользователи из выбранных сегментов GetCourse: 33818061.</li>
+<li>Дальше он передает данные как: Формы и анкеты.</li>
+<li>Связанных баз Vakas: 1.</li>
+</ul>
+<h2 id="понятное-описание-процесса">Понятное описание процесса</h2>
+<ul>
+<li>Процесс работает с объектом GetCourse: Пользователи. Текущий статус процесса: Ожидание событий.</li>
+<li>На вход попадают данные так: В процесс попадают пользователи из выбранных сегментов GetCourse: 33818061.</li>
+<li>Техническое правило входа в GetCourse: Находится в сегменте.</li>
+<li>Внутри схемы есть дополнительные проверки/ожидания: 3. Основные блоки: «Анкета заполнена?»; «Есть ли банкротство(Нет)»; «Есть ли банкротство(Да)».</li>
+<li>Дальше процесс делает прямые вызовы Vakas: 3. Напрямую задействованы базы: 81673.</li>
+<li>Передача: 81673. Передача анкеты &quot;выиграл = нет премиум пакета&quot;: Формы и анкеты. Передаются параметры: <code>name</code>, <code>email</code>, <code>phone</code>, <code>getcourse_user_id</code>, <code>utm_source</code>, <code>utm_medium</code>, <code>utm_campaign</code>, <code>utm_content</code>, <code>utm_term</code>, <code>bankrotstvo</code>.</li>
+<li>Передача: 81673. Передача анкеты &quot;выиграл = нет премиум пакета&quot;: Формы и анкеты. Передаются параметры: <code>name</code>, <code>email</code>, <code>phone</code>, <code>getcourse_user_id</code>, <code>utm_source</code>, <code>utm_medium</code>, <code>utm_campaign</code>, <code>utm_content</code>, <code>utm_term</code>, <code>bankrotstvo</code>.</li>
+<li>Передача: 81673. Передача анкеты &quot;выиграл = нет премиум пакета&quot;: Формы и анкеты. Передаются параметры: <code>name</code>, <code>email</code>, <code>phone</code>, <code>getcourse_user_id</code>, <code>utm_source</code>, <code>utm_medium</code>, <code>utm_campaign</code>, <code>utm_content</code>, <code>utm_term</code>, <code>bankrotstvo</code>.</li>
+<li>Что происходит в amoCRM: На входе в этап ОД -&gt; Заявка на диагностику [78324606] база ищет дубль и при необходимости переводит найденную сделку в рабочий этап.</li>
+</ul>
+<h2 id="ход-процесса-в-getcourse">Ход процесса в GetCourse</h2>
+<ul>
+<li>Схема состоит из 16 блоков и 26 переходов.</li>
+<li>По типам: стартов 1, условий/ожиданий 3, вызовов URL 9, изменений полей 0, финалов 2.</li>
+</ul>
+<p>Блоки процесса: что делают и зачем нужны:</p>
+<ul>
+<li>Блок <code>37482582</code> «Начало работы» (старт). Что делает: Запускает выполнение схемы для объекта, который попал под правило входа процесса. Зачем нужен: Нужен как точка входа: от него GetCourse начинает движение объекта по схеме. Дальше: если результат «Выполнено», идет в «Анкета заполнена?».</li>
+<li>Блок <code>37583494</code> «Анкета заполнена?» (условие). Что делает: Проверяет условие: Имеет ответ на анкету. Зачем нужен: Нужен, чтобы разделить поток: подходящих пользователей/заказы отправить дальше, неподходящих перевести на другую ветку или завершить. Дальше: если результат «Нет», идет в «Вызвать url»; если результат «Да», идет в «Есть ли банкротство(Нет)».</li>
+<li>Блок <code>37583504</code> «Есть ли банкротство(Нет)» (условие). Что делает: Проверяет условие: Имеет ответ на анкету. Зачем нужен: Нужен, чтобы разделить поток: подходящих пользователей/заказы отправить дальше, неподходящих перевести на другую ветку или завершить. Дальше: если результат «Нет», идет в «Есть ли банкротство(Да)»; если результат «Да», идет в «Если анкета заполнена».</li>
+<li>Блок <code>37583500</code> «Если анкета заполнена» (вызов URL). Что делает: Передает в Vakas: 81673. Передача анкеты &quot;выиграл = нет премиум пакета&quot;, канал «Формы и анкеты» (GET); параметры: <code>name</code>, <code>email</code>, <code>phone</code>, <code>getcourse_user_id</code>, <code>utm_source</code>, <code>utm_medium</code>, <code>utm_campaign</code>, <code>utm_content</code>, <code>utm_term</code>, <code>bankrotstvo</code>; timeout 300 сек. Зачем нужен: Нужен, чтобы передать подходящий объект в 81673. Передача анкеты &quot;выиграл = нет премиум пакета&quot;; дальше На входе в этап ОД -&gt; Заявка на диагностику [78324606] база ищет дубль и при необходимости переводит найденную сделку в рабочий этап. Дальше: если результат «Ошибка», идет в «n8n fail после Если анкета заполнена #37583500»; если результат «Выполнено», идет в «n8n success после Если анкета заполнена #37583500».</li>
+<li>Блок <code>43527841</code> «n8n success после Если анкета заполнена #37583500» (вызов URL). Что делает: Пишет событие в n8n: success, action vakas_users (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен для фиксации успешной отправки: n8n получает событие, что Vakas-вызов отработал без ошибки. Дальше: если результат «Ошибка», идет в «Завершение процесса»; если результат «Выполнено», идет в «Завершение процесса».</li>
+<li>Блок <code>37583524</code> «Завершение процесса» (завершение). Что делает: Завершает ветку процесса после выполненных проверок и действий. Зачем нужен: Нужен, чтобы закрыть текущую ветку и не гонять объект по процессу повторно. Дальше переходов нет: это конечная точка ветки.</li>
+<li>Блок <code>43527842</code> «n8n fail после Если анкета заполнена #37583500» (вызов URL). Что делает: Пишет событие в n8n: fail, action vakas_users (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен для контроля ошибки: n8n получает данные неуспешной отправки, чтобы можно было увидеть проблему и повторить/разобрать передачу. Дальше: если результат «Ошибка», идет в «Есть ли банкротство(Нет)»; если результат «Выполнено», идет в «Есть ли банкротство(Нет)».</li>
+<li>Блок <code>37583514</code> «Есть ли банкротство(Да)» (условие). Что делает: Проверяет ветвление «Есть ли банкротство(Да)», но текст условия в дампе не расшифрован. Зачем нужен: Нужен, чтобы разделить поток: подходящих пользователей/заказы отправить дальше, неподходящих перевести на другую ветку или завершить. Дальше: если результат «Нет», идет в «Вызвать url»; если результат «Да», идет в «Если анкета заполнена».</li>
+<li>Блок <code>37583518</code> «Если анкета заполнена» (вызов URL). Что делает: Передает в Vakas: 81673. Передача анкеты &quot;выиграл = нет премиум пакета&quot;, канал «Формы и анкеты» (GET); параметры: <code>name</code>, <code>email</code>, <code>phone</code>, <code>getcourse_user_id</code>, <code>utm_source</code>, <code>utm_medium</code>, <code>utm_campaign</code>, <code>utm_content</code>, <code>utm_term</code>, <code>bankrotstvo</code>; timeout 300 сек. Зачем нужен: Нужен, чтобы передать подходящий объект в 81673. Передача анкеты &quot;выиграл = нет премиум пакета&quot;; дальше На входе в этап ОД -&gt; Заявка на диагностику [78324606] база ищет дубль и при необходимости переводит найденную сделку в рабочий этап. Дальше: если результат «Ошибка», идет в «n8n fail после Если анкета заполнена #37583518»; если результат «Выполнено», идет в «n8n success после Если анкета заполнена #37583518».</li>
+<li>Блок <code>43527843</code> «n8n success после Если анкета заполнена #37583518» (вызов URL). Что делает: Пишет событие в n8n: success, action vakas_users (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен для фиксации успешной отправки: n8n получает событие, что Vakas-вызов отработал без ошибки. Дальше: если результат «Ошибка», идет в «Завершение процесса»; если результат «Выполнено», идет в «Завершение процесса».</li>
+<li>Блок <code>43527844</code> «n8n fail после Если анкета заполнена #37583518» (вызов URL). Что делает: Пишет событие в n8n: fail, action vakas_users (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен для контроля ошибки: n8n получает данные неуспешной отправки, чтобы можно было увидеть проблему и повторить/разобрать передачу. Дальше: если результат «Ошибка», идет в «Есть ли банкротство(Да)»; если результат «Выполнено», идет в «Есть ли банкротство(Да)».</li>
+<li>Блок <code>37482584</code> «Вызвать url» (вызов URL). Что делает: Передает в Vakas: 81673. Передача анкеты &quot;выиграл = нет премиум пакета&quot;, канал «Формы и анкеты» (GET); параметры: <code>name</code>, <code>email</code>, <code>phone</code>, <code>getcourse_user_id</code>, <code>utm_source</code>, <code>utm_medium</code>, <code>utm_campaign</code>, <code>utm_content</code>, <code>utm_term</code>, <code>bankrotstvo</code>; timeout 300 сек. Зачем нужен: Нужен, чтобы передать подходящий объект в 81673. Передача анкеты &quot;выиграл = нет премиум пакета&quot;; дальше На входе в этап ОД -&gt; Заявка на диагностику [78324606] база ищет дубль и при необходимости переводит найденную сделку в рабочий этап. Дальше: если результат «Ошибка», идет в «n8n fail после Вызвать url #37482584»; если результат «Выполнено», идет в «n8n success после Вызвать url #37482584».</li>
+<li>Блок <code>43527835</code> «n8n success после Вызвать url #37482584» (вызов URL). Что делает: Пишет событие в n8n: success, action vakas_users (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен для фиксации успешной отправки: n8n получает событие, что Vakas-вызов отработал без ошибки. Дальше: если результат «Ошибка», идет в «Завершение процесса»; если результат «Выполнено», идет в «Завершение процесса».</li>
+<li>Блок <code>37482585</code> «Завершение процесса» (завершение). Что делает: Завершает ветку процесса после выполненных проверок и действий. Зачем нужен: Нужен, чтобы закрыть текущую ветку и не гонять объект по процессу повторно. Дальше переходов нет: это конечная точка ветки.</li>
+<li>Блок <code>43527840</code> «n8n fail после Вызвать url #37482584» (вызов URL). Что делает: Пишет событие в n8n: fail, action vakas_users (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен для контроля ошибки: n8n получает данные неуспешной отправки, чтобы можно было увидеть проблему и повторить/разобрать передачу. Дальше: если результат «Ошибка», идет в «Анкета заполнена?»; если результат «Выполнено», идет в «Анкета заполнена?».</li>
+<li>Блок <code>43435186</code> «Уведомить сотрудника» (операция notify_manager_operation). Что делает: Выполняет служебный шаг схемы «Уведомить сотрудника». Зачем нужен: Нужен как промежуточный технический шаг в схеме «Уведомить сотрудника». Дальше: если результат «Выполнено», идет в «Завершение процесса».</li>
+</ul>
+<h2 id="что-именно-входит-в-процесс">Что именно входит в процесс</h2>
+<ul>
+<li>В процесс попадают пользователи из выбранных сегментов GetCourse: 33818061.</li>
+</ul>
+<h2 id="как-именно-настроено-правило">Как именно настроено правило</h2>
+<ul>
+<li>Техническое правило входа в GetCourse: Находится в сегменте.</li>
+</ul>
+<h2 id="куда-и-как-передается-дальше">Куда и как передается дальше</h2>
+<table>
+<thead>
+<tr>
+<th>База Vakas</th>
+<th>Что передается</th>
+<th>Этап в amoCRM</th>
+<th>Что происходит со сделкой</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../bases/81673.html">81673. Передача анкеты &quot;выиграл = нет премиум пакета&quot;</a></td>
+<td>Формы и анкеты</td>
+<td>ОД -&gt; Заявка на диагностику [78324606]</td>
+<td>На входе в этап ОД -&gt; Заявка на диагностику [78324606] база ищет дубль и при необходимости переводит найденную сделку в рабочий этап.</td>
+</tr>
+</tbody>
+</table>
+</article></main><script>window.DOC_ROOT="../../";</script>
+<script src="../../search-data.js"></script><script src="../../nav-data.js"></script><script src="../../gitbook.js"></script></body></html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>[AMO] [ED] Передача форм/анкеты Лидорубы по продукту Видеоворонка бесплатная — Investor Practic</title><link rel="stylesheet" href="../../offline.css"></head>
+<body><aside><a class="home" href="../../index.html">Investor Practic</a>
+<label for="search">Поиск по страницам</label><input id="search" type="search" placeholder="Название или ID">
+<div id="results"></div><nav id="doc-nav"></nav></aside>
+<main><div class="toolbar"><a href="../../index.html">Главная</a><span>Документация · 03.11.2026</span></div>
+<article><h1 id="amo-ed-передача-форманкеты-лидорубы-по-продукту-видеоворонка-бесплатная">[AMO] [ED] Передача форм/анкеты Лидорубы по продукту Видеоворонка бесплатная</h1>
+<ul>
+<li>ID процесса: <code>2327571</code></li>
+<li>Объект: Заказы</li>
+<li>Статус: Ожидание событий</li>
+<li>Внутренняя страница: <a href="../../processes/2327571.html">2327571. [AMO] [ED] Передача форм/анкеты Лидорубы по продукту Видеоворонка бесплатная</a></li>
+<li>GetCourse: <a href="https://investorpractic.getcourse.ru/pl/tasks/mission/update?id=2327571">Карточка</a> | <a href="https://investorpractic.getcourse.ru/pl/tasks/mission/process?id=2327571">Схема процесса</a></li>
+</ul>
+<h2 id="скриншоты-процесса">Скриншоты процесса</h2>
+<p><img src="../../assets/rules/2327571_rule.png" alt="Правило входа 2327571" /></p>
+<p><img src="../../assets/processes/2327571_process.png" alt="Схема процесса 2327571" /></p>
+<h2 id="коротко-для-заказчика">Коротко для заказчика</h2>
+<ul>
+<li>Главное: В процесс попадают заказы по правилу: Продукт (ID: 4194685).</li>
+<li>Дальше он передает данные как: Оплаты и заказы.</li>
+<li>Связанных баз Vakas: 1.</li>
+</ul>
+<h2 id="понятное-описание-процесса">Понятное описание процесса</h2>
+<ul>
+<li>Процесс работает с объектом GetCourse: Заказы. Текущий статус процесса: Ожидание событий.</li>
+<li>На вход попадают данные так: В процесс попадают заказы по правилу: Продукт (ID: 4194685).</li>
+<li>Дополнительные условия внутри схемы не извлечены: процесс идет напрямую по основной ветке или условия не подписаны.</li>
+<li>Дальше процесс делает прямые вызовы Vakas: 1. Напрямую задействованы базы: 92627.</li>
+<li>Передача: 92627. Передача форм/анкеты Лидорубы по продукту Видеоворонка бесплатная: Оплаты и заказы. Передаются параметры: <code>number</code>, <code>id</code>, <code>order_id</code>, <code>positions</code>, <code>costMoney</code>, <code>leftCostMoney</code>, <code>payedMoney</code>, <code>status</code>, <code>paymentLink</code>, <code>firstName</code> и другие.</li>
+<li>Что происходит в amoCRM: На входе в этап ЛИДОРУБЫ -&gt; квиз [82367626] база ищет дубль и, если находит его, обновляет сделку без смены этапа.</li>
+</ul>
+<h2 id="ход-процесса-в-getcourse">Ход процесса в GetCourse</h2>
+<ul>
+<li>Схема состоит из 5 блоков и 7 переходов.</li>
+<li>По типам: стартов 1, условий/ожиданий 0, вызовов URL 3, изменений полей 0, финалов 1.</li>
+</ul>
+<p>Блоки процесса: что делают и зачем нужны:</p>
+<ul>
+<li>Блок <code>40360363</code> «Начало работы» (старт). Что делает: Запускает выполнение схемы для объекта, который попал под правило входа процесса. Зачем нужен: Нужен как точка входа: от него GetCourse начинает движение объекта по схеме. Дальше: если результат «Выполнено», идет в «Вызвать url».</li>
+<li>Блок <code>40360369</code> «Вызвать url» (вызов URL). Что делает: Передает в Vakas: 92627. Передача форм/анкеты Лидорубы по продукту Видеоворонка бесплатная, канал «Оплаты и заказы» (GET); параметры: <code>number</code>, <code>id</code>, <code>order_id</code>, <code>positions</code>, <code>costMoney</code>, <code>leftCostMoney</code>, <code>payedMoney</code>, <code>status</code>, <code>paymentLink</code>, <code>firstName</code>, <code>lastName</code>, <code>name</code>, <code>email</code>, <code>phone</code> и другие; timeout 300 сек. Зачем нужен: Нужен, чтобы передать подходящий объект в 92627. Передача форм/анкеты Лидорубы по продукту Видеоворонка бесплатная; дальше На входе в этап ЛИДОРУБЫ -&gt; квиз [82367626] база ищет дубль и, если находит его, обновляет сделку без смены этапа. Дальше: если результат «Ошибка», идет в «n8n fail после Вызвать url #40360369»; если результат «Выполнено», идет в «n8n success после Вызвать url #40360369».</li>
+<li>Блок <code>43525940</code> «n8n success после Вызвать url #40360369» (вызов URL). Что делает: Вызывает внешний URL: testn8n.easydrafting.ru/webhook/gc-vakas-retry-events (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>order_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен, чтобы процесс GetCourse передал данные во внешний сервис testn8n.easydrafting.ru. Дальше: если результат «Ошибка», идет в «Завершение процесса»; если результат «Выполнено», идет в «Завершение процесса».</li>
+<li>Блок <code>40360370</code> «Завершение процесса» (завершение). Что делает: Завершает ветку процесса после выполненных проверок и действий. Зачем нужен: Нужен, чтобы закрыть текущую ветку и не гонять объект по процессу повторно. Дальше переходов нет: это конечная точка ветки.</li>
+<li>Блок <code>43525943</code> «n8n fail после Вызвать url #40360369» (вызов URL). Что делает: Вызывает внешний URL: testn8n.easydrafting.ru/webhook/gc-vakas-retry-events (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>order_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен, чтобы процесс GetCourse передал данные во внешний сервис testn8n.easydrafting.ru. Дальше: если результат «Ошибка», идет в «Начало работы»; если результат «Выполнено», идет в «Начало работы».</li>
+</ul>
+<h2 id="что-именно-входит-в-процесс">Что именно входит в процесс</h2>
+<ul>
+<li>В процесс попадают заказы по правилу: Продукт (ID: 4194685).</li>
+</ul>
+<h2 id="как-именно-настроено-правило">Как именно настроено правило</h2>
+<ul>
+<li>Продукт (ID: 4194685)</li>
+</ul>
+<h2 id="куда-и-как-передается-дальше">Куда и как передается дальше</h2>
+<table>
+<thead>
+<tr>
+<th>База Vakas</th>
+<th>Что передается</th>
+<th>Этап в amoCRM</th>
+<th>Что происходит со сделкой</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../bases/92627.html">92627. Передача форм/анкеты Лидорубы по продукту Видеоворонка бесплатная</a></td>
+<td>Оплаты и заказы</td>
+<td>ЛИДОРУБЫ -&gt; квиз [82367626]</td>
+<td>На входе в этап ЛИДОРУБЫ -&gt; квиз [82367626] база ищет дубль и, если находит его, обновляет сделку без смены этапа.</td>
+</tr>
+</tbody>
+</table>
+</article></main><script>window.DOC_ROOT="../../";</script>
+<script src="../../search-data.js"></script><script src="../../nav-data.js"></script><script src="../../gitbook.js"></script></body></html>

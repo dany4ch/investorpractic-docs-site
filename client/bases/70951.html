@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>70951. Передача в амо ПШТ4 — Investor Practic</title><link rel="stylesheet" href="../../offline.css"></head>
+<body><aside><a class="home" href="../../index.html">Investor Practic</a>
+<label for="search">Поиск по страницам</label><input id="search" type="search" placeholder="Название или ID">
+<div id="results"></div><nav id="doc-nav"></nav></aside>
+<main><div class="toolbar"><a href="../../index.html">Главная</a><span>Документация · 03.11.2026</span></div>
+<article><h1 id="70951-передача-в-амо-пшт4">70951. Передача в амо ПШТ4</h1>
+<ul>
+<li>Внутренняя страница: <a href="../../vakas-bases/70951.html">70951. Передача в амо ПШТ4</a></li>
+<li>Страница настройки: <a href="https://vakas-tools.ru/account/base/amo.php?mode=contact&amp;base_id=70951">Vakas</a></li>
+<li>Связанных процессов GetCourse: <code>1</code></li>
+</ul>
+<h2 id="как-база-обрабатывает-передачу">Как база обрабатывает передачу</h2>
+<p>Сначала база ищет дубль в 12 воронках.</p>
+<h3 id="оплаты-и-заказы">Оплаты и заказы</h3>
+<ul>
+<li>Новая передача приходит в этап: ОТДЕЛ - ДОВЕДЕНИЯ -&gt; ПОСМОТРЕЛИ ВЕБИНАР 3 [57387594]</li>
+<li>Если подходящей сделки нет, создается новая сделка.</li>
+<li>Если дубль найден, сделка не двигается по этапам, а только обновляется.</li>
+<li>Дополнительных условных маршрутов для этого канала нет.</li>
+</ul>
+<h2 id="какие-процессы-приводят-данные-в-эту-базу">Какие процессы приводят данные в эту базу</h2>
+<table>
+<thead>
+<tr>
+<th>Процесс</th>
+<th>Что входит в процесс</th>
+<th>Что передается</th>
+<th>Техническое условие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../processes/1971204.html">1971204. Передача в амо ПШТ4</a></td>
+<td>В процесс попадают заказы по правилу: Дата создания (дата: 06.02.2025 - ...) и Предложение (ID: 5300529) и С тегом (ID: 1780392).</td>
+<td>Формы и анкеты</td>
+<td>Дата создания (дата: 06.02.2025 - ...) и Предложение (ID: 5300529) и С тегом (ID: 1780392)</td>
+</tr>
+</tbody>
+</table>
+</article></main><script>window.DOC_ROOT="../../";</script>
+<script src="../../search-data.js"></script><script src="../../nav-data.js"></script><script src="../../gitbook.js"></script></body></html>

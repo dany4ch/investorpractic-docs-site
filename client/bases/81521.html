@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>81521. База 81521 — Investor Practic</title><link rel="stylesheet" href="../../offline.css"></head>
+<body><aside><a class="home" href="../../index.html">Investor Practic</a>
+<label for="search">Поиск по страницам</label><input id="search" type="search" placeholder="Название или ID">
+<div id="results"></div><nav id="doc-nav"></nav></aside>
+<main><div class="toolbar"><a href="../../index.html">Главная</a><span>Документация · 03.11.2026</span></div>
+<article><h1 id="81521-база-81521">81521. База 81521</h1>
+<ul>
+<li>Внутренняя страница: <a href="../../vakas-bases/81521.html">81521. База 81521</a></li>
+<li>Страница настройки: <a href="https://vakas-tools.ru/account/base/amo.php?mode=contact&amp;base_id=81521">Vakas</a></li>
+<li>Связанных процессов GetCourse: <code>3</code></li>
+</ul>
+<h2 id="как-база-обрабатывает-передачу">Как база обрабатывает передачу</h2>
+<p>Сначала база ищет дубль в 14 воронках.</p>
+<h3 id="оплаты-и-заказы">Оплаты и заказы</h3>
+<ul>
+<li>Новая передача приходит в этап: ПАССИВНЫЙ ДОХОД -&gt; НОВЫЙ ЗАКАЗ [75466258]</li>
+<li>Если подходящей сделки нет, создается новая сделка.</li>
+<li>Если дубль найден, старая сделка может быть взята только из 140 заранее выбранных этапов в 11 воронках и переведена в рабочий этап.</li>
+<li>Дополнительных условных маршрутов для этого канала нет.</li>
+</ul>
+<h2 id="какие-процессы-приводят-данные-в-эту-базу">Какие процессы приводят данные в эту базу</h2>
+<table>
+<thead>
+<tr>
+<th>Процесс</th>
+<th>Что входит в процесс</th>
+<th>Что передается</th>
+<th>Техническое условие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../processes/2159031.html">2159031. [AMO] [ED] Пассивный доход (новый заказ)</a></td>
+<td>В процесс попадают заказы по следующим продуктам: «Продукты».</td>
+<td>Оплаты и заказы</td>
+<td>Продукт (ID: 4263645, 4263822, 4263897, 4263952, 4264021, 3970614, 3970599)</td>
+</tr>
+<tr>
+<td><a href="../processes/2159043.html">2159043. [AMO] [ED] Пассивный доход (частичная оплата)</a></td>
+<td>В процесс попадают заказы по следующим продуктам: «База:».</td>
+<td>Оплаты и заказы</td>
+<td>Продукт (ID: 4263645, 4263822, 4263897, 4263952, 4264021, 3970614, 3970599; теги: пассивный доход) и Статус (ID: part_payed)</td>
+</tr>
+<tr>
+<td><a href="../processes/2159044.html">2159044. [AMO] [ED] Пассивный доход (полная оплат)</a></td>
+<td>В процесс попадают заказы по следующим продуктам: «Продукты».</td>
+<td>Оплаты и заказы</td>
+<td>Оплачен (да) и Продукт (ID: 4263645, 4263822, 4263897, 4263952, 4264021)</td>
+</tr>
+</tbody>
+</table>
+</article></main><script>window.DOC_ROOT="../../";</script>
+<script src="../../search-data.js"></script><script src="../../nav-data.js"></script><script src="../../gitbook.js"></script></body></html>

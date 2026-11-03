@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ru"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>[AMO] [ED] КриптоКлуб чекины 90557 — Investor Practic</title><link rel="stylesheet" href="../../offline.css"></head>
+<body><aside><a class="home" href="../../index.html">Investor Practic</a>
+<label for="search">Поиск по страницам</label><input id="search" type="search" placeholder="Название или ID">
+<div id="results"></div><nav id="doc-nav"></nav></aside>
+<main><div class="toolbar"><a href="../../index.html">Главная</a><span>Документация · 03.11.2026</span></div>
+<article><h1 id="amo-ed-криптоклуб-чекины-90557">[AMO] [ED] КриптоКлуб чекины 90557</h1>
+<ul>
+<li>ID процесса: <code>2415415</code></li>
+<li>Объект: Пользователи</li>
+<li>Статус: Ожидание событий</li>
+</ul>
+<p><a href="https://investorpractic.getcourse.ru/pl/tasks/mission/update?id=2415415">Общее</a> | <a href="https://investorpractic.getcourse.ru/pl/tasks/mission/process?id=2415415">Схема процесса</a></p>
+<h2 id="описание-из-getcourse">Описание из GetCourse</h2>
+<blockquote>
+<p>30.06.2026. Подробный ход процесса GetCourse:</p>
+<ul>
+<li>
+<p>Главное: В процесс попадают пользователи по правилу: В группе (ID: 4724538).</p>
+</li>
+<li>
+<p>Процесс работает с объектом GetCourse: Пользователи. Текущий статус процесса: Ожидание событий.</p>
+</li>
+</ul>
+<p>Как идет процесс внутри GetCourse:</p>
+<ul>
+<li>Схема состоит из 9 блоков и 11 переходов.</li>
+</ul>
+<p>Конец подробного хода процесса GetCourse.</p>
+<hr />
+<p>https://vakas-tools.ru/account/base/amo.php?base_id=90557</p>
+<p>Передача чекинов в амо
+Название сделок: чекин
+Воронка: КриптоКлуб
+Этап: Пришел на веб</p>
+<p>Если по группе &quot;КК - Вошли на вебинар 24/03/26&quot; (с виджета  https://investorpractic.getcourse.ru/entrance_24_03)
+то тег в амо &quot;Чекин_ЗапускКК_24.03&quot;   (https://spi.bitrix24.ru/online/?IM_TASK=chat24416&amp;IM_MESSAGE=2076702)</p>
+</blockquote>
+<h2 id="понятное-описание-процесса">Понятное описание процесса</h2>
+<ul>
+<li>Процесс работает с объектом GetCourse: Пользователи. Текущий статус процесса: Ожидание событий.</li>
+<li>На вход попадают данные так: В процесс попадают пользователи по правилу: В группе (ID: 4724538).</li>
+<li>Внутри схемы есть дополнительные проверки/ожидания: 1. Основные блоки: «КК - Вошли на вебинар 24/03/26?».</li>
+<li>Дальше процесс делает прямые вызовы Vakas: 1. Напрямую задействованы базы: 90557.</li>
+<li>Передача: 90557. База 90557: Формы и анкеты. Передаются параметры: <code>name</code>, <code>email</code>, <code>phone</code>, <code>getcourse_user_id</code>, <code>utm_source</code>, <code>utm_medium</code>, <code>utm_campaign</code>, <code>utm_content</code>, <code>utm_term</code>, <code>tag_deal_1</code> и другие.</li>
+<li>Что происходит в amoCRM: На входе в этап КРИПТОКЛУБ -&gt; Пришел на веб [77815634] база ищет дубль и при необходимости переводит найденную сделку в рабочий этап.</li>
+</ul>
+<h2 id="ход-процесса-в-getcourse">Ход процесса в GetCourse</h2>
+<ul>
+<li>Схема состоит из 9 блоков и 11 переходов.</li>
+<li>По типам: стартов 1, условий/ожиданий 1, вызовов URL 3, изменений полей 2, финалов 2.</li>
+</ul>
+<p>Блоки процесса: что делают и зачем нужны:</p>
+<ul>
+<li>Блок <code>41910138</code> «Начало работы» (старт). Что делает: Запускает выполнение схемы для объекта, который попал под правило входа процесса. Зачем нужен: Нужен как точка входа: от него GetCourse начинает движение объекта по схеме. Дальше: если результат «Выполнено», идет в «Название сделки в амо».</li>
+<li>Блок <code>41910140</code> «Название сделки в амо» (изменение поля). Что делает: меняет поле <code>order_name_amo</code> (Установить равным). значение: чекин Зачем нужен: Нужен, чтобы записать внутри GetCourse технический признак/значение, которое потом используется в передаче или логике ветвления. Дальше: если результат «Выполнено», идет в «КК - Вошли на вебинар 24/03/26?».</li>
+<li>Блок <code>41910143</code> «КК - Вошли на вебинар 24/03/26?» (условие). Что делает: Проверяет условие: В группе (ID: 4724538). Зачем нужен: Нужен, чтобы разделить поток: подходящих пользователей/заказы отправить дальше, неподходящих перевести на другую ветку или завершить. Дальше: если результат «Нет», идет в «Завершение процесса»; если результат «Да», идет в «Тег в амо Чекин_ЗапускКК_24.03».</li>
+<li>Блок <code>41910144</code> «Тег в амо Чекин_ЗапускКК_24.03» (изменение поля). Что делает: меняет поле <code>deal_tag_1</code> (Установить равным). значение: Чекин_ЗапускКК_24.03 Зачем нужен: Нужен, чтобы записать внутри GetCourse технический признак/значение, которое потом используется в передаче или логике ветвления. Дальше: если результат «Выполнено», идет в «Вызвать url (копия)».</li>
+<li>Блок <code>41910145</code> «Вызвать url (копия)» (вызов URL). Что делает: Передает в Vakas: 90557. База 90557, канал «Формы и анкеты» (POST); параметры: <code>name</code>, <code>email</code>, <code>phone</code>, <code>getcourse_user_id</code>, <code>utm_source</code>, <code>utm_medium</code>, <code>utm_campaign</code>, <code>utm_content</code>, <code>utm_term</code>, <code>tag_deal_1</code>, <code>order_name_amo</code>; timeout 300 сек. Зачем нужен: Нужен, чтобы передать подходящий объект в 90557. База 90557; дальше На входе в этап КРИПТОКЛУБ -&gt; Пришел на веб [77815634] база ищет дубль и при необходимости переводит найденную сделку в рабочий этап. Дальше: если результат «Ошибка», идет в «n8n fail после Вызвать url (копия) #41910145»; если результат «Выполнено», идет в «n8n success после Вызвать url (копия) #41910145».</li>
+<li>Блок <code>43528067</code> «n8n success после Вызвать url (копия) #41910145» (вызов URL). Что делает: Пишет событие в n8n: success, action vakas_users (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен для фиксации успешной отправки: n8n получает событие, что Vakas-вызов отработал без ошибки. Дальше: если результат «Ошибка», идет в «Завершение процесса»; если результат «Выполнено», идет в «Завершение процесса».</li>
+<li>Блок <code>41910139</code> «Завершение процесса» (завершение). Что делает: Завершает ветку процесса после выполненных проверок и действий. Зачем нужен: Нужен, чтобы закрыть текущую ветку и не гонять объект по процессу повторно. Дальше переходов нет: это конечная точка ветки.</li>
+<li>Блок <code>43528076</code> «n8n fail после Вызвать url (копия) #41910145» (вызов URL). Что делает: Пишет событие в n8n: fail, action vakas_users (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен для контроля ошибки: n8n получает данные неуспешной отправки, чтобы можно было увидеть проблему и повторить/разобрать передачу. Дальше: если результат «Ошибка», идет в «Тег в амо Чекин_ЗапускКК_24.03»; если результат «Выполнено», идет в «Тег в амо Чекин_ЗапускКК_24.03».</li>
+<li>Блок <code>41910146</code> «Завершение процесса» (завершение). Что делает: Завершает ветку процесса после выполненных проверок и действий. Зачем нужен: Нужен, чтобы закрыть текущую ветку и не гонять объект по процессу повторно. Дальше переходов нет: это конечная точка ветки.</li>
+</ul>
+<h2 id="скриншоты-процесса">Скриншоты процесса</h2>
+<p><img src="../../assets/rules/2415415_rule.png" alt="Правило входа 2415415" /></p>
+<p><img src="../../assets/processes/2415415_process.png" alt="Схема процесса 2415415" /></p>
+<p>Откуда: процесс берет пользователи по правилу входа, детали лучше смотреть на скриншоте ниже.</p>
+<p>Что проверяет по пути: КК - Вошли на вебинар 24/03/26?.</p>
+<p>Куда ведет: вызывает внешние URL: Вызвать url; обновляет доп. поля GetCourse (2 разных действий).</p>
+<h2 id="логика-vakas-и-amocrm">Логика Vakas и amoCRM</h2>
+<ul>
+<li>Условие входа в процесс: В группе (ID: 4724538).</li>
+<li>Вызовов Vakas в схеме: <code>1</code>. Уникальных URL Vakas: <code>1</code>. Связанных баз: <code>1</code>.</li>
+</ul>
+<h3 id="связанная-база-vakas-90557-база-90557">Связанная база Vakas: 90557. База 90557</h3>
+<ul>
+<li>Использование в процессе: Формы и анкеты</li>
+<li>Документация базы: <a href="../bases/90557.html">90557. База 90557</a></li>
+<li>Страница настройки: <a href="https://vakas-tools.ru/account/base/amo.php?mode=contact&amp;base_id=90557">Vakas</a></li>
+<li>Поиск дублей: Проверять на дубли</li>
+<li>Искать только в выбранных воронках: 1</li>
+<li>Ответственный по контакту имеет приоритет: Нет</li>
+</ul>
+<h4 id="вызовы-из-процесса">Вызовы из процесса</h4>
+<h4 id="вызвать-url">Вызвать url</h4>
+<ul>
+<li>Endpoint: <code>sendform</code></li>
+<li>URL вызова: <code>https://vakas-tools.ru/base/sendform/8927217/90557/?name={object.name}&amp;email={object.email}&amp;phone={object.phone}&amp;getcourse_user_id={object.id}&amp;utm_source={object.create_session.utm_source}&amp;utm_medium={object.create_session.utm_medium}&amp;utm_campaign={object.create_session.utm_campaign}&amp;utm_content={object.create_session.utm_content}&amp;utm_term={object.create_session.utm_term}&amp;tag_deal_1={object.deal_tag_1}&amp;order_name_amo={object.order_name_amo}</code></li>
+<li>Связанная база Vakas: <a href="../bases/90557.html">90557. База 90557</a></li>
+</ul>
+<h5 id="когда-срабатывает-в-процессе">Когда срабатывает в процессе</h5>
+<ul>
+<li>Сценарий 1: <code>Начало работы</code> --Выполнено--&gt; <code>Название сделки в амо</code> --Выполнено--&gt; <code>КК - Вошли на вебинар 24/03/26?</code> --Да--&gt; <code>Тег в амо Чекин_ЗапускКК_24.03</code> --Выполнено--&gt; <code>Вызвать url (копия)</code>
+<ul>
+<li>условие <code>КК - Вошли на вебинар 24/03/26?</code>: В группе (ID: 4724538) -&gt; <code>Да</code></li>
+</ul>
+</li>
+</ul>
+<h5 id="что-уходит-в-vakas">Что уходит в Vakas</h5>
+<ul>
+<li><code>name</code></li>
+<li><code>email</code></li>
+<li><code>phone</code></li>
+<li><code>getcourse_user_id</code></li>
+<li><code>utm_source</code></li>
+<li><code>utm_medium</code></li>
+<li><code>utm_campaign</code></li>
+<li><code>utm_content</code></li>
+<li><code>utm_term</code></li>
+<li><code>tag_deal_1</code></li>
+<li><code>order_name_amo</code></li>
+</ul>
+<h5 id="как-база-обработает-вызов-и-что-будет-в-amocrm">Как база обработает вызов и что будет в amoCRM</h5>
+<ul>
+<li>Логика создания сделки: сначала ищется существующая сделка/контакт по правилам базы; если подходящая сделка найдена, обновляется она, иначе создается новая.</li>
+<li>Режим проверки дублей: Проверять на дубли</li>
+<li>Искать дубль только в выбранных воронках: 1 шт.</li>
+<li>Учитывать закрытые этапы при поиске дубля: нет</li>
+<li>Добавлять телефон/email в найденный контакт: Нет</li>
+<li>Менять имя контакта при обновлении: Нет</li>
+<li><code>КРИПТОКЛУБ [9578374]</code></li>
+<li>Автоотправка регистраций в amoCRM: Да</li>
+<li>Базовый этап: КРИПТОКЛУБ -&gt; Пришел на веб [77815634]</li>
+<li>Этапы, из которых разрешен сдвиг: <code>КРИПТОКЛУБ -&gt; Неразобранное [76504482]</code>, <code>КРИПТОКЛУБ -&gt; Регистрации [77608914]</code>, <code>КРИПТОКЛУБ -&gt; Пришел на веб [77815634]</code></li>
+<li>Менять название сделки при обновлении: Да</li>
+<li>Менять имя контакта при обновлении: Нет</li>
+<li>Ответственный по умолчанию: Максим Хоруженко[12235050]</li>
+<li>Всегда менять ответственного: Нет</li>
+<li>Теги сделки: {#reg_field_tag_deal_1#}</li>
+<li>Индивидуальные правила маршрутизации: нет</li>
+</ul>
+</article></main><script>window.DOC_ROOT="../../";</script>
+<script src="../../search-data.js"></script><script src="../../nav-data.js"></script><script src="../../gitbook.js"></script></body></html>

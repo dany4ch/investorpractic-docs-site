@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ru"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>[AMO] Оплатил криптоклуб, передача в амо — Investor Practic</title><link rel="stylesheet" href="../../offline.css"></head>
+<body><aside><a class="home" href="../../index.html">Investor Practic</a>
+<label for="search">Поиск по страницам</label><input id="search" type="search" placeholder="Название или ID">
+<div id="results"></div><nav id="doc-nav"></nav></aside>
+<main><div class="toolbar"><a href="../../index.html">Главная</a><span>Документация · 03.11.2026</span></div>
+<article><h1 id="amo-оплатил-криптоклуб-передача-в-амо">[AMO] Оплатил криптоклуб, передача в амо</h1>
+<ul>
+<li>ID процесса: <code>1823888</code></li>
+<li>Объект: Заказы</li>
+<li>Статус: Не запущен</li>
+<li>Внутренняя страница: <a href="../../processes/1823888.html">1823888. [AMO] Оплатил криптоклуб, передача в амо</a></li>
+<li>GetCourse: <a href="https://investorpractic.getcourse.ru/pl/tasks/mission/update?id=1823888">Карточка</a> | <a href="https://investorpractic.getcourse.ru/pl/tasks/mission/process?id=1823888">Схема процесса</a></li>
+</ul>
+<h2 id="скриншоты-процесса">Скриншоты процесса</h2>
+<p><img src="../../assets/rules/1823888_rule.png" alt="Правило входа 1823888" /></p>
+<p><img src="../../assets/processes/1823888_process.png" alt="Схема процесса 1823888" /></p>
+<h2 id="коротко-для-заказчика">Коротко для заказчика</h2>
+<ul>
+<li>Главное: В процесс попадают заказы по правилу: ID объектов.</li>
+<li>Дальше он передает данные как: Оплаты и заказы.</li>
+<li>Связанных баз Vakas: 1.</li>
+</ul>
+<h2 id="понятное-описание-процесса">Понятное описание процесса</h2>
+<ul>
+<li>Процесс работает с объектом GetCourse: Заказы. Текущий статус процесса: Не запущен.</li>
+<li>На вход попадают данные так: В процесс попадают заказы по правилу: ID объектов.</li>
+<li>Внутри схемы есть дополнительные проверки/ожидания: 4. Основные блоки: «Частично оплачен?»; «Ожидаем полную оплату»; «Оплачен?»; «Ожидаем оплату».</li>
+<li>Дальше процесс делает прямые вызовы Vakas: 2. Напрямую задействованы базы: 60358.</li>
+<li>Передача: 60358. Оплатил криптоклуб, передача в амо: Оплаты и заказы. Передаются параметры: <code>number</code>, <code>id</code>, <code>order_id</code>, <code>positions</code>, <code>costMoney</code>, <code>leftCostMoney</code>, <code>payedMoney</code>, <code>status</code>, <code>paymentLink</code>, <code>firstName</code> и другие.</li>
+<li>Что происходит в amoCRM: На входе в этап КРИПТОКЛУБ -&gt; Новый заказ [76504486] база ищет дубль и при необходимости переводит найденную сделку в рабочий этап.</li>
+</ul>
+<h2 id="ход-процесса-в-getcourse">Ход процесса в GetCourse</h2>
+<ul>
+<li>Схема состоит из 14 блоков и 22 переходов.</li>
+<li>По типам: стартов 1, условий/ожиданий 4, вызовов URL 7, изменений полей 1, финалов 1.</li>
+</ul>
+<p>Блоки процесса: что делают и зачем нужны:</p>
+<ul>
+<li>Блок <code>31765729</code> «Начало работы» (старт). Что делает: Запускает выполнение схемы для объекта, который попал под правило входа процесса. Зачем нужен: Нужен как точка входа: от него GetCourse начинает движение объекта по схеме. Дальше: если результат «Выполнено», идет в «Оплачен?».</li>
+<li>Блок <code>31971578</code> «Оплачен?» (условие). Что делает: Проверяет условие: Частично оплачен (да) или Оплачен (да). Зачем нужен: Нужен, чтобы разделить поток: подходящих пользователей/заказы отправить дальше, неподходящих перевести на другую ветку или завершить. Дальше: если результат «Нет», идет в «Вызвать url — заменить URL»; если результат «Да», идет в «Частично оплачен?».</li>
+<li>Блок <code>31903197</code> «Частично оплачен?» (условие). Что делает: Проверяет условие: Частично оплачен (да) и Предложение (все с тегами: Криптоклуб). Зачем нужен: Нужен, чтобы разделить поток: подходящих пользователей/заказы отправить дальше, неподходящих перевести на другую ветку или завершить. Дальше: если результат «Нет», идет в «Полная оплата»; если результат «Да», идет в «Частичная оплата».</li>
+<li>Блок <code>31903199</code> «Частичная оплата» (вызов URL). Что делает: Передает в Vakas: 60358. Оплатил криптоклуб, передача в амо, канал «Оплаты и заказы» (GET); параметры: <code>number</code>, <code>id</code>, <code>order_id</code>, <code>positions</code>, <code>costMoney</code>, <code>leftCostMoney</code>, <code>payedMoney</code>, <code>status</code>, <code>paymentLink</code>, <code>firstName</code>, <code>lastName</code>, <code>name</code>, <code>email</code>, <code>phone</code> и другие; timeout 300 сек. Зачем нужен: Нужен, чтобы передать подходящий объект в 60358. Оплатил криптоклуб, передача в амо; дальше На входе в этап КРИПТОКЛУБ -&gt; Новый заказ [76504486] база ищет дубль и при необходимости переводит найденную сделку в рабочий этап. Дальше: если результат «Ошибка», идет в «n8n fail после частичной оплаты»; если результат «Выполнено», идет в «n8n success после частичной оплаты».</li>
+<li>Блок <code>43509869</code> «n8n success после частичной оплаты» (вызов URL). Что делает: Вызывает внешний URL: testn8n.easydrafting.ru/webhook/gc-vakas-retry-events (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>order_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен, чтобы процесс GetCourse передал данные во внешний сервис testn8n.easydrafting.ru. Дальше: если результат «Ошибка», идет в «Ожидаем полную оплату»; если результат «Выполнено», идет в «Ожидаем полную оплату».</li>
+<li>Блок <code>31903250</code> «Ожидаем полную оплату» (ожидание условия). Что делает: Останавливает объект в ожидании, пока выполнится условие: Оплачен (да) и Предложение (все с тегами: Криптоклуб). Зачем нужен: Нужен, чтобы не отправлять объект раньше времени: процесс ждет нужное событие, заказ, сегмент или другое условие. Дальше: если результат «Условие выполнено», идет в «Полная оплата».</li>
+<li>Блок <code>31765730</code> «Полная оплата» (вызов URL). Что делает: Передает в Vakas: 60358. Оплатил криптоклуб, передача в амо, канал «Оплаты и заказы» (GET); параметры: <code>number</code>, <code>id</code>, <code>order_id</code>, <code>positions</code>, <code>costMoney</code>, <code>leftCostMoney</code>, <code>payedMoney</code>, <code>status</code>, <code>paymentLink</code>, <code>firstName</code>, <code>lastName</code>, <code>name</code>, <code>email</code>, <code>phone</code> и другие; timeout 300 сек. Зачем нужен: Нужен, чтобы передать подходящий объект в 60358. Оплатил криптоклуб, передача в амо; дальше На входе в этап КРИПТОКЛУБ -&gt; Новый заказ [76504486] база ищет дубль и при необходимости переводит найденную сделку в рабочий этап. Дальше: если результат «Ошибка», идет в «n8n fail после полной оплаты»; если результат «Выполнено», идет в «n8n success после полной оплаты».</li>
+<li>Блок <code>43509868</code> «n8n success после полной оплаты» (вызов URL). Что делает: Вызывает внешний URL: testn8n.easydrafting.ru/webhook/gc-vakas-retry-events (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>order_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен, чтобы процесс GetCourse передал данные во внешний сервис testn8n.easydrafting.ru. Дальше: если результат «Ошибка», идет в «Изменить значение доп. поля»; если результат «Выполнено», идет в «Изменить значение доп. поля».</li>
+<li>Блок <code>32290506</code> «Изменить значение доп. поля» (изменение поля). Что делает: меняет поле <code>Передан в АМО</code> (Установить равным). значение: 1 Зачем нужен: Нужен, чтобы записать внутри GetCourse технический признак/значение, которое потом используется в передаче или логике ветвления. Дальше: если результат «Выполнено», идет в «Завершение процесса».</li>
+<li>Блок <code>31765731</code> «Завершение процесса» (завершение). Что делает: Завершает ветку процесса после выполненных проверок и действий. Зачем нужен: Нужен, чтобы закрыть текущую ветку и не гонять объект по процессу повторно. Дальше переходов нет: это конечная точка ветки.</li>
+<li>Блок <code>43509871</code> «n8n fail после полной оплаты» (вызов URL). Что делает: Вызывает внешний URL: testn8n.easydrafting.ru/webhook/gc-vakas-retry-events (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>order_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен, чтобы процесс GetCourse передал данные во внешний сервис testn8n.easydrafting.ru. Дальше: если результат «Ошибка», идет в «Частично оплачен?»; если результат «Выполнено», идет в «Частично оплачен?».</li>
+<li>Блок <code>43509919</code> «n8n fail после частичной оплаты» (вызов URL). Что делает: Вызывает внешний URL: testn8n.easydrafting.ru/webhook/gc-vakas-retry-events (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>order_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен, чтобы процесс GetCourse передал данные во внешний сервис testn8n.easydrafting.ru. Дальше: если результат «Ошибка», идет в «Частично оплачен?»; если результат «Выполнено», идет в «Частично оплачен?».</li>
+<li>Блок <code>43509524</code> «Вызвать url — заменить URL» (вызов URL). Что делает: Вызывает внешний URL: testn8n.easydrafting.ru/webhook/gc-vakas-retry-events (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>order_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен, чтобы процесс GetCourse передал данные во внешний сервис testn8n.easydrafting.ru. Дальше: если результат «Ошибка», идет в «Ожидаем оплату»; если результат «Выполнено», идет в «Ожидаем оплату».</li>
+<li>Блок <code>31971579</code> «Ожидаем оплату» (ожидание условия). Что делает: Останавливает объект в ожидании, пока выполнится условие: Частично оплачен (да) или Оплачен (да). Зачем нужен: Нужен, чтобы не отправлять объект раньше времени: процесс ждет нужное событие, заказ, сегмент или другое условие. Дальше: если результат «Условие выполнено», идет в «Частично оплачен?».</li>
+</ul>
+<h2 id="что-именно-входит-в-процесс">Что именно входит в процесс</h2>
+<ul>
+<li>В процесс попадают заказы по правилу: ID объектов.</li>
+</ul>
+<h2 id="как-именно-настроено-правило">Как именно настроено правило</h2>
+<ul>
+<li>ID объектов</li>
+</ul>
+<h2 id="куда-и-как-передается-дальше">Куда и как передается дальше</h2>
+<table>
+<thead>
+<tr>
+<th>База Vakas</th>
+<th>Что передается</th>
+<th>Этап в amoCRM</th>
+<th>Что происходит со сделкой</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../bases/60358.html">60358. Оплатил криптоклуб, передача в амо</a></td>
+<td>Оплаты и заказы</td>
+<td>КРИПТОКЛУБ -&gt; Новый заказ [76504486]</td>
+<td>На входе в этап КРИПТОКЛУБ -&gt; Новый заказ [76504486] база ищет дубль и при необходимости переводит найденную сделку в рабочий этап.</td>
+</tr>
+</tbody>
+</table>
+</article></main><script>window.DOC_ROOT="../../";</script>
+<script src="../../search-data.js"></script><script src="../../nav-data.js"></script><script src="../../gitbook.js"></script></body></html>

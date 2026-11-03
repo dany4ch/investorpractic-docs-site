@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>88098. База 88098 — Investor Practic</title><link rel="stylesheet" href="../../offline.css"></head>
+<body><aside><a class="home" href="../../index.html">Investor Practic</a>
+<label for="search">Поиск по страницам</label><input id="search" type="search" placeholder="Название или ID">
+<div id="results"></div><nav id="doc-nav"></nav></aside>
+<main><div class="toolbar"><a href="../../index.html">Главная</a><span>Документация · 03.11.2026</span></div>
+<article><h1 id="88098-база-88098">88098. База 88098</h1>
+<ul>
+<li>Внутренняя страница: <a href="../../vakas-bases/88098.html">88098. База 88098</a></li>
+<li>Страница настройки: <a href="https://vakas-tools.ru/account/base/amo.php?mode=contact&amp;base_id=88098">Vakas</a></li>
+<li>Связанных процессов GetCourse: <code>3</code></li>
+</ul>
+<h2 id="как-база-обрабатывает-передачу">Как база обрабатывает передачу</h2>
+<p>Сначала база ищет дубль без ограничения по воронкам.</p>
+<h3 id="оплаты-и-заказы">Оплаты и заказы</h3>
+<ul>
+<li>Новая передача приходит в этап: ФИНАНСОВАЯ СВОБОДА -&gt; НОВЫЙ ЗАКАЗ [75957170]</li>
+<li>Если подходящей сделки нет, создается новая сделка.</li>
+<li>Если дубль найден, база ориентируется на список из 126 этапов старой сделки в 12 воронках и при необходимости переводит ее в рабочий этап.</li>
+<li>Дополнительных условных маршрутов для этого канала нет.</li>
+</ul>
+<h2 id="какие-процессы-приводят-данные-в-эту-базу">Какие процессы приводят данные в эту базу</h2>
+<table>
+<thead>
+<tr>
+<th>Процесс</th>
+<th>Что входит в процесс</th>
+<th>Что передается</th>
+<th>Техническое условие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../processes/2261169.html">2261169. Запуск_ФС_21.10(новый заказ)</a></td>
+<td>В процесс попадают заказы по следующим продуктам: «» и «».</td>
+<td>Оплаты и заказы</td>
+<td>Предложение (ID: 7713895, 7713901)</td>
+</tr>
+<tr>
+<td><a href="../processes/2261264.html">2261264. Запуск_ФС_21.10(частичная оплата)</a></td>
+<td>В процесс попадают заказы по следующим продуктам: «» и «».</td>
+<td>Оплаты и заказы</td>
+<td>Частично оплачен (да) и Предложение (ID: 7713895, 7713901)</td>
+</tr>
+<tr>
+<td><a href="../processes/2261266.html">2261266. Запуск_ФС_21.10(полная оплата)</a></td>
+<td>В процесс попадают заказы по следующим продуктам: «» и «».</td>
+<td>Оплаты и заказы</td>
+<td>Оплачен (да) и Предложение (ID: 7713895, 7713901)</td>
+</tr>
+</tbody>
+</table>
+</article></main><script>window.DOC_ROOT="../../";</script>
+<script src="../../search-data.js"></script><script src="../../nav-data.js"></script><script src="../../gitbook.js"></script></body></html>

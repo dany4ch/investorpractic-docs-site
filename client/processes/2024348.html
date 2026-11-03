@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ru"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Передача в амо ПД зрители — Investor Practic</title><link rel="stylesheet" href="../../offline.css"></head>
+<body><aside><a class="home" href="../../index.html">Investor Practic</a>
+<label for="search">Поиск по страницам</label><input id="search" type="search" placeholder="Название или ID">
+<div id="results"></div><nav id="doc-nav"></nav></aside>
+<main><div class="toolbar"><a href="../../index.html">Главная</a><span>Документация · 03.11.2026</span></div>
+<article><h1 id="передача-в-амо-пд-зрители">Передача в амо ПД зрители</h1>
+<ul>
+<li>ID процесса: <code>2024348</code></li>
+<li>Объект: Заказы</li>
+<li>Статус: Активен</li>
+<li>Внутренняя страница: <a href="../../processes/2024348.html">2024348. Передача в амо ПД зрители</a></li>
+<li>GetCourse: <a href="https://investorpractic.getcourse.ru/pl/tasks/mission/update?id=2024348">Карточка</a> | <a href="https://investorpractic.getcourse.ru/pl/tasks/mission/process?id=2024348">Схема процесса</a></li>
+</ul>
+<h2 id="скриншоты-процесса">Скриншоты процесса</h2>
+<p><img src="../../assets/rules/2024348_rule.png" alt="Правило входа 2024348" /></p>
+<p><img src="../../assets/processes/2024348_process.png" alt="Схема процесса 2024348" /></p>
+<h2 id="коротко-для-заказчика">Коротко для заказчика</h2>
+<ul>
+<li>Главное: В процесс попадают заказы по правилу: Предложение (ID: 5300529) и НЕ С тегом (ID: 1439205, 1439206, 1439207) и Дата создания и Принадлежит пользователю.</li>
+<li>Дальше он передает данные как: Оплаты и заказы.</li>
+<li>Связанных баз Vakas: 1.</li>
+</ul>
+<h2 id="понятное-описание-процесса">Понятное описание процесса</h2>
+<ul>
+<li>Процесс работает с объектом GetCourse: Заказы. Текущий статус процесса: Активен.</li>
+<li>На вход попадают данные так: В процесс попадают заказы по правилу: Предложение (ID: 5300529) и НЕ С тегом (ID: 1439205, 1439206, 1439207) и Дата создания и Принадлежит пользователю.</li>
+<li>Внутри схемы есть дополнительные проверки/ожидания: 1. Основные блоки: «Есть платный заказ ПД?».</li>
+<li>Дальше процесс делает прямые вызовы Vakas: 1. Напрямую задействованы базы: 73270.</li>
+<li>Передача: 73270. Передача в амо ПД зрители: Оплаты и заказы. Передаются параметры: <code>number</code>, <code>id</code>, <code>order_id</code>, <code>positions</code>, <code>costMoney</code>, <code>leftCostMoney</code>, <code>payedMoney</code>, <code>status</code>, <code>paymentLink</code>, <code>firstName</code> и другие.</li>
+<li>Что происходит в amoCRM: На входе в этап ОТДЕЛ - ДОВЕДЕНИЯ -&gt; ПОСМОТРЕЛИ ВЕБИНАР 1 [57387586] база ищет дубль и, если находит его, обновляет сделку без смены этапа.</li>
+</ul>
+<h2 id="ход-процесса-в-getcourse">Ход процесса в GetCourse</h2>
+<ul>
+<li>Схема состоит из 6 блоков и 9 переходов.</li>
+<li>По типам: стартов 1, условий/ожиданий 1, вызовов URL 3, изменений полей 0, финалов 1.</li>
+</ul>
+<p>Блоки процесса: что делают и зачем нужны:</p>
+<ul>
+<li>Блок <code>35015038</code> «Начало работы» (старт). Что делает: Запускает выполнение схемы для объекта, который попал под правило входа процесса. Зачем нужен: Нужен как точка входа: от него GetCourse начинает движение объекта по схеме. Дальше: если результат «Выполнено», идет в «Есть платный заказ ПД?».</li>
+<li>Блок <code>35015041</code> «Есть платный заказ ПД?» (условие). Что делает: Проверяет условие: Принадлежит пользователю. Зачем нужен: Нужен, чтобы разделить поток: подходящих пользователей/заказы отправить дальше, неподходящих перевести на другую ветку или завершить. Дальше: если результат «Нет», идет в «Вызвать url»; если результат «Да», идет в «Завершение процесса».</li>
+<li>Блок <code>35015040</code> «Завершение процесса» (завершение). Что делает: Завершает ветку процесса после выполненных проверок и действий. Зачем нужен: Нужен, чтобы закрыть текущую ветку и не гонять объект по процессу повторно. Дальше переходов нет: это конечная точка ветки.</li>
+<li>Блок <code>35015039</code> «Вызвать url» (вызов URL). Что делает: Передает в Vakas: 73270. Передача в амо ПД зрители, канал «Оплаты и заказы» (GET); параметры: <code>number</code>, <code>id</code>, <code>order_id</code>, <code>positions</code>, <code>costMoney</code>, <code>leftCostMoney</code>, <code>payedMoney</code>, <code>status</code>, <code>paymentLink</code>, <code>firstName</code>, <code>lastName</code>, <code>name</code>, <code>email</code>, <code>phone</code> и другие; timeout 300 сек. Зачем нужен: Нужен, чтобы передать подходящий объект в 73270. Передача в амо ПД зрители; дальше На входе в этап ОТДЕЛ - ДОВЕДЕНИЯ -&gt; ПОСМОТРЕЛИ ВЕБИНАР 1 [57387586] база ищет дубль и, если находит его, обновляет сделку без смены этапа. Дальше: если результат «Ошибка», идет в «n8n fail после Вызвать url #35015039»; если результат «Выполнено», идет в «n8n success после Вызвать url #35015039».</li>
+<li>Блок <code>43524633</code> «n8n success после Вызвать url #35015039» (вызов URL). Что делает: Вызывает внешний URL: testn8n.easydrafting.ru/webhook/gc-vakas-retry-events (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>order_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен, чтобы процесс GetCourse передал данные во внешний сервис testn8n.easydrafting.ru. Дальше: если результат «Ошибка», идет в «Завершение процесса»; если результат «Выполнено», идет в «Завершение процесса».</li>
+<li>Блок <code>43524752</code> «n8n fail после Вызвать url #35015039» (вызов URL). Что делает: Вызывает внешний URL: testn8n.easydrafting.ru/webhook/gc-vakas-retry-events (POST); параметры: <code>event</code>, <code>clientED</code>, <code>gcDomain</code>, <code>action</code>, <code>process_id</code>, <code>process_name</code>, <code>entity_type</code>, <code>object_id</code>, <code>order_id</code>, <code>user_id</code>, <code>name</code>, <code>email</code>, <code>phone</code>, <code>error_message</code>; timeout 10 сек. Зачем нужен: Нужен, чтобы процесс GetCourse передал данные во внешний сервис testn8n.easydrafting.ru. Дальше: если результат «Ошибка», идет в «Есть платный заказ ПД?»; если результат «Выполнено», идет в «Есть платный заказ ПД?».</li>
+</ul>
+<h2 id="что-именно-входит-в-процесс">Что именно входит в процесс</h2>
+<ul>
+<li>В процесс попадают заказы по правилу: Предложение (ID: 5300529) и НЕ С тегом (ID: 1439205, 1439206, 1439207) и Дата создания и Принадлежит пользователю.</li>
+</ul>
+<h2 id="как-именно-настроено-правило">Как именно настроено правило</h2>
+<ul>
+<li>Предложение (ID: 5300529) и НЕ С тегом (ID: 1439205, 1439206, 1439207) и Дата создания и Принадлежит пользователю</li>
+</ul>
+<h2 id="куда-и-как-передается-дальше">Куда и как передается дальше</h2>
+<table>
+<thead>
+<tr>
+<th>База Vakas</th>
+<th>Что передается</th>
+<th>Этап в amoCRM</th>
+<th>Что происходит со сделкой</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../bases/73270.html">73270. Передача в амо ПД зрители</a></td>
+<td>Оплаты и заказы</td>
+<td>ОТДЕЛ - ДОВЕДЕНИЯ -&gt; ПОСМОТРЕЛИ ВЕБИНАР 1 [57387586]</td>
+<td>На входе в этап ОТДЕЛ - ДОВЕДЕНИЯ -&gt; ПОСМОТРЕЛИ ВЕБИНАР 1 [57387586] база ищет дубль и, если находит его, обновляет сделку без смены этапа.</td>
+</tr>
+</tbody>
+</table>
+</article></main><script>window.DOC_ROOT="../../";</script>
+<script src="../../search-data.js"></script><script src="../../nav-data.js"></script><script src="../../gitbook.js"></script></body></html>

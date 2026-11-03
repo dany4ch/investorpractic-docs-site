@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>78502. База 78502 — Investor Practic</title><link rel="stylesheet" href="../../offline.css"></head>
+<body><aside><a class="home" href="../../index.html">Investor Practic</a>
+<label for="search">Поиск по страницам</label><input id="search" type="search" placeholder="Название или ID">
+<div id="results"></div><nav id="doc-nav"></nav></aside>
+<main><div class="toolbar"><a href="../../index.html">Главная</a><span>Документация · 03.11.2026</span></div>
+<article><h1 id="78502-база-78502">78502. База 78502</h1>
+<ul>
+<li>Внутренняя страница: <a href="../../vakas-bases/78502.html">78502. База 78502</a></li>
+<li>Страница настройки: <a href="https://vakas-tools.ru/account/base/amo.php?mode=contact&amp;base_id=78502">Vakas</a></li>
+<li>Связанных процессов GetCourse: <code>2</code></li>
+</ul>
+<h2 id="как-база-обрабатывает-передачу">Как база обрабатывает передачу</h2>
+<p>Сначала база ищет дубль в 12 воронках.</p>
+<h3 id="регистрации-и-формы">Регистрации и формы</h3>
+<ul>
+<li>Новая передача приходит в этап: ИНВЕСТ КЛУБ -&gt; ПРОДЛИТЬ ПОДПИСКУ [75971314]</li>
+<li>Если подходящей сделки нет, создается новая сделка.</li>
+<li>Если дубль найден, база ориентируется на список из 119 этапов старой сделки в 12 воронках и при необходимости переводит ее в рабочий этап.</li>
+<li>Дополнительных условных маршрутов для этого канала нет.</li>
+</ul>
+<h2 id="какие-процессы-приводят-данные-в-эту-базу">Какие процессы приводят данные в эту базу</h2>
+<table>
+<thead>
+<tr>
+<th>Процесс</th>
+<th>Что входит в процесс</th>
+<th>Что передается</th>
+<th>Техническое условие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../processes/2102420.html">2102420. удалить</a></td>
+<td>В процесс попадают пользователи по правилу: Находится в сегменте.</td>
+<td>Формы и анкеты</td>
+<td>Находится в сегменте</td>
+</tr>
+<tr>
+<td><a href="../processes/2117777.html">2117777. amo da</a></td>
+<td>В процесс попадают пользователи по правилу: Имеет заказ и НЕ Имеет заказ.</td>
+<td>Формы и анкеты</td>
+<td>Имеет заказ и НЕ Имеет заказ</td>
+</tr>
+</tbody>
+</table>
+</article></main><script>window.DOC_ROOT="../../";</script>
+<script src="../../search-data.js"></script><script src="../../nav-data.js"></script><script src="../../gitbook.js"></script></body></html>

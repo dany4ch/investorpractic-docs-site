@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="ru"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>101088. База 101088 — Investor Practic</title><link rel="stylesheet" href="../offline.css"></head>
+<body><aside><a class="home" href="../index.html">Investor Practic</a>
+<label for="search">Поиск по страницам</label><input id="search" type="search" placeholder="Название или ID">
+<div id="results"></div><nav id="doc-nav"></nav></aside>
+<main><div class="toolbar"><a href="../index.html">Главная</a><span>Документация · 03.11.2026</span></div>
+<article><h1 id="101088-база-101088">101088. База 101088</h1>
+<ul>
+<li><code>base_id</code>: <code>101088</code></li>
+<li>Использование в GetCourse: <em>не определено</em></li>
+<li>Связанные процессы: <code>2</code></li>
+<li>Страница настройки: <a href="https://vakas-tools.ru/account/base/amo.php?mode=contact&amp;base_id=101088">Vakas</a></li>
+<li>Условия регистраций: <a href="https://vakas-tools.ru/account/base/amo.php?mode=reg_cond&amp;base_id=101088&amp;modal=true">reg_cond</a></li>
+</ul>
+<h2 id="что-происходит-с-передачей-в-этой-базе">Что происходит с передачей в этой базе</h2>
+<p>Сначала база ищет дубль в 1 воронках.</p>
+<h3 id="регистрации-и-формы">Регистрации и формы</h3>
+<ul>
+<li>Новая передача приходит в этап: ПДО -&gt; Чекин [85906974]</li>
+<li>Если подходящей сделки нет, создается новая сделка.</li>
+<li>Если дубль найден, база ориентируется на список из 11 этапов старой сделки в 1 воронках и при необходимости переводит ее в рабочий этап.</li>
+<li>Разрешённые этапы сгруппированы по воронкам: <code>ПДО: 11</code></li>
+</ul>
+<h4 id="разрешённые-этапы-по-воронкам">Разрешённые этапы по воронкам</h4>
+<ul>
+<li><code>ПДО</code> (11): Неразобранное [85904434]; Чекин [85906974]; НОВЫЙ ЗАКАЗ [85904438]; ОТВЕТСТВЕННЫЙ НАЗНАЧЕН [85904442]; В РАБОТЕ [85904446]; НДЗ 1 [85904450]; НДЗ 2 [85904454]; НДЗ 3 [85904458]; ПРИНИМАЮТ РЕШЕНИЕ [85904462]; ПРЕДОПЛАТА/ЧАСТИЧНО ОПЛАЧЕН [85904466]; ОЖИДАЕМ ОПЛАТУ [85904470]</li>
+<li>Дополнительных условных маршрутов для этого канала нет.</li>
+</ul>
+<h2 id="краткая-сводка">Краткая сводка</h2>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Название базы</td>
+<td>База 101088</td>
+</tr>
+<tr>
+<td>Типы использования</td>
+<td>не определено</td>
+</tr>
+<tr>
+<td>Сервисы на карточке</td>
+<td>не указаны</td>
+</tr>
+<tr>
+<td>Теги базы</td>
+<td>не указаны</td>
+</tr>
+<tr>
+<td>Проверка дублей</td>
+<td>Проверять на дубли</td>
+</tr>
+<tr>
+<td>Распределять на менеджера по контакту</td>
+<td>Нет</td>
+</tr>
+<tr>
+<td>База для правила распределения</td>
+<td>из текущей базы</td>
+</tr>
+<tr>
+<td>Ответственный по умолчанию</td>
+<td>EasyDrafting[12985298]</td>
+</tr>
+<tr>
+<td>Отправка регистраций</td>
+<td>Да</td>
+</tr>
+<tr>
+<td>Отправка отчетов</td>
+<td>Нет</td>
+</tr>
+<tr>
+<td>Отправка оплат</td>
+<td>Нет</td>
+</tr>
+<tr>
+<td>Правил reg_cond</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Правил report_cond</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Правил payment_cond</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h2 id="связанные-процессы-getcourse">Связанные процессы GetCourse</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Процесс</th>
+<th>Объект</th>
+<th>Статус</th>
+<th>Тип вызова</th>
+<th>Документация</th>
+<th>GetCourse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>2469718</code></td>
+<td>[AMO] [ED] Чекин_ПДО_Авто | Чекин_запускПДО | 101088</td>
+<td>Пользователи</td>
+<td>Ожидание событий</td>
+<td>Формы и анкеты</td>
+<td><a href="../processes/2469718.html">Открыть</a></td>
+<td><a href="https://investorpractic.getcourse.ru/pl/tasks/mission/update?id=2469718">Карточка</a></td>
+</tr>
+<tr>
+<td><code>2473375</code></td>
+<td>[AMO] [ED] повторы Чекин_ПДО_Авто 101088</td>
+<td>Пользователи</td>
+<td>Ожидание событий</td>
+<td>Формы и анкеты</td>
+<td><a href="../processes/2473375.html">Открыть</a></td>
+<td><a href="https://investorpractic.getcourse.ru/pl/tasks/mission/update?id=2473375">Карточка</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="технические-описания-процессов">Технические описания процессов</h2>
+<h3 id="2469718-amo-ed-чекин-пдо-авто-чекин-запускпдо-101088">2469718. [AMO] [ED] Чекин_ПДО_Авто | Чекин_запускПДО | 101088</h3>
+<ul>
+<li>Тип вызова: <code>sendform</code></li>
+<li>Объект: Пользователи</li>
+<li>Статус: Ожидание событий</li>
+</ul>
+<blockquote>
+<p>15.05.2026 Задача: https://spi.bitrix24.ru/online/?IM_TASK=chat24416&amp;IM_MESSAGE=2110576</p>
+<p>https://vakas-tools.ru/account/base/amo.php?base_id=101088</p>
+<p>Вебинар: https://investorpractic.getcourse.ru/pl/webinar/show?hash=57ec96fe264849ad1f2134dcec1e9706</p>
+<p>Воронка:  ПДО https://investorpractic.amocrm.ru/leads/pipeline/10923418/?skip_filter=Y
+Этап: Чекин
+Название в амо: Чекин_ПДО_Авто
+Тег в амо: Чекин_ПДО_Авто</p>
+<p>25.05.2026 Задача: https://spi.bitrix24.ru/online/?IM_TASK=chat24416&amp;IM_MESSAGE=2118182</p>
+<p>https://vakas-tools.ru/account/base/amo.php?base_id=101088</p>
+<p>Вебинар: https://investorpractic.getcourse.ru/pl/webinar/show?id=3287237</p>
+<p>Воронка:  ПДО https://investorpractic.amocrm.ru/leads/pipeline/10923418/?skip_filter=Y
+Этап: Чекин
+Название в амо: Чекин_запускПДО
+Тег в амо: Чекин_запускПДО</p>
+</blockquote>
+<h3 id="2473375-amo-ed-повторы-чекин-пдо-авто-101088">2473375. [AMO] [ED] повторы Чекин_ПДО_Авто 101088</h3>
+<ul>
+<li>Тип вызова: <code>sendform</code></li>
+<li>Объект: Пользователи</li>
+<li>Статус: Ожидание событий</li>
+</ul>
+<blockquote>
+<p>30.06.2026. Подробный ход процесса GetCourse:</p>
+<ul>
+<li>
+<p>Главное: В процесс попадают пользователи из выбранных сегментов GetCourse: 36004473, 36004477.</p>
+</li>
+<li>
+<p>Процесс работает с объектом GetCourse: Пользователи. Текущий статус процесса: Ожидание событий.</p>
+</li>
+</ul>
+<p>Как идет процесс внутри GetCourse:</p>
+<ul>
+<li>Схема состоит из 17 блоков и 27 переходов.</li>
+</ul>
+<p>Конец подробного хода процесса GetCourse.</p>
+<hr />
+<p>30.06.2026. Актуальное описание процесса:</p>
+<ul>
+<li>
+<p>Главное: В процесс попадают пользователи из выбранных сегментов GetCourse: 36004473, 36004477.</p>
+</li>
+<li>
+<p>Процесс работает с объектом GetCourse: Пользователи. Текущий статус процесса: Ожидание событий.</p>
+</li>
+</ul>
+<p>Конец актуального описания процесса.</p>
+<hr />
+<p>21.05.2026 Задача: https://spi.bitrix24.ru/online/?IM_TASK=chat24416&amp;IM_MESSAGE=2114864</p>
+<p>https://vakas-tools.ru/account/base/amo.php?base_id=101088</p>
+<p>повтор -
+комната https://investorpractic.getcourse.ru/pl/webinar/show?id=3284529
+стр входа https://investorpractic.getcourse.ru/pass_d_2</p>
+<p>Воронка:  ПДО https://investorpractic.amocrm.ru/leads/pipeline/10923418/?skip_filter=Y
+Этап: Чекин
+Название в амо: Чекин_ПДО_Авто
+Тег в амо: Чекин_ПДО_Авто</p>
+<p>Правило входа / сегменты:</p>
+<ul>
+<li>ПД на облигациях: segment_id=36004477; дата попадания в сегмент от 19.06.2026</li>
+<li>ПД на облигациях после ПД: segment_id=36004473; дата попадания в сегмент от 19.06.2026
+Передача в Vakas: tag=Чекин_ПДО_Авто; timeline_web передается в URL.</li>
+</ul>
+<p>19.06.2026 по задаче https://spi.bitrix24.ru/company/personal/user/760/tasks/task/view/7144/
+Было: процесс входил по группе 4808200 и отправлял повторную передачу Чекин_ПДО_Авто в Vakas без отдельной метки длительности просмотра.
+Стало: правило входа процесса переведено на сегменты 36004477 (ПД на облигациях) и 36004473 (ПД на облигациях после ПД) с датой попадания в сегмент от 19.06.2026. Перед Vakas проверяются сегменты длительности просмотра, в timeline_web записывается under_30 / 30_60 / 60_90 / over_90 и передается в Vakas URL. Если пользователь не попал ни в один сегмент времени, процесс идет дальше по старой логике без установки timeline_web.
+Входные сегменты приведены в текущей задаче: ПД на облигациях — https://investorpractic.getcourse.ru/pl/user/user/index?uc[segment_id]=36004477; ПД на облигациях после ПД — https://investorpractic.getcourse.ru/pl/user/user/index?uc[segment_id]=36004473.
+Сегменты timeline_web приведены в текущей задаче: after PD under_30 — https://investorpractic.getcourse.ru/pl/user/user/index?uc[segment_id]=36005680; after PD 30_60 — https://investorpractic.getcourse.ru/pl/user/user/index?uc[segment_id]=36005746; after PD 60_90 — https://investorpractic.getcourse.ru/pl/user/user/index?uc[segment_id]=36005781; after PD over_90 — https://investorpractic.getcourse.ru/pl/user/user/index?uc[segment_id]=36005776; ПДО under_30 — https://investorpractic.getcourse.ru/pl/user/user/index?uc[segment_id]=36005929; ПДО 30_60 — https://investorpractic.getcourse.ru/pl/user/user/index?uc[segment_id]=36005934; ПДО 60_90 — https://investorpractic.getcourse.ru/pl/user/user/index?uc[segment_id]=36005935; ПДО over_90 — https://investorpractic.getcourse.ru/pl/user/user/index?uc[segment_id]=36005938.</p>
+</blockquote>
+<h2 id="поиск-дублей-и-существующих-сделок">Поиск дублей и существующих сделок</h2>
+<ul>
+<li>
+<p>Режим проверки дублей: Проверять на дубли</p>
+</li>
+<li>
+<p>Искать только в выбранных воронках: 1 шт.</p>
+</li>
+<li>
+<p>Поле проекта/продукта для проверки: <em>не выбрано</em></p>
+</li>
+<li>
+<p>Значение поля проекта/продукта: <em>не задано</em></p>
+</li>
+<li>
+<p>Искать в «Успешно реализовано [142]»: Нет</p>
+</li>
+<li>
+<p>Искать в «Закрыто и не реализовано [143]»: Нет</p>
+</li>
+<li>
+<p>Добавлять телефон/email в найденный контакт: Нет</p>
+</li>
+<li>
+<p>Менять имя контакта при обновлении: Нет</p>
+</li>
+<li>
+<p><code>ПДО [10923418]</code></p>
+</li>
+</ul>
+<h2 id="ответственные-и-распределение">Ответственные и распределение</h2>
+<ul>
+<li>Ответственный по умолчанию: EasyDrafting[12985298]</li>
+<li>Распределять на нескольких менеджеров: Нет</li>
+<li>Если контакт найден, брать ответственного контакта: Нет</li>
+<li>База для правила распределения: из текущей базы</li>
+</ul>
+<h2 id="регистрации">Регистрации</h2>
+<ul>
+<li>Отправка включена: Да</li>
+<li>Целевой этап: ПДО -&gt; Чекин [85906974]</li>
+<li>Ответственный по умолчанию: <em>не выбран</em></li>
+<li>Всегда менять ответственного: Нет</li>
+<li>Менять название сделки при обновлении: Да</li>
+<li>Менять имя контакта при обновлении: Нет</li>
+<li>Теги сделки: Чекин_ПДО_Авто</li>
+<li>Задача при создании: нет</li>
+<li>Задача при обновлении: нет</li>
+</ul>
+<h3 id="шаблон-названия-сделки">Шаблон названия сделки</h3>
+<pre><code class="language-text">Чекин_ПДО_Авто
+</code></pre>
+<h3 id="шаблон-примечания">Шаблон примечания</h3>
+<p><em>Пусто.</em></p>
+<h3 id="этапы-из-которых-разрешен-сдвиг">Этапы, из которых разрешен сдвиг</h3>
+<p>&lt;details&gt;
+&lt;summary&gt;Показать 11 этапов&lt;/summary&gt;</p>
+<ul>
+<li><code>ПДО -&gt; Неразобранное [85904434]</code></li>
+<li><code>ПДО -&gt; Чекин [85906974]</code></li>
+<li><code>ПДО -&gt; НОВЫЙ ЗАКАЗ [85904438]</code></li>
+<li><code>ПДО -&gt; ОТВЕТСТВЕННЫЙ НАЗНАЧЕН [85904442]</code></li>
+<li><code>ПДО -&gt; В РАБОТЕ [85904446]</code></li>
+<li><code>ПДО -&gt; НДЗ 1 [85904450]</code></li>
+<li><code>ПДО -&gt; НДЗ 2 [85904454]</code></li>
+<li><code>ПДО -&gt; НДЗ 3 [85904458]</code></li>
+<li><code>ПДО -&gt; ПРИНИМАЮТ РЕШЕНИЕ [85904462]</code></li>
+<li><code>ПДО -&gt; ПРЕДОПЛАТА/ЧАСТИЧНО ОПЛАЧЕН [85904466]</code></li>
+<li><code>ПДО -&gt; ОЖИДАЕМ ОПЛАТУ [85904470]</code></li>
+</ul>
+<p>&lt;/details&gt;</p>
+<h3 id="условия-reg-cond">Условия <code>reg_cond</code></h3>
+<p><em>Индивидуальные правила не настроены.</em></p>
+<h2 id="типы-полей-контакта">Типы полей контакта</h2>
+<ul>
+<li>Телефон: WORK[506437]</li>
+<li>Email: WORK[506449]</li>
+</ul>
+</article></main><script>window.DOC_ROOT="../";</script>
+<script src="../search-data.js"></script><script src="../nav-data.js"></script><script src="../gitbook.js"></script></body></html>

@@ -1,0 +1,1154 @@
+<!doctype html>
+<html lang="ru"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>[AMO] [ED] Диагностика_ЗапуcкКлад 100344 — Investor Practic</title><link rel="stylesheet" href="../../offline.css"></head>
+<body><aside><a class="home" href="../../index.html">Investor Practic</a>
+<label for="search">Поиск по страницам</label><input id="search" type="search" placeholder="Название или ID">
+<div id="results"></div><nav id="doc-nav"></nav></aside>
+<main><div class="toolbar"><a href="../../index.html">Главная</a><span>Документация · 03.11.2026</span></div>
+<article><h1 id="amo-ed-диагностика-запуcкклад-100344">[AMO] [ED] Диагностика_ЗапуcкКлад 100344</h1>
+<ul>
+<li>ID процесса: <code>2458873</code></li>
+<li>Объект: Заказы</li>
+<li>Статус: Ожидание событий</li>
+</ul>
+<p><a href="https://investorpractic.getcourse.ru/pl/tasks/mission/update?id=2458873">Общее</a> | <a href="https://investorpractic.getcourse.ru/pl/tasks/mission/process?id=2458873">Схема процесса</a></p>
+<h2 id="описание-из-getcourse">Описание из GetCourse</h2>
+<blockquote>
+<p>База - https://vakas-tools.ru/account/base/amo.php?base_id=100344</p>
+<p>Продукт: https://investorpractic.getcourse.ru/pl/sales/product/update?id=4346051</p>
+<p>Название:Диагностика_ЗапускКлад
+Тег: Диагностика_ЗапускКлад</p>
+<p>Воронка: Лидорубы
+Новый заказ в Этап &quot;Новая заявка&quot;
+Не оплатил в течение 10 минут в Этап &quot;Неоплаченные&quot;
+Оплатил - Этап &quot;запускКЛАД&quot;</p>
+<p>По просьбе https://spi.bitrix24.ru/online/?IM_TASK=chat24416&amp;IM_MESSAGE=2101802</p>
+<p>14.07.2026</p>
+<p>База - https://vakas-tools.ru/account/base/amo.php?base_id=100344</p>
+<p>Продукт: https://investorpractic.getcourse.ru/pl/sales/product/update?id=4420342</p>
+<p>Название: Диагностика_ЗапсукКС
+Тег: Диагностика_ЗапсукКС</p>
+<p>Воронка: Лидорубы
+Новый заказ в Этап &quot;Новая заявка&quot;
+Не оплатил в течение 10 минут в Этап &quot;Неоплаченные&quot;
+Оплатил - Этап &quot;Запуск&quot;</p>
+<p>По просьбе https://spi.bitrix24.ru/online/?IM_TASK=chat24416&amp;IM_MESSAGE=2176506</p>
+</blockquote>
+<h2 id="понятное-описание-процесса">Понятное описание процесса</h2>
+<ul>
+<li>Процесс работает с объектом GetCourse: Заказы. Текущий статус процесса: Ожидание событий.</li>
+<li>На вход попадают данные так: В процесс попадают заказы по продуктам с тегом «AMO-Склад».</li>
+<li>Техническое правило входа в GetCourse: Продукт (все с тегами: AMO-Склад)..</li>
+<li>Дополнительные условия внутри схемы не извлечены: процесс идет напрямую по основной ветке или условия не подписаны.</li>
+<li>Дальше процесс делает прямые вызовы Vakas: 9. Напрямую задействованы базы: 87177, 88097, 95661, 100344.</li>
+<li>Передача: 87177. База 87177: Пользователи и визиты. Передаются параметры: <code>name</code>, <code>email</code>, <code>phone</code>, <code>getcourse_user_id</code>, <code>komment_from_autoveb_for_amo</code>, <code>finished</code>, <code>web_p1</code>.</li>
+<li>Передача: 87177. База 87177: Пользователи и визиты. Передаются параметры: <code>name</code>, <code>email</code>, <code>phone</code>, <code>getcourse_user_id</code>, <code>komment_from_autoveb_for_amo</code>, <code>finished</code>, <code>vizit_vebinar</code>, <code>view_date_data</code>, <code>webinarId</code>, <code>bil_minut</code>.</li>
+<li>Передача: 88097. База 88097: Оплаты и заказы. Передаются параметры: <code>number</code>, <code>id</code>, <code>order_id</code>, <code>positions</code>, <code>costMoney</code>, <code>leftCostMoney</code>, <code>payedMoney</code>, <code>status</code>, <code>paymentLink</code>, <code>firstName</code> и другие.</li>
+<li>Передача: 88097. База 88097: Оплаты и заказы. Передаются параметры: <code>number</code>, <code>id</code>, <code>order_id</code>, <code>positions</code>, <code>costMoney</code>, <code>leftCostMoney</code>, <code>payedMoney</code>, <code>status</code>, <code>paymentLink</code>, <code>firstName</code> и другие.</li>
+<li>Передача: 88097. База 88097: Оплаты и заказы. Передаются параметры: <code>number</code>, <code>id</code>, <code>order_id</code>, <code>positions</code>, <code>costMoney</code>, <code>leftCostMoney</code>, <code>payedMoney</code>, <code>status</code>, <code>paymentLink</code>, <code>firstName</code> и другие.</li>
+<li>Передача: 88097. База 88097: Оплаты и заказы. Передаются параметры: <code>number</code>, <code>id</code>, <code>order_id</code>, <code>positions</code>, <code>costMoney</code>, <code>leftCostMoney</code>, <code>payedMoney</code>, <code>status</code>, <code>paymentLink</code>, <code>firstName</code> и другие.</li>
+<li>Передача: 95661. Диагностика_ЗапуcкКлад 100344: Оплаты и заказы. Передаются параметры: <code>number</code>, <code>id</code>, <code>order_id</code>, <code>positions</code>, <code>costMoney</code>, <code>leftCostMoney</code>, <code>payedMoney</code>, <code>status</code>, <code>paymentLink</code>, <code>firstName</code> и другие.</li>
+<li>Передача: 100344. Диагностика_ЗапуcкКлад: Оплаты и заказы. Передаются параметры: <code>number</code>, <code>id</code>, <code>order_id</code>, <code>positions</code>, <code>costMoney</code>, <code>leftCostMoney</code>, <code>payedMoney</code>, <code>status</code>, <code>paymentLink</code>, <code>firstName</code> и другие.</li>
+<li>Передача: 100344. Диагностика_ЗапуcкКлад: Оплаты и заказы. Передаются параметры: <code>number</code>, <code>id</code>, <code>order_id</code>, <code>positions</code>, <code>costMoney</code>, <code>leftCostMoney</code>, <code>payedMoney</code>, <code>status</code>, <code>paymentLink</code>, <code>firstName</code> и другие.</li>
+<li>Что происходит в amoCRM: Маршрут в amoCRM нужно проверить вручную. На входе в этап ЛИДОРУБЫ -&gt; Новая заявка [73992646] база ищет дубль и может взять старую сделку только из заранее разрешенных этапов.</li>
+</ul>
+<h2 id="ход-процесса-в-getcourse">Ход процесса в GetCourse</h2>
+<ul>
+<li>Схема состоит из 10 блоков и 9 переходов.</li>
+<li>По типам: стартов 1, условий/ожиданий 0, вызовов URL 0, изменений полей 0, финалов 0.</li>
+</ul>
+<p>Блоки процесса: что делают и зачем нужны:</p>
+<ul>
+<li>Блок <code>1</code> «Начало работы» (старт). Что делает: Запускает выполнение схемы для объекта, который попал под правило входа процесса. Зачем нужен: Нужен как точка входа: от него GetCourse начинает движение объекта по схеме. Дальше: если результат «Выполнено», идет в «2 группа не обновл сделку по кфи»; если результат «Выполнено», идет в «1 группа не обновл сделку по кфи»; если результат «Выполнено», идет в «Новая заявка обновл сделку по кфи»; если результат «Выполнено», идет в «2 группа обновл сделку по кфи»; если результат «Выполнено», идет в «Автовебинар обновл сделку по Крипто»; если результат «Выполнено», идет в «2 группа обновл сделку по Автовебинар Крипта»; если результат «Выполнено», идет в «Новая заявка обновл сделку по кфи»; если результат «Выполнено», идет в «Новая заявка обновл сделку по Склад»; если результат «Выполнено», идет в «Запуск Склад обновл сделку».</li>
+<li>Блок <code>2</code> «2 группа не обновл сделку по кфи» (операция request). Что делает: Выполняет служебный шаг схемы «2 группа не обновл сделку по кфи». Зачем нужен: Нужен как промежуточный технический шаг в схеме «2 группа не обновл сделку по кфи». Дальше переходов нет: это конечная точка ветки.</li>
+<li>Блок <code>3</code> «1 группа не обновл сделку по кфи» (операция request). Что делает: Выполняет служебный шаг схемы «1 группа не обновл сделку по кфи». Зачем нужен: Нужен как промежуточный технический шаг в схеме «1 группа не обновл сделку по кфи». Дальше переходов нет: это конечная точка ветки.</li>
+<li>Блок <code>4</code> «Новая заявка обновл сделку по кфи» (операция request). Что делает: Выполняет служебный шаг схемы «Новая заявка обновл сделку по кфи». Зачем нужен: Нужен как промежуточный технический шаг в схеме «Новая заявка обновл сделку по кфи». Дальше переходов нет: это конечная точка ветки.</li>
+<li>Блок <code>5</code> «2 группа обновл сделку по кфи» (операция request). Что делает: Выполняет служебный шаг схемы «2 группа обновл сделку по кфи». Зачем нужен: Нужен как промежуточный технический шаг в схеме «2 группа обновл сделку по кфи». Дальше переходов нет: это конечная точка ветки.</li>
+<li>Блок <code>6</code> «Автовебинар обновл сделку по Крипто» (операция request). Что делает: Выполняет служебный шаг схемы «Автовебинар обновл сделку по Крипто». Зачем нужен: Нужен как промежуточный технический шаг в схеме «Автовебинар обновл сделку по Крипто». Дальше переходов нет: это конечная точка ветки.</li>
+<li>Блок <code>7</code> «2 группа обновл сделку по Автовебинар Крипта» (операция request). Что делает: Выполняет служебный шаг схемы «2 группа обновл сделку по Автовебинар Крипта». Зачем нужен: Нужен как промежуточный технический шаг в схеме «2 группа обновл сделку по Автовебинар Крипта». Дальше переходов нет: это конечная точка ветки.</li>
+<li>Блок <code>8</code> «Новая заявка обновл сделку по кфи» (операция request). Что делает: Выполняет служебный шаг схемы «Новая заявка обновл сделку по кфи». Зачем нужен: Нужен как промежуточный технический шаг в схеме «Новая заявка обновл сделку по кфи». Дальше переходов нет: это конечная точка ветки.</li>
+<li>Блок <code>9</code> «Новая заявка обновл сделку по Склад» (операция request). Что делает: Выполняет служебный шаг схемы «Новая заявка обновл сделку по Склад». Зачем нужен: Нужен как промежуточный технический шаг в схеме «Новая заявка обновл сделку по Склад». Дальше переходов нет: это конечная точка ветки.</li>
+<li>Блок <code>10</code> «Запуск Склад обновл сделку» (операция request). Что делает: Выполняет служебный шаг схемы «Запуск Склад обновл сделку». Зачем нужен: Нужен как промежуточный технический шаг в схеме «Запуск Склад обновл сделку». Дальше переходов нет: это конечная точка ветки.</li>
+</ul>
+<h2 id="скриншоты-процесса">Скриншоты процесса</h2>
+<p><img src="../../assets/rules/2458873_rule.png" alt="Правило входа 2458873" /></p>
+<p><img src="../../assets/processes/2458873_process.png" alt="Схема процесса 2458873" /></p>
+<p>Откуда: процесс берет заказы по правилу входа, детали лучше смотреть на скриншоте ниже.</p>
+<p>Что проверяет по пути: это crypto_niagara &quot;Полное участие&quot; за 590?, Клиент уже имеет такой заказ за последние 30 дней?, Оплатил?, Автомарафон Крипта?, Сейчас понедельник или вторник?, Ждем 48 часов.</p>
+<p>Куда ведет: вызывает внешние URL: Новая заявка обновл сделку по кфи, 2 группа не обновл сделку по кфи, 1 группа не обновл сделку по кфи, 2 группа обновл сделку по кфи; обновляет доп. поля GetCourse (6 разных действий); добавляет в группы: Добавить в группу; уведомляет сотрудников: Что-то не так; ждет выполнения условий: Оплатил?; ставит задержки: Ждем 48 часов, Ждем до следующего вторника, 9:00.</p>
+<h2 id="логика-vakas-и-amocrm">Логика Vakas и amoCRM</h2>
+<ul>
+<li>Условие входа в процесс: Продукт (все с тегами: AMO-Склад)..</li>
+<li>Вызовов Vakas в схеме: <code>9</code>. Уникальных URL Vakas: <code>9</code>. Связанных баз: <code>4</code>.</li>
+</ul>
+<h3 id="связанная-база-vakas-87177-база-87177">Связанная база Vakas: 87177. База 87177</h3>
+<ul>
+<li>Использование в процессе: Пользователи и визиты</li>
+<li>Документация базы: <a href="../bases/87177.html">87177. База 87177</a></li>
+<li>Страница настройки: <a href="https://vakas-tools.ru/account/base/amo.php?mode=contact&amp;base_id=87177">Vakas</a></li>
+<li>Поиск дублей: Проверять на дубли</li>
+<li>Искать только в выбранных воронках: 12</li>
+<li>Ответственный по контакту имеет приоритет: Да</li>
+</ul>
+<h4 id="вызовы-из-процесса">Вызовы из процесса</h4>
+<h4 id="2-группа-не-обновл-сделку-по-кфи">2 группа не обновл сделку по кфи</h4>
+<ul>
+<li>Endpoint: <code>users</code></li>
+<li>URL вызова: <code>https://vakas-tools.ru/base/users/8927217/87177/?name={object.user.name}&amp;email={object.user.email}&amp;phone={object.user.phone}&amp;getcourse_user_id={object.id}&amp;komment_from_autoveb_for_amo={object.komment_from_autoveb_for_amo}&amp;finished=0&amp;web_p1=0</code></li>
+<li>Связанная база Vakas: <a href="../bases/87177.html">87177. База 87177</a></li>
+</ul>
+<h5 id="когда-срабатывает-в-процессе">Когда срабатывает в процессе</h5>
+<ul>
+<li>Сценарий 1: <code>Начало работы</code> --Выполнено--&gt; <code>2 группа не обновл сделку по кфи</code></li>
+</ul>
+<h5 id="что-уходит-в-vakas">Что уходит в Vakas</h5>
+<ul>
+<li><code>name</code></li>
+<li><code>email</code></li>
+<li><code>phone</code></li>
+<li><code>getcourse_user_id</code></li>
+<li><code>komment_from_autoveb_for_amo</code></li>
+<li><code>finished</code></li>
+<li><code>web_p1</code></li>
+</ul>
+<h5 id="как-база-обработает-вызов-и-что-будет-в-amocrm">Как база обработает вызов и что будет в amoCRM</h5>
+<ul>
+<li>
+<p>Логика создания сделки: сначала ищется существующая сделка/контакт по правилам базы; если подходящая сделка найдена, обновляется она, иначе создается новая.</p>
+</li>
+<li>
+<p>Режим проверки дублей: Проверять на дубли</p>
+</li>
+<li>
+<p>Искать дубль только в выбранных воронках: 12 шт.</p>
+</li>
+<li>
+<p>Учитывать закрытые этапы при поиске дубля: нет</p>
+</li>
+<li>
+<p>Добавлять телефон/email в найденный контакт: Да</p>
+</li>
+<li>
+<p>Менять имя контакта при обновлении: Нет
+&lt;details&gt;
+&lt;summary&gt;Показать 12 воронок для поиска дублей&lt;/summary&gt;</p>
+</li>
+<li>
+<p><code>ОСНОВНОЙ ОТДЕЛ - ЗАЯВКИ [6777466]</code></p>
+</li>
+<li>
+<p><code>ПАССИВНЫЙ ДОХОД [9426954]</code></p>
+</li>
+<li>
+<p><code>КРИПТОКАПИТАЛ [9498394]</code></p>
+</li>
+<li>
+<p><code>ФИНАНСОВАЯ СВОБОДА [9498398]</code></p>
+</li>
+<li>
+<p><code>ОД [9839030]</code></p>
+</li>
+<li>
+<p><code>КРИПТОКЛУБ [9578374]</code></p>
+</li>
+<li>
+<p><code>ИНВЕСТ КЛУБ [9500418]</code></p>
+</li>
+<li>
+<p><code>ОТДЕЛ КЛУБОВ [6869966]</code></p>
+</li>
+<li>
+<p><code>АПСЕЙЛЫ ОП [8910882]</code></p>
+</li>
+<li>
+<p><code>ОТДЕЛ ДИАГНОСТИК [6844390]</code></p>
+</li>
+<li>
+<p><code>ЛИДОРУБЫ [9212986]</code></p>
+</li>
+<li>
+<p><code>ДИАГНОСТЫ [9213518]</code></p>
+</li>
+</ul>
+<p>&lt;/details&gt;</p>
+<ul>
+<li>Автоотправка отчетов/визитов в amoCRM: Нет</li>
+<li>Базовый этап: ЛИДОРУБЫ -&gt; квиз [82367626]</li>
+<li>Этапы, из которых разрешен сдвиг: <code>ЛИДОРУБЫ -&gt; Автовебинар крипта [79804246]</code>, <code>ЛИДОРУБЫ -&gt; 1 группа [73995198]</code>, <code>ЛИДОРУБЫ -&gt; 2 группа [73995202]</code></li>
+<li>Менять название сделки при обновлении: Нет</li>
+<li>Ответственный по умолчанию: EasyDrafting[12985298]</li>
+<li>Теги сделки: <em>не заданы</em></li>
+<li>Индивидуальные правила маршрутизации: 2 шт.</li>
+<li>если поле <code>param1 с бизон</code> содержит <code>0</code>, то сделка идет в этап <code>ЛИДОРУБЫ -&gt; 2 группа[73995202]</code></li>
+<li>если поле <code>param1 с бизон</code> содержит <code>1</code>, то сделка идет в этап <code>ЛИДОРУБЫ -&gt; 1 группа[73995198]</code></li>
+</ul>
+<h4 id="1-группа-не-обновл-сделку-по-кфи">1 группа не обновл сделку по кфи</h4>
+<ul>
+<li>Endpoint: <code>users</code></li>
+<li>URL вызова: <code>https://vakas-tools.ru/base/users/8927217/87177/?name={object.user.name}&amp;email={object.user.email}&amp;phone={object.user.phone}&amp;getcourse_user_id={object.id}&amp;komment_from_autoveb_for_amo={object.komment_from_autoveb_for_amo}&amp;finished=1&amp;vizit_vebinar={object.user.Bil_na_webe_for_amo}&amp;view_date_data={object.user.Data_webinara}&amp;webinarId={object.user.Web_room}&amp;bil_minut={object.user.Bil_minut}</code></li>
+<li>Связанная база Vakas: <a href="../bases/87177.html">87177. База 87177</a></li>
+</ul>
+<h5 id="когда-срабатывает-в-процессе-1">Когда срабатывает в процессе</h5>
+<ul>
+<li>Сценарий 1: <code>Начало работы</code> --Выполнено--&gt; <code>1 группа не обновл сделку по кфи</code></li>
+</ul>
+<h5 id="что-уходит-в-vakas-1">Что уходит в Vakas</h5>
+<ul>
+<li><code>name</code></li>
+<li><code>email</code></li>
+<li><code>phone</code></li>
+<li><code>getcourse_user_id</code></li>
+<li><code>komment_from_autoveb_for_amo</code></li>
+<li><code>finished</code></li>
+<li><code>vizit_vebinar</code></li>
+<li><code>view_date_data</code></li>
+<li><code>webinarId</code></li>
+<li><code>bil_minut</code></li>
+</ul>
+<h5 id="как-база-обработает-вызов-и-что-будет-в-amocrm-1">Как база обработает вызов и что будет в amoCRM</h5>
+<ul>
+<li>
+<p>Логика создания сделки: сначала ищется существующая сделка/контакт по правилам базы; если подходящая сделка найдена, обновляется она, иначе создается новая.</p>
+</li>
+<li>
+<p>Режим проверки дублей: Проверять на дубли</p>
+</li>
+<li>
+<p>Искать дубль только в выбранных воронках: 12 шт.</p>
+</li>
+<li>
+<p>Учитывать закрытые этапы при поиске дубля: нет</p>
+</li>
+<li>
+<p>Добавлять телефон/email в найденный контакт: Да</p>
+</li>
+<li>
+<p>Менять имя контакта при обновлении: Нет
+&lt;details&gt;
+&lt;summary&gt;Показать 12 воронок для поиска дублей&lt;/summary&gt;</p>
+</li>
+<li>
+<p><code>ОСНОВНОЙ ОТДЕЛ - ЗАЯВКИ [6777466]</code></p>
+</li>
+<li>
+<p><code>ПАССИВНЫЙ ДОХОД [9426954]</code></p>
+</li>
+<li>
+<p><code>КРИПТОКАПИТАЛ [9498394]</code></p>
+</li>
+<li>
+<p><code>ФИНАНСОВАЯ СВОБОДА [9498398]</code></p>
+</li>
+<li>
+<p><code>ОД [9839030]</code></p>
+</li>
+<li>
+<p><code>КРИПТОКЛУБ [9578374]</code></p>
+</li>
+<li>
+<p><code>ИНВЕСТ КЛУБ [9500418]</code></p>
+</li>
+<li>
+<p><code>ОТДЕЛ КЛУБОВ [6869966]</code></p>
+</li>
+<li>
+<p><code>АПСЕЙЛЫ ОП [8910882]</code></p>
+</li>
+<li>
+<p><code>ОТДЕЛ ДИАГНОСТИК [6844390]</code></p>
+</li>
+<li>
+<p><code>ЛИДОРУБЫ [9212986]</code></p>
+</li>
+<li>
+<p><code>ДИАГНОСТЫ [9213518]</code></p>
+</li>
+</ul>
+<p>&lt;/details&gt;</p>
+<ul>
+<li>Автоотправка отчетов/визитов в amoCRM: Нет</li>
+<li>Базовый этап: ЛИДОРУБЫ -&gt; квиз [82367626]</li>
+<li>Этапы, из которых разрешен сдвиг: <code>ЛИДОРУБЫ -&gt; Автовебинар крипта [79804246]</code>, <code>ЛИДОРУБЫ -&gt; 1 группа [73995198]</code>, <code>ЛИДОРУБЫ -&gt; 2 группа [73995202]</code></li>
+<li>Менять название сделки при обновлении: Нет</li>
+<li>Ответственный по умолчанию: EasyDrafting[12985298]</li>
+<li>Теги сделки: <em>не заданы</em></li>
+<li>Индивидуальные правила маршрутизации: 2 шт.</li>
+<li>если поле <code>param1 с бизон</code> содержит <code>0</code>, то сделка идет в этап <code>ЛИДОРУБЫ -&gt; 2 группа[73995202]</code></li>
+<li>если поле <code>param1 с бизон</code> содержит <code>1</code>, то сделка идет в этап <code>ЛИДОРУБЫ -&gt; 1 группа[73995198]</code></li>
+</ul>
+<h3 id="связанная-база-vakas-88097-база-88097">Связанная база Vakas: 88097. База 88097</h3>
+<ul>
+<li>Использование в процессе: Оплаты и заказы</li>
+<li>Документация базы: <a href="../bases/88097.html">88097. База 88097</a></li>
+<li>Страница настройки: <a href="https://vakas-tools.ru/account/base/amo.php?mode=contact&amp;base_id=88097">Vakas</a></li>
+<li>Поиск дублей: Проверять на дубли</li>
+<li>Искать только в выбранных воронках: 12</li>
+<li>Ответственный по контакту имеет приоритет: Да</li>
+</ul>
+<h4 id="вызовы-из-процесса-1">Вызовы из процесса</h4>
+<h4 id="новая-заявка-обновл-сделку-по-кфи">Новая заявка обновл сделку по кфи</h4>
+<ul>
+<li>Endpoint: <code>payments</code></li>
+<li>URL вызова: <code>https://vakas-tools.ru/base/payments/8927217/88097/?number={object.number}&amp;id={object.user.id}&amp;order_id={object.id}&amp;positions={object.positions}&amp;costMoney={object.cost_money}&amp;leftCostMoney={object.left_cost_money}&amp;payedMoney={object.payed_money}&amp;status={object.status}&amp;paymentLink={object.payment_link}&amp;firstName={object.user.first_name}&amp;lastName={object.user.last_name}&amp;name={object.user.name}&amp;email={object.user.email}&amp;phone={object.user.phone}&amp;manager_name={object.manager}&amp;manager_email={object.manager_email}&amp;manager_phone={object.manager_phone}&amp;offers={object.offers}&amp;avatarUrl={object.user.avatar_url}&amp;utmS={object.user.create_session.utm_source}&amp;utmM={object.user.create_session.utm_medium}&amp;utmCa={object.user.create_session.utm_campaign}&amp;utmCo={object.user.create_session.utm_content}&amp;utmT={object.user.create_session.utm_term}&amp;order_name_amo={object.order_name_amo}&amp;order_price={cost_money_value}&amp;pay_date={object.payed_at format=&quot;d.m.Y H:i&quot;}&amp;tag_deal_1={object.deal_tag_1}&amp;p1=''</code></li>
+<li>Связанная база Vakas: <a href="../bases/88097.html">88097. База 88097</a></li>
+</ul>
+<h5 id="когда-срабатывает-в-процессе-2">Когда срабатывает в процессе</h5>
+<ul>
+<li>Сценарий 1: <code>Начало работы</code> --Выполнено--&gt; <code>Новая заявка обновл сделку по кфи</code></li>
+</ul>
+<h5 id="что-уходит-в-vakas-2">Что уходит в Vakas</h5>
+<p>&lt;details&gt;
+&lt;summary&gt;Показать 29 параметров запроса&lt;/summary&gt;</p>
+<ul>
+<li><code>number</code></li>
+<li><code>id</code></li>
+<li><code>order_id</code></li>
+<li><code>positions</code></li>
+<li><code>costMoney</code></li>
+<li><code>leftCostMoney</code></li>
+<li><code>payedMoney</code></li>
+<li><code>status</code></li>
+<li><code>paymentLink</code></li>
+<li><code>firstName</code></li>
+<li><code>lastName</code></li>
+<li><code>name</code></li>
+<li><code>email</code></li>
+<li><code>phone</code></li>
+<li><code>manager_name</code></li>
+<li><code>manager_email</code></li>
+<li><code>manager_phone</code></li>
+<li><code>offers</code></li>
+<li><code>avatarUrl</code></li>
+<li><code>utmS</code></li>
+<li><code>utmM</code></li>
+<li><code>utmCa</code></li>
+<li><code>utmCo</code></li>
+<li><code>utmT</code></li>
+<li><code>order_name_amo</code></li>
+<li><code>order_price</code></li>
+<li><code>pay_date</code></li>
+<li><code>tag_deal_1</code></li>
+<li><code>p1</code></li>
+</ul>
+<p>&lt;/details&gt;</p>
+<h5 id="как-база-обработает-вызов-и-что-будет-в-amocrm-2">Как база обработает вызов и что будет в amoCRM</h5>
+<ul>
+<li>
+<p>Логика создания сделки: сначала ищется существующая сделка/контакт по правилам базы; если подходящая сделка найдена, обновляется она, иначе создается новая.</p>
+</li>
+<li>
+<p>Режим проверки дублей: Проверять на дубли</p>
+</li>
+<li>
+<p>Искать дубль только в выбранных воронках: 12 шт.</p>
+</li>
+<li>
+<p>Учитывать закрытые этапы при поиске дубля: нет</p>
+</li>
+<li>
+<p>Добавлять телефон/email в найденный контакт: Да</p>
+</li>
+<li>
+<p>Менять имя контакта при обновлении: Нет
+&lt;details&gt;
+&lt;summary&gt;Показать 12 воронок для поиска дублей&lt;/summary&gt;</p>
+</li>
+<li>
+<p><code>ОСНОВНОЙ ОТДЕЛ - ЗАЯВКИ [6777466]</code></p>
+</li>
+<li>
+<p><code>ПАССИВНЫЙ ДОХОД [9426954]</code></p>
+</li>
+<li>
+<p><code>КРИПТОКАПИТАЛ [9498394]</code></p>
+</li>
+<li>
+<p><code>ФИНАНСОВАЯ СВОБОДА [9498398]</code></p>
+</li>
+<li>
+<p><code>ОД [9839030]</code></p>
+</li>
+<li>
+<p><code>КРИПТОКЛУБ [9578374]</code></p>
+</li>
+<li>
+<p><code>ИНВЕСТ КЛУБ [9500418]</code></p>
+</li>
+<li>
+<p><code>ОТДЕЛ КЛУБОВ [6869966]</code></p>
+</li>
+<li>
+<p><code>АПСЕЙЛЫ ОП [8910882]</code></p>
+</li>
+<li>
+<p><code>ОТДЕЛ ДИАГНОСТИК [6844390]</code></p>
+</li>
+<li>
+<p><code>ЛИДОРУБЫ [9212986]</code></p>
+</li>
+<li>
+<p><code>ДИАГНОСТЫ [9213518]</code></p>
+</li>
+</ul>
+<p>&lt;/details&gt;</p>
+<ul>
+<li>Автоотправка оплат в amoCRM: Да</li>
+<li>Базовый этап для этого вызова: ЛИДОРУБЫ -&gt; Новая заявка [73992646]</li>
+<li>Новый заказ: ЛИДОРУБЫ -&gt; Новая заявка [73992646]</li>
+<li>Частичная оплата: ЛИДОРУБЫ -&gt; Автовебинар крипта [79804246]</li>
+<li>Полная оплата: ЛИДОРУБЫ -&gt; Автовебинар крипта [79804246]</li>
+<li>Поле amoCRM для суммы: оплачено[payedMoney]</li>
+<li>Двигать старые сделки только с выбранных этапов: Да</li>
+<li>Этапы, из которых разрешен сдвиг: 138 этапов</li>
+<li>Не менять этап при обновлении: Нет</li>
+<li>Менять название сделки при обновлении: Да</li>
+<li>Теги сделки: {pay_field_tag_deal_1}</li>
+<li>Ответственный по умолчанию: EasyDrafting[12985298]</li>
+<li>Индивидуальные правила маршрутизации: 2 шт.</li>
+<li>если поле <code>param1 с бизон</code> содержит <code>1</code>, то сделка идет в этап <code>ЛИДОРУБЫ -&gt; 1 группа[73995198]</code></li>
+<li>если поле <code>param1 с бизон</code> содержит <code>2</code>, то сделка идет в этап <code>ЛИДОРУБЫ -&gt; 2 группа[73995202]</code></li>
+</ul>
+<h4 id="2-группа-обновл-сделку-по-кфи">2 группа обновл сделку по кфи</h4>
+<ul>
+<li>Endpoint: <code>payments</code></li>
+<li>URL вызова: <code>https://vakas-tools.ru/base/payments/8927217/88097/?number={object.number}&amp;id={object.user.id}&amp;order_id={object.id}&amp;positions={object.positions}&amp;costMoney={object.cost_money}&amp;leftCostMoney={object.left_cost_money}&amp;payedMoney={object.payed_money}&amp;status={object.status}&amp;paymentLink={object.payment_link}&amp;firstName={object.user.first_name}&amp;lastName={object.user.last_name}&amp;name={object.user.name}&amp;email={object.user.email}&amp;phone={object.user.phone}&amp;manager_name={object.manager}&amp;manager_email={object.manager_email}&amp;manager_phone={object.manager_phone}&amp;offers={object.offers}&amp;avatarUrl={object.user.avatar_url}&amp;utmS={object.user.create_session.utm_source}&amp;utmM={object.user.create_session.utm_medium}&amp;utmCa={object.user.create_session.utm_campaign}&amp;utmCo={object.user.create_session.utm_content}&amp;utmT={object.user.create_session.utm_term}&amp;order_name_amo={object.order_name_amo}&amp;order_price={cost_money_value}&amp;pay_date={object.payed_at format=&quot;d.m.Y H:i&quot;}&amp;p1=1</code></li>
+<li>Связанная база Vakas: <a href="../bases/88097.html">88097. База 88097</a></li>
+</ul>
+<h5 id="когда-срабатывает-в-процессе-3">Когда срабатывает в процессе</h5>
+<ul>
+<li>Сценарий 1: <code>Начало работы</code> --Выполнено--&gt; <code>2 группа обновл сделку по кфи</code></li>
+</ul>
+<h5 id="что-уходит-в-vakas-3">Что уходит в Vakas</h5>
+<p>&lt;details&gt;
+&lt;summary&gt;Показать 28 параметров запроса&lt;/summary&gt;</p>
+<ul>
+<li><code>number</code></li>
+<li><code>id</code></li>
+<li><code>order_id</code></li>
+<li><code>positions</code></li>
+<li><code>costMoney</code></li>
+<li><code>leftCostMoney</code></li>
+<li><code>payedMoney</code></li>
+<li><code>status</code></li>
+<li><code>paymentLink</code></li>
+<li><code>firstName</code></li>
+<li><code>lastName</code></li>
+<li><code>name</code></li>
+<li><code>email</code></li>
+<li><code>phone</code></li>
+<li><code>manager_name</code></li>
+<li><code>manager_email</code></li>
+<li><code>manager_phone</code></li>
+<li><code>offers</code></li>
+<li><code>avatarUrl</code></li>
+<li><code>utmS</code></li>
+<li><code>utmM</code></li>
+<li><code>utmCa</code></li>
+<li><code>utmCo</code></li>
+<li><code>utmT</code></li>
+<li><code>order_name_amo</code></li>
+<li><code>order_price</code></li>
+<li><code>pay_date</code></li>
+<li><code>p1</code></li>
+</ul>
+<p>&lt;/details&gt;</p>
+<h5 id="как-база-обработает-вызов-и-что-будет-в-amocrm-3">Как база обработает вызов и что будет в amoCRM</h5>
+<ul>
+<li>
+<p>Логика создания сделки: сначала ищется существующая сделка/контакт по правилам базы; если подходящая сделка найдена, обновляется она, иначе создается новая.</p>
+</li>
+<li>
+<p>Режим проверки дублей: Проверять на дубли</p>
+</li>
+<li>
+<p>Искать дубль только в выбранных воронках: 12 шт.</p>
+</li>
+<li>
+<p>Учитывать закрытые этапы при поиске дубля: нет</p>
+</li>
+<li>
+<p>Добавлять телефон/email в найденный контакт: Да</p>
+</li>
+<li>
+<p>Менять имя контакта при обновлении: Нет
+&lt;details&gt;
+&lt;summary&gt;Показать 12 воронок для поиска дублей&lt;/summary&gt;</p>
+</li>
+<li>
+<p><code>ОСНОВНОЙ ОТДЕЛ - ЗАЯВКИ [6777466]</code></p>
+</li>
+<li>
+<p><code>ПАССИВНЫЙ ДОХОД [9426954]</code></p>
+</li>
+<li>
+<p><code>КРИПТОКАПИТАЛ [9498394]</code></p>
+</li>
+<li>
+<p><code>ФИНАНСОВАЯ СВОБОДА [9498398]</code></p>
+</li>
+<li>
+<p><code>ОД [9839030]</code></p>
+</li>
+<li>
+<p><code>КРИПТОКЛУБ [9578374]</code></p>
+</li>
+<li>
+<p><code>ИНВЕСТ КЛУБ [9500418]</code></p>
+</li>
+<li>
+<p><code>ОТДЕЛ КЛУБОВ [6869966]</code></p>
+</li>
+<li>
+<p><code>АПСЕЙЛЫ ОП [8910882]</code></p>
+</li>
+<li>
+<p><code>ОТДЕЛ ДИАГНОСТИК [6844390]</code></p>
+</li>
+<li>
+<p><code>ЛИДОРУБЫ [9212986]</code></p>
+</li>
+<li>
+<p><code>ДИАГНОСТЫ [9213518]</code></p>
+</li>
+</ul>
+<p>&lt;/details&gt;</p>
+<ul>
+<li>Автоотправка оплат в amoCRM: Да</li>
+<li>Базовый этап для этого вызова: ЛИДОРУБЫ -&gt; Новая заявка [73992646]</li>
+<li>Новый заказ: ЛИДОРУБЫ -&gt; Новая заявка [73992646]</li>
+<li>Частичная оплата: ЛИДОРУБЫ -&gt; Автовебинар крипта [79804246]</li>
+<li>Полная оплата: ЛИДОРУБЫ -&gt; Автовебинар крипта [79804246]</li>
+<li>Поле amoCRM для суммы: оплачено[payedMoney]</li>
+<li>Двигать старые сделки только с выбранных этапов: Да</li>
+<li>Этапы, из которых разрешен сдвиг: 138 этапов</li>
+<li>Не менять этап при обновлении: Нет</li>
+<li>Менять название сделки при обновлении: Да</li>
+<li>Теги сделки: {pay_field_tag_deal_1}</li>
+<li>Ответственный по умолчанию: EasyDrafting[12985298]</li>
+<li>Индивидуальные правила маршрутизации: 2 шт.</li>
+<li>если поле <code>param1 с бизон</code> содержит <code>1</code>, то сделка идет в этап <code>ЛИДОРУБЫ -&gt; 1 группа[73995198]</code></li>
+<li>если поле <code>param1 с бизон</code> содержит <code>2</code>, то сделка идет в этап <code>ЛИДОРУБЫ -&gt; 2 группа[73995202]</code></li>
+</ul>
+<h4 id="автовебинар-обновл-сделку-по-крипто">Автовебинар обновл сделку по Крипто</h4>
+<ul>
+<li>Endpoint: <code>payments</code></li>
+<li>URL вызова: <code>https://vakas-tools.ru/base/payments/8927217/88097/?number={object.number}&amp;id={object.user.id}&amp;order_id={object.id}&amp;positions={object.positions}&amp;costMoney={object.cost_money}&amp;leftCostMoney={object.left_cost_money}&amp;payedMoney={object.payed_money}&amp;status={object.status}&amp;paymentLink={object.payment_link}&amp;firstName={object.user.first_name}&amp;lastName={object.user.last_name}&amp;name={object.user.name}&amp;email={object.user.email}&amp;phone={object.user.phone}&amp;manager_name={object.manager}&amp;manager_email={object.manager_email}&amp;manager_phone={object.manager_phone}&amp;offers={object.offers}&amp;avatarUrl={object.user.avatar_url}&amp;utmS={object.user.create_session.utm_source}&amp;utmM={object.user.create_session.utm_medium}&amp;utmCa={object.user.create_session.utm_campaign}&amp;utmCo={object.user.create_session.utm_content}&amp;utmT={object.user.create_session.utm_term}&amp;order_name_amo={object.order_name_amo}&amp;order_price={cost_money_value}&amp;pay_date={object.payed_at format=&quot;d.m.Y H:i&quot;}&amp;p1=''</code></li>
+<li>Связанная база Vakas: <a href="../bases/88097.html">88097. База 88097</a></li>
+</ul>
+<h5 id="когда-срабатывает-в-процессе-4">Когда срабатывает в процессе</h5>
+<ul>
+<li>Сценарий 1: <code>Начало работы</code> --Выполнено--&gt; <code>Автовебинар обновл сделку по Крипто</code></li>
+</ul>
+<h5 id="что-уходит-в-vakas-4">Что уходит в Vakas</h5>
+<p>&lt;details&gt;
+&lt;summary&gt;Показать 28 параметров запроса&lt;/summary&gt;</p>
+<ul>
+<li><code>number</code></li>
+<li><code>id</code></li>
+<li><code>order_id</code></li>
+<li><code>positions</code></li>
+<li><code>costMoney</code></li>
+<li><code>leftCostMoney</code></li>
+<li><code>payedMoney</code></li>
+<li><code>status</code></li>
+<li><code>paymentLink</code></li>
+<li><code>firstName</code></li>
+<li><code>lastName</code></li>
+<li><code>name</code></li>
+<li><code>email</code></li>
+<li><code>phone</code></li>
+<li><code>manager_name</code></li>
+<li><code>manager_email</code></li>
+<li><code>manager_phone</code></li>
+<li><code>offers</code></li>
+<li><code>avatarUrl</code></li>
+<li><code>utmS</code></li>
+<li><code>utmM</code></li>
+<li><code>utmCa</code></li>
+<li><code>utmCo</code></li>
+<li><code>utmT</code></li>
+<li><code>order_name_amo</code></li>
+<li><code>order_price</code></li>
+<li><code>pay_date</code></li>
+<li><code>p1</code></li>
+</ul>
+<p>&lt;/details&gt;</p>
+<h5 id="как-база-обработает-вызов-и-что-будет-в-amocrm-4">Как база обработает вызов и что будет в amoCRM</h5>
+<ul>
+<li>
+<p>Логика создания сделки: сначала ищется существующая сделка/контакт по правилам базы; если подходящая сделка найдена, обновляется она, иначе создается новая.</p>
+</li>
+<li>
+<p>Режим проверки дублей: Проверять на дубли</p>
+</li>
+<li>
+<p>Искать дубль только в выбранных воронках: 12 шт.</p>
+</li>
+<li>
+<p>Учитывать закрытые этапы при поиске дубля: нет</p>
+</li>
+<li>
+<p>Добавлять телефон/email в найденный контакт: Да</p>
+</li>
+<li>
+<p>Менять имя контакта при обновлении: Нет
+&lt;details&gt;
+&lt;summary&gt;Показать 12 воронок для поиска дублей&lt;/summary&gt;</p>
+</li>
+<li>
+<p><code>ОСНОВНОЙ ОТДЕЛ - ЗАЯВКИ [6777466]</code></p>
+</li>
+<li>
+<p><code>ПАССИВНЫЙ ДОХОД [9426954]</code></p>
+</li>
+<li>
+<p><code>КРИПТОКАПИТАЛ [9498394]</code></p>
+</li>
+<li>
+<p><code>ФИНАНСОВАЯ СВОБОДА [9498398]</code></p>
+</li>
+<li>
+<p><code>ОД [9839030]</code></p>
+</li>
+<li>
+<p><code>КРИПТОКЛУБ [9578374]</code></p>
+</li>
+<li>
+<p><code>ИНВЕСТ КЛУБ [9500418]</code></p>
+</li>
+<li>
+<p><code>ОТДЕЛ КЛУБОВ [6869966]</code></p>
+</li>
+<li>
+<p><code>АПСЕЙЛЫ ОП [8910882]</code></p>
+</li>
+<li>
+<p><code>ОТДЕЛ ДИАГНОСТИК [6844390]</code></p>
+</li>
+<li>
+<p><code>ЛИДОРУБЫ [9212986]</code></p>
+</li>
+<li>
+<p><code>ДИАГНОСТЫ [9213518]</code></p>
+</li>
+</ul>
+<p>&lt;/details&gt;</p>
+<ul>
+<li>Автоотправка оплат в amoCRM: Да</li>
+<li>Базовый этап для этого вызова: ЛИДОРУБЫ -&gt; Новая заявка [73992646]</li>
+<li>Новый заказ: ЛИДОРУБЫ -&gt; Новая заявка [73992646]</li>
+<li>Частичная оплата: ЛИДОРУБЫ -&gt; Автовебинар крипта [79804246]</li>
+<li>Полная оплата: ЛИДОРУБЫ -&gt; Автовебинар крипта [79804246]</li>
+<li>Поле amoCRM для суммы: оплачено[payedMoney]</li>
+<li>Двигать старые сделки только с выбранных этапов: Да</li>
+<li>Этапы, из которых разрешен сдвиг: 138 этапов</li>
+<li>Не менять этап при обновлении: Нет</li>
+<li>Менять название сделки при обновлении: Да</li>
+<li>Теги сделки: {pay_field_tag_deal_1}</li>
+<li>Ответственный по умолчанию: EasyDrafting[12985298]</li>
+<li>Индивидуальные правила маршрутизации: 2 шт.</li>
+<li>если поле <code>param1 с бизон</code> содержит <code>1</code>, то сделка идет в этап <code>ЛИДОРУБЫ -&gt; 1 группа[73995198]</code></li>
+<li>если поле <code>param1 с бизон</code> содержит <code>2</code>, то сделка идет в этап <code>ЛИДОРУБЫ -&gt; 2 группа[73995202]</code></li>
+</ul>
+<h4 id="2-группа-обновл-сделку-по-автовебинар-крипта">2 группа обновл сделку по Автовебинар Крипта</h4>
+<ul>
+<li>Endpoint: <code>payments</code></li>
+<li>URL вызова: <code>https://vakas-tools.ru/base/payments/8927217/88097/?number={object.number}&amp;id={object.user.id}&amp;order_id={object.id}&amp;positions={object.positions}&amp;costMoney={object.cost_money}&amp;leftCostMoney={object.left_cost_money}&amp;payedMoney={object.payed_money}&amp;status={object.status}&amp;paymentLink={object.payment_link}&amp;firstName={object.user.first_name}&amp;lastName={object.user.last_name}&amp;name={object.user.name}&amp;email={object.user.email}&amp;phone={object.user.phone}&amp;manager_name={object.manager}&amp;manager_email={object.manager_email}&amp;manager_phone={object.manager_phone}&amp;offers={object.offers}&amp;avatarUrl={object.user.avatar_url}&amp;utmS={object.user.create_session.utm_source}&amp;utmM={object.user.create_session.utm_medium}&amp;utmCa={object.user.create_session.utm_campaign}&amp;utmCo={object.user.create_session.utm_content}&amp;utmT={object.user.create_session.utm_term}&amp;order_name_amo={object.order_name_amo}&amp;order_price={cost_money_value}&amp;pay_date={object.payed_at format=&quot;d.m.Y H:i&quot;}&amp;p1=2</code></li>
+<li>Связанная база Vakas: <a href="../bases/88097.html">88097. База 88097</a></li>
+</ul>
+<h5 id="когда-срабатывает-в-процессе-5">Когда срабатывает в процессе</h5>
+<ul>
+<li>Сценарий 1: <code>Начало работы</code> --Выполнено--&gt; <code>2 группа обновл сделку по Автовебинар Крипта</code></li>
+</ul>
+<h5 id="что-уходит-в-vakas-5">Что уходит в Vakas</h5>
+<p>&lt;details&gt;
+&lt;summary&gt;Показать 28 параметров запроса&lt;/summary&gt;</p>
+<ul>
+<li><code>number</code></li>
+<li><code>id</code></li>
+<li><code>order_id</code></li>
+<li><code>positions</code></li>
+<li><code>costMoney</code></li>
+<li><code>leftCostMoney</code></li>
+<li><code>payedMoney</code></li>
+<li><code>status</code></li>
+<li><code>paymentLink</code></li>
+<li><code>firstName</code></li>
+<li><code>lastName</code></li>
+<li><code>name</code></li>
+<li><code>email</code></li>
+<li><code>phone</code></li>
+<li><code>manager_name</code></li>
+<li><code>manager_email</code></li>
+<li><code>manager_phone</code></li>
+<li><code>offers</code></li>
+<li><code>avatarUrl</code></li>
+<li><code>utmS</code></li>
+<li><code>utmM</code></li>
+<li><code>utmCa</code></li>
+<li><code>utmCo</code></li>
+<li><code>utmT</code></li>
+<li><code>order_name_amo</code></li>
+<li><code>order_price</code></li>
+<li><code>pay_date</code></li>
+<li><code>p1</code></li>
+</ul>
+<p>&lt;/details&gt;</p>
+<h5 id="как-база-обработает-вызов-и-что-будет-в-amocrm-5">Как база обработает вызов и что будет в amoCRM</h5>
+<ul>
+<li>
+<p>Логика создания сделки: сначала ищется существующая сделка/контакт по правилам базы; если подходящая сделка найдена, обновляется она, иначе создается новая.</p>
+</li>
+<li>
+<p>Режим проверки дублей: Проверять на дубли</p>
+</li>
+<li>
+<p>Искать дубль только в выбранных воронках: 12 шт.</p>
+</li>
+<li>
+<p>Учитывать закрытые этапы при поиске дубля: нет</p>
+</li>
+<li>
+<p>Добавлять телефон/email в найденный контакт: Да</p>
+</li>
+<li>
+<p>Менять имя контакта при обновлении: Нет
+&lt;details&gt;
+&lt;summary&gt;Показать 12 воронок для поиска дублей&lt;/summary&gt;</p>
+</li>
+<li>
+<p><code>ОСНОВНОЙ ОТДЕЛ - ЗАЯВКИ [6777466]</code></p>
+</li>
+<li>
+<p><code>ПАССИВНЫЙ ДОХОД [9426954]</code></p>
+</li>
+<li>
+<p><code>КРИПТОКАПИТАЛ [9498394]</code></p>
+</li>
+<li>
+<p><code>ФИНАНСОВАЯ СВОБОДА [9498398]</code></p>
+</li>
+<li>
+<p><code>ОД [9839030]</code></p>
+</li>
+<li>
+<p><code>КРИПТОКЛУБ [9578374]</code></p>
+</li>
+<li>
+<p><code>ИНВЕСТ КЛУБ [9500418]</code></p>
+</li>
+<li>
+<p><code>ОТДЕЛ КЛУБОВ [6869966]</code></p>
+</li>
+<li>
+<p><code>АПСЕЙЛЫ ОП [8910882]</code></p>
+</li>
+<li>
+<p><code>ОТДЕЛ ДИАГНОСТИК [6844390]</code></p>
+</li>
+<li>
+<p><code>ЛИДОРУБЫ [9212986]</code></p>
+</li>
+<li>
+<p><code>ДИАГНОСТЫ [9213518]</code></p>
+</li>
+</ul>
+<p>&lt;/details&gt;</p>
+<ul>
+<li>Автоотправка оплат в amoCRM: Да</li>
+<li>Базовый этап для этого вызова: ЛИДОРУБЫ -&gt; Новая заявка [73992646]</li>
+<li>Новый заказ: ЛИДОРУБЫ -&gt; Новая заявка [73992646]</li>
+<li>Частичная оплата: ЛИДОРУБЫ -&gt; Автовебинар крипта [79804246]</li>
+<li>Полная оплата: ЛИДОРУБЫ -&gt; Автовебинар крипта [79804246]</li>
+<li>Поле amoCRM для суммы: оплачено[payedMoney]</li>
+<li>Двигать старые сделки только с выбранных этапов: Да</li>
+<li>Этапы, из которых разрешен сдвиг: 138 этапов</li>
+<li>Не менять этап при обновлении: Нет</li>
+<li>Менять название сделки при обновлении: Да</li>
+<li>Теги сделки: {pay_field_tag_deal_1}</li>
+<li>Ответственный по умолчанию: EasyDrafting[12985298]</li>
+<li>Индивидуальные правила маршрутизации: 2 шт.</li>
+<li>если поле <code>param1 с бизон</code> содержит <code>1</code>, то сделка идет в этап <code>ЛИДОРУБЫ -&gt; 1 группа[73995198]</code></li>
+<li>если поле <code>param1 с бизон</code> содержит <code>2</code>, то сделка идет в этап <code>ЛИДОРУБЫ -&gt; 2 группа[73995202]</code></li>
+</ul>
+<h3 id="связанная-база-vakas-95661-диагностика-запуcкклад-100344">Связанная база Vakas: 95661. Диагностика_ЗапуcкКлад 100344</h3>
+<ul>
+<li>Использование в процессе: Оплаты и заказы</li>
+<li>Документация базы: <a href="../bases/95661.html">95661. Диагностика_ЗапуcкКлад 100344</a></li>
+<li>Страница настройки: <a href="https://vakas-tools.ru/account/base/amo.php?mode=contact&amp;base_id=95661">Vakas</a></li>
+<li>Поиск дублей: Проверять на дубли</li>
+<li>Искать только в выбранных воронках: 12</li>
+<li>Ответственный по контакту имеет приоритет: Да</li>
+</ul>
+<h4 id="вызовы-из-процесса-2">Вызовы из процесса</h4>
+<h4 id="новая-заявка-обновл-сделку-по-кфи-1">Новая заявка обновл сделку по кфи</h4>
+<ul>
+<li>Endpoint: <code>payments</code></li>
+<li>URL вызова: <code>https://vakas-tools.ru/base/payments/8927217/95661/?number={object.number}&amp;id={object.user.id}&amp;order_id={object.id}&amp;positions={object.positions}&amp;costMoney={object.cost_money}&amp;leftCostMoney={object.left_cost_money}&amp;payedMoney={object.payed_money}&amp;status={object.status}&amp;paymentLink={object.payment_link}&amp;firstName={object.user.first_name}&amp;lastName={object.user.last_name}&amp;name={object.user.name}&amp;email={object.user.email}&amp;phone={object.user.phone}&amp;manager_name={object.manager}&amp;manager_email={object.manager_email}&amp;manager_phone={object.manager_phone}&amp;offers={object.offers}&amp;avatarUrl={object.user.avatar_url}&amp;utmS={object.user.create_session.utm_source}&amp;utmM={object.user.create_session.utm_medium}&amp;utmCa={object.user.create_session.utm_campaign}&amp;utmCo={object.user.create_session.utm_content}&amp;utmT={object.user.create_session.utm_term}&amp;order_name_amo={object.order_name_amo}&amp;order_price={cost_money_value}&amp;pay_date={object.payed_at format=&quot;d.m.Y H:i&quot;}&amp;tag_deal_1={object.deal_tag_1}&amp;p1=''</code></li>
+<li>Связанная база Vakas: <a href="../bases/95661.html">95661. Диагностика_ЗапуcкКлад 100344</a></li>
+</ul>
+<h5 id="когда-срабатывает-в-процессе-6">Когда срабатывает в процессе</h5>
+<ul>
+<li>Сценарий 1: <code>Начало работы</code> --Выполнено--&gt; <code>Новая заявка обновл сделку по кфи</code></li>
+</ul>
+<h5 id="что-уходит-в-vakas-6">Что уходит в Vakas</h5>
+<p>&lt;details&gt;
+&lt;summary&gt;Показать 29 параметров запроса&lt;/summary&gt;</p>
+<ul>
+<li><code>number</code></li>
+<li><code>id</code></li>
+<li><code>order_id</code></li>
+<li><code>positions</code></li>
+<li><code>costMoney</code></li>
+<li><code>leftCostMoney</code></li>
+<li><code>payedMoney</code></li>
+<li><code>status</code></li>
+<li><code>paymentLink</code></li>
+<li><code>firstName</code></li>
+<li><code>lastName</code></li>
+<li><code>name</code></li>
+<li><code>email</code></li>
+<li><code>phone</code></li>
+<li><code>manager_name</code></li>
+<li><code>manager_email</code></li>
+<li><code>manager_phone</code></li>
+<li><code>offers</code></li>
+<li><code>avatarUrl</code></li>
+<li><code>utmS</code></li>
+<li><code>utmM</code></li>
+<li><code>utmCa</code></li>
+<li><code>utmCo</code></li>
+<li><code>utmT</code></li>
+<li><code>order_name_amo</code></li>
+<li><code>order_price</code></li>
+<li><code>pay_date</code></li>
+<li><code>tag_deal_1</code></li>
+<li><code>p1</code></li>
+</ul>
+<p>&lt;/details&gt;</p>
+<h5 id="как-база-обработает-вызов-и-что-будет-в-amocrm-6">Как база обработает вызов и что будет в amoCRM</h5>
+<ul>
+<li>
+<p>Логика создания сделки: сначала ищется существующая сделка/контакт по правилам базы; если подходящая сделка найдена, обновляется она, иначе создается новая.</p>
+</li>
+<li>
+<p>Режим проверки дублей: Проверять на дубли</p>
+</li>
+<li>
+<p>Искать дубль только в выбранных воронках: 12 шт.</p>
+</li>
+<li>
+<p>Учитывать закрытые этапы при поиске дубля: нет</p>
+</li>
+<li>
+<p>Добавлять телефон/email в найденный контакт: Да</p>
+</li>
+<li>
+<p>Менять имя контакта при обновлении: Нет
+&lt;details&gt;
+&lt;summary&gt;Показать 12 воронок для поиска дублей&lt;/summary&gt;</p>
+</li>
+<li>
+<p><code>ОСНОВНОЙ ОТДЕЛ - ЗАЯВКИ [6777466]</code></p>
+</li>
+<li>
+<p><code>ПАССИВНЫЙ ДОХОД [9426954]</code></p>
+</li>
+<li>
+<p><code>КРИПТОКАПИТАЛ [9498394]</code></p>
+</li>
+<li>
+<p><code>ФИНАНСОВАЯ СВОБОДА [9498398]</code></p>
+</li>
+<li>
+<p><code>ОД [9839030]</code></p>
+</li>
+<li>
+<p><code>КРИПТОКЛУБ [9578374]</code></p>
+</li>
+<li>
+<p><code>ИНВЕСТ КЛУБ [9500418]</code></p>
+</li>
+<li>
+<p><code>ОТДЕЛ КЛУБОВ [6869966]</code></p>
+</li>
+<li>
+<p><code>АПСЕЙЛЫ ОП [8910882]</code></p>
+</li>
+<li>
+<p><code>ОТДЕЛ ДИАГНОСТИК [6844390]</code></p>
+</li>
+<li>
+<p><code>ЛИДОРУБЫ [9212986]</code></p>
+</li>
+<li>
+<p><code>ДИАГНОСТЫ [9213518]</code></p>
+</li>
+</ul>
+<p>&lt;/details&gt;</p>
+<ul>
+<li>Автоотправка оплат в amoCRM: Да</li>
+<li>Базовый этап для этого вызова: ЛИДОРУБЫ -&gt; Новая заявка [73992646]</li>
+<li>Новый заказ: ЛИДОРУБЫ -&gt; Новая заявка [73992646]</li>
+<li>Частичная оплата: <em>не выбран</em></li>
+<li>Полная оплата: ЛИДОРУБЫ -&gt; 1 группа [73995198]</li>
+<li>Поле amoCRM для суммы: оплачено[payedMoney]</li>
+<li>Двигать старые сделки только с выбранных этапов: Да</li>
+<li>Этапы, из которых разрешен сдвиг: 135 этапов</li>
+<li>Не менять этап при обновлении: Нет</li>
+<li>Менять название сделки при обновлении: Да</li>
+<li>Теги сделки: {pay_field_tag_deal_1}</li>
+<li>Ответственный по умолчанию: EasyDrafting[12985298]</li>
+<li>Индивидуальные правила маршрутизации: нет</li>
+</ul>
+<h3 id="связанная-база-vakas-100344-диагностика-запуcкклад">Связанная база Vakas: 100344. Диагностика_ЗапуcкКлад</h3>
+<ul>
+<li>Использование в процессе: Оплаты и заказы</li>
+<li>Документация базы: <a href="../bases/100344.html">100344. Диагностика_ЗапуcкКлад</a></li>
+<li>Страница настройки: <a href="https://vakas-tools.ru/account/base/amo.php?mode=contact&amp;base_id=100344">Vakas</a></li>
+<li>Поиск дублей: Проверять на дубли</li>
+<li>Искать только в выбранных воронках: 12</li>
+<li>Ответственный по контакту имеет приоритет: Да</li>
+</ul>
+<h4 id="вызовы-из-процесса-3">Вызовы из процесса</h4>
+<h4 id="новая-заявка-обновл-сделку-по-склад">Новая заявка обновл сделку по Склад</h4>
+<ul>
+<li>Endpoint: <code>payments</code></li>
+<li>URL вызова: <code>https://vakas-tools.ru/base/payments/8927217/100344/?number={object.number}&amp;id={object.user.id}&amp;order_id={object.id}&amp;positions={object.positions}&amp;costMoney={object.cost_money}&amp;leftCostMoney={object.left_cost_money}&amp;payedMoney={object.payed_money}&amp;status={object.status}&amp;paymentLink={object.payment_link}&amp;firstName={object.user.first_name}&amp;lastName={object.user.last_name}&amp;name={object.user.name}&amp;email={object.user.email}&amp;phone={object.user.phone}&amp;manager_name={object.manager}&amp;manager_email={object.manager_email}&amp;manager_phone={object.manager_phone}&amp;offers={object.offers}&amp;avatarUrl={object.user.avatar_url}&amp;utmS={object.user.create_session.utm_source}&amp;utmM={object.user.create_session.utm_medium}&amp;utmCa={object.user.create_session.utm_campaign}&amp;utmCo={object.user.create_session.utm_content}&amp;utmT={object.user.create_session.utm_term}&amp;order_name_amo={object.order_name_amo}&amp;order_price={cost_money_value}&amp;pay_date={object.payed_at format=&quot;d.m.Y H:i&quot;}&amp;tag_deal_1={object.deal_tag_1}&amp;p1=''</code></li>
+<li>Связанная база Vakas: <a href="../bases/100344.html">100344. Диагностика_ЗапуcкКлад</a></li>
+</ul>
+<h5 id="когда-срабатывает-в-процессе-7">Когда срабатывает в процессе</h5>
+<ul>
+<li>Сценарий 1: <code>Начало работы</code> --Выполнено--&gt; <code>Новая заявка обновл сделку по Склад</code></li>
+</ul>
+<h5 id="что-уходит-в-vakas-7">Что уходит в Vakas</h5>
+<p>&lt;details&gt;
+&lt;summary&gt;Показать 29 параметров запроса&lt;/summary&gt;</p>
+<ul>
+<li><code>number</code></li>
+<li><code>id</code></li>
+<li><code>order_id</code></li>
+<li><code>positions</code></li>
+<li><code>costMoney</code></li>
+<li><code>leftCostMoney</code></li>
+<li><code>payedMoney</code></li>
+<li><code>status</code></li>
+<li><code>paymentLink</code></li>
+<li><code>firstName</code></li>
+<li><code>lastName</code></li>
+<li><code>name</code></li>
+<li><code>email</code></li>
+<li><code>phone</code></li>
+<li><code>manager_name</code></li>
+<li><code>manager_email</code></li>
+<li><code>manager_phone</code></li>
+<li><code>offers</code></li>
+<li><code>avatarUrl</code></li>
+<li><code>utmS</code></li>
+<li><code>utmM</code></li>
+<li><code>utmCa</code></li>
+<li><code>utmCo</code></li>
+<li><code>utmT</code></li>
+<li><code>order_name_amo</code></li>
+<li><code>order_price</code></li>
+<li><code>pay_date</code></li>
+<li><code>tag_deal_1</code></li>
+<li><code>p1</code></li>
+</ul>
+<p>&lt;/details&gt;</p>
+<h5 id="как-база-обработает-вызов-и-что-будет-в-amocrm-7">Как база обработает вызов и что будет в amoCRM</h5>
+<ul>
+<li>
+<p>Логика создания сделки: сначала ищется существующая сделка/контакт по правилам базы; если подходящая сделка найдена, обновляется она, иначе создается новая.</p>
+</li>
+<li>
+<p>Режим проверки дублей: Проверять на дубли</p>
+</li>
+<li>
+<p>Искать дубль только в выбранных воронках: 12 шт.</p>
+</li>
+<li>
+<p>Учитывать закрытые этапы при поиске дубля: нет</p>
+</li>
+<li>
+<p>Добавлять телефон/email в найденный контакт: Да</p>
+</li>
+<li>
+<p>Менять имя контакта при обновлении: Нет
+&lt;details&gt;
+&lt;summary&gt;Показать 12 воронок для поиска дублей&lt;/summary&gt;</p>
+</li>
+<li>
+<p><code>ОСНОВНОЙ ОТДЕЛ - ЗАЯВКИ [6777466]</code></p>
+</li>
+<li>
+<p><code>ПАССИВНЫЙ ДОХОД [9426954]</code></p>
+</li>
+<li>
+<p><code>КРИПТОКАПИТАЛ [9498394]</code></p>
+</li>
+<li>
+<p><code>ФИНАНСОВАЯ СВОБОДА [9498398]</code></p>
+</li>
+<li>
+<p><code>ОД [9839030]</code></p>
+</li>
+<li>
+<p><code>КРИПТОКЛУБ [9578374]</code></p>
+</li>
+<li>
+<p><code>ИНВЕСТ КЛУБ [9500418]</code></p>
+</li>
+<li>
+<p><code>ОТДЕЛ КЛУБОВ [6869966]</code></p>
+</li>
+<li>
+<p><code>АПСЕЙЛЫ ОП [8910882]</code></p>
+</li>
+<li>
+<p><code>ОТДЕЛ ДИАГНОСТИК [6844390]</code></p>
+</li>
+<li>
+<p><code>ЛИДОРУБЫ [9212986]</code></p>
+</li>
+<li>
+<p><code>ДИАГНОСТЫ [9213518]</code></p>
+</li>
+</ul>
+<p>&lt;/details&gt;</p>
+<ul>
+<li>Автоотправка оплат в amoCRM: Да</li>
+<li>Базовый этап для этого вызова: ЛИДОРУБЫ -&gt; Новая заявка [73992646]</li>
+<li>Новый заказ: ЛИДОРУБЫ -&gt; Новая заявка [73992646]</li>
+<li>Частичная оплата: ЛИДОРУБЫ -&gt; запускКЛАД [81364958]</li>
+<li>Полная оплата: ЛИДОРУБЫ -&gt; запускКЛАД [81364958]</li>
+<li>Поле amoCRM для суммы: оплачено[payedMoney]</li>
+<li>Двигать старые сделки только с выбранных этапов: Да</li>
+<li>Этапы, из которых разрешен сдвиг: 136 этапов</li>
+<li>Не менять этап при обновлении: Нет</li>
+<li>Менять название сделки при обновлении: Да</li>
+<li>Теги сделки: {pay_field_tag_deal_1}</li>
+<li>Ответственный по умолчанию: EasyDrafting[12985298]</li>
+<li>Индивидуальные правила маршрутизации: нет</li>
+</ul>
+<h4 id="запуск-склад-обновл-сделку">Запуск Склад обновл сделку</h4>
+<ul>
+<li>Endpoint: <code>payments</code></li>
+<li>URL вызова: <code>https://vakas-tools.ru/base/payments/8927217/100344/?number={object.number}&amp;id={object.user.id}&amp;order_id={object.id}&amp;positions={object.positions}&amp;costMoney={object.cost_money}&amp;leftCostMoney={object.left_cost_money}&amp;payedMoney={object.payed_money}&amp;status={object.status}&amp;paymentLink={object.payment_link}&amp;firstName={object.user.first_name}&amp;lastName={object.user.last_name}&amp;name={object.user.name}&amp;email={object.user.email}&amp;phone={object.user.phone}&amp;manager_name={object.manager}&amp;manager_email={object.manager_email}&amp;manager_phone={object.manager_phone}&amp;offers={object.offers}&amp;avatarUrl={object.user.avatar_url}&amp;utmS={object.user.create_session.utm_source}&amp;utmM={object.user.create_session.utm_medium}&amp;utmCa={object.user.create_session.utm_campaign}&amp;utmCo={object.user.create_session.utm_content}&amp;utmT={object.user.create_session.utm_term}&amp;order_name_amo={object.order_name_amo}&amp;order_price={cost_money_value}&amp;pay_date={object.payed_at format=&quot;d.m.Y H:i&quot;}&amp;p1=''</code></li>
+<li>Связанная база Vakas: <a href="../bases/100344.html">100344. Диагностика_ЗапуcкКлад</a></li>
+</ul>
+<h5 id="когда-срабатывает-в-процессе-8">Когда срабатывает в процессе</h5>
+<ul>
+<li>Сценарий 1: <code>Начало работы</code> --Выполнено--&gt; <code>Запуск Склад обновл сделку</code></li>
+</ul>
+<h5 id="что-уходит-в-vakas-8">Что уходит в Vakas</h5>
+<p>&lt;details&gt;
+&lt;summary&gt;Показать 28 параметров запроса&lt;/summary&gt;</p>
+<ul>
+<li><code>number</code></li>
+<li><code>id</code></li>
+<li><code>order_id</code></li>
+<li><code>positions</code></li>
+<li><code>costMoney</code></li>
+<li><code>leftCostMoney</code></li>
+<li><code>payedMoney</code></li>
+<li><code>status</code></li>
+<li><code>paymentLink</code></li>
+<li><code>firstName</code></li>
+<li><code>lastName</code></li>
+<li><code>name</code></li>
+<li><code>email</code></li>
+<li><code>phone</code></li>
+<li><code>manager_name</code></li>
+<li><code>manager_email</code></li>
+<li><code>manager_phone</code></li>
+<li><code>offers</code></li>
+<li><code>avatarUrl</code></li>
+<li><code>utmS</code></li>
+<li><code>utmM</code></li>
+<li><code>utmCa</code></li>
+<li><code>utmCo</code></li>
+<li><code>utmT</code></li>
+<li><code>order_name_amo</code></li>
+<li><code>order_price</code></li>
+<li><code>pay_date</code></li>
+<li><code>p1</code></li>
+</ul>
+<p>&lt;/details&gt;</p>
+<h5 id="как-база-обработает-вызов-и-что-будет-в-amocrm-8">Как база обработает вызов и что будет в amoCRM</h5>
+<ul>
+<li>
+<p>Логика создания сделки: сначала ищется существующая сделка/контакт по правилам базы; если подходящая сделка найдена, обновляется она, иначе создается новая.</p>
+</li>
+<li>
+<p>Режим проверки дублей: Проверять на дубли</p>
+</li>
+<li>
+<p>Искать дубль только в выбранных воронках: 12 шт.</p>
+</li>
+<li>
+<p>Учитывать закрытые этапы при поиске дубля: нет</p>
+</li>
+<li>
+<p>Добавлять телефон/email в найденный контакт: Да</p>
+</li>
+<li>
+<p>Менять имя контакта при обновлении: Нет
+&lt;details&gt;
+&lt;summary&gt;Показать 12 воронок для поиска дублей&lt;/summary&gt;</p>
+</li>
+<li>
+<p><code>ОСНОВНОЙ ОТДЕЛ - ЗАЯВКИ [6777466]</code></p>
+</li>
+<li>
+<p><code>ПАССИВНЫЙ ДОХОД [9426954]</code></p>
+</li>
+<li>
+<p><code>КРИПТОКАПИТАЛ [9498394]</code></p>
+</li>
+<li>
+<p><code>ФИНАНСОВАЯ СВОБОДА [9498398]</code></p>
+</li>
+<li>
+<p><code>ОД [9839030]</code></p>
+</li>
+<li>
+<p><code>КРИПТОКЛУБ [9578374]</code></p>
+</li>
+<li>
+<p><code>ИНВЕСТ КЛУБ [9500418]</code></p>
+</li>
+<li>
+<p><code>ОТДЕЛ КЛУБОВ [6869966]</code></p>
+</li>
+<li>
+<p><code>АПСЕЙЛЫ ОП [8910882]</code></p>
+</li>
+<li>
+<p><code>ОТДЕЛ ДИАГНОСТИК [6844390]</code></p>
+</li>
+<li>
+<p><code>ЛИДОРУБЫ [9212986]</code></p>
+</li>
+<li>
+<p><code>ДИАГНОСТЫ [9213518]</code></p>
+</li>
+</ul>
+<p>&lt;/details&gt;</p>
+<ul>
+<li>Автоотправка оплат в amoCRM: Да</li>
+<li>Базовый этап для этого вызова: ЛИДОРУБЫ -&gt; Новая заявка [73992646]</li>
+<li>Новый заказ: ЛИДОРУБЫ -&gt; Новая заявка [73992646]</li>
+<li>Частичная оплата: ЛИДОРУБЫ -&gt; запускКЛАД [81364958]</li>
+<li>Полная оплата: ЛИДОРУБЫ -&gt; запускКЛАД [81364958]</li>
+<li>Поле amoCRM для суммы: оплачено[payedMoney]</li>
+<li>Двигать старые сделки только с выбранных этапов: Да</li>
+<li>Этапы, из которых разрешен сдвиг: 136 этапов</li>
+<li>Не менять этап при обновлении: Нет</li>
+<li>Менять название сделки при обновлении: Да</li>
+<li>Теги сделки: {pay_field_tag_deal_1}</li>
+<li>Ответственный по умолчанию: EasyDrafting[12985298]</li>
+<li>Индивидуальные правила маршрутизации: нет</li>
+</ul>
+</article></main><script>window.DOC_ROOT="../../";</script>
+<script src="../../search-data.js"></script><script src="../../nav-data.js"></script><script src="../../gitbook.js"></script></body></html>
