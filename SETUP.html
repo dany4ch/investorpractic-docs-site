@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow"><meta name="docs-source-commit" content="4e2e3eb4f76db9c03fa1177ab3215d5e95838594">
+<meta name="robots" content="noindex,nofollow"><meta name="docs-source-commit" content="6e0c2414f3e9b10033a4933fcc96cb352a6e8714">
 <title>Setup — Investor Practic</title><link rel="stylesheet" href="site.css?v=984ec4f77e90"></head>
 <body><aside><a class="home" href="index.html">Investor Practic</a>
 <label for="search">Поиск по страницам</label><input id="search" type="search" placeholder="Название или ID">
@@ -22,5 +22,12 @@
 <li><a href="https://gitbook.com/docs/getting-started/git-sync/enabling-github-sync">GitHub Sync</a></li>
 <li><a href="https://gitbook.com/docs/getting-started/git-sync/content-configuration">Content configuration</a></li>
 </ul>
+<h2 id="публичный-сайт">Публичный сайт</h2>
+<p>После коммита в ветку <code>main</code> workflow <code>.github/workflows/publish-site.yml</code>
+собирает Markdown в HTML и публикует его на
+<a href="https://dany4ch.github.io/investorpractic-docs-site/">сайте документации</a>.
+Обновление появляется после успешной сборки GitHub Actions и GitHub Pages,
+обычно через несколько минут. Публикуются клиентская и внутренняя версии,
+поэтому не добавляйте в <code>main</code> секреты и материалы, которые должны остаться закрытыми.</p>
 </article></main><script>window.DOC_ROOT="";</script>
 <script src="search-data.js"></script><script src="nav-data.js"></script><script src="site.js?v=2dde8957d967"></script></body></html>
