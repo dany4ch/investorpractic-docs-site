@@ -8,11 +8,11 @@ const current = location.pathname;
 const isCurrent = item => new URL(root + item.url, location.href).pathname === current;
 const active = entries.findIndex(isCurrent);
 
-function makeLink(item) {
+function makeLink(item, markActive = false) {
   const link = document.createElement('a');
   link.href = root + item.url;
   link.textContent = item.title;
-  if (isCurrent(item)) {
+  if (markActive) {
     link.classList.add('active');
     link.setAttribute('aria-current', 'page');
   }
@@ -29,7 +29,7 @@ for (let i = 0; i < entries.length; i++) {
     const group = document.createElement('details');
     group.className = 'nav-group';
     const label = document.createElement('summary');
-    label.append(makeLink(item));
+    label.append(makeLink(item, i === active));
     group.append(label);
     const children = document.createElement('div');
     children.className = 'nav-children';
@@ -41,7 +41,7 @@ for (let i = 0; i < entries.length; i++) {
     }
     levels.push({depth: item.depth, container: children});
   } else {
-    const link = makeLink(item);
+    const link = makeLink(item, i === active);
     link.classList.add('nav-leaf');
     parent.append(link);
   }
